@@ -1,0 +1,6 @@
+{
+  "name": "ระบบแดชบอร์ดงบประมาณ ปี 2570",
+  "description": "ระบบแดชบอร์ดงบประมาณ สภาการสาธารณสุขชุมชน ประจำปีงบประมาณ พ.ศ. 2570 วิเคราะห์รายรับ-รายจ่าย นำเข้าไฟล์ Excel พร้อมแผนภูมิเปรียบเทียบ",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
