@@ -908,9 +908,8 @@ export function parseExcelData(fileBuffer: ArrayBuffer, fileName: string): Parse
   let idCol = findCol(['รหัสโครงการ', 'รหัส', 'code', 'ลำดับรหัส', 'id']);
   let actCol = findCol(['รายละเอียดกิจกรรม', 'รายการกิจกรรม', 'กิจกรรม', 'โครงการ', 'ชื่อโครงการ', 'รายการ', 'ชื่อรายการ', 'activity', 'project', 'title', 'name']);
   let budgetCol = findCol(['คำขอปี 70', 'คำขอ 2570', 'คำขอ 70', 'คำของบประมาณปี 2570', 'คำของบประมาณ 2570', 'งบประมาณปี 70', 'งบประมาณ (บาท)', 'งบประมาณปี2570', 'งบประมาณ', 'ปี 70', 'ปี2570', '2570', '70', 'จำนวนเงิน', 'ยอดเงิน', 'budget', 'amount', 'บาท']);
-  let budget69Col = findCol(['คำขอปี 69', 'คำขอ 2569', 'คำขอ 69', 'คำของบประมาณปี 2569', 'คำของบประมาณ 2569', 'งบประมาณปี 69', 'งบประมาณปี2569', 'ปี 69', 'ปี2569', '2569', 'งบ 69', 'budget 69', 'budget 2569']);
-  let actual69Col = findCol(['จ่ายจริงปี 2569', 'จ่ายจริง 2569', 'จ่ายจริงปี 69', 'จ่ายจริง 69', 'จ่ายจริง', 'ใช้จริง 2569', 'ใช้จริงปี 2569', 'ใช้จริง 69', 'ใช้จริง', 'ผลการใช้จ่าย', 'ผลการเบิกจ่าย', 'เบิกจ่าย 2569', 'เบิกจ่ายจริง', 'เบิกจ่าย', 'actual 69', 'actual 2569', 'actual']);
-
+  let budget69Col = -1;
+  let actual69Col = -1;
   // Dynamic fallback
   if (actCol === -1 || actCol === idCol || budgetCol === -1) {
     const sampleRows = rawJson.slice(headerIdx + 1, Math.min(headerIdx + 15, rawJson.length));
