@@ -9,6 +9,9 @@ return {
 	StageSlots = 3, -- how many avatars can be on stage at once
 	ProcessInterval = 0.25, -- how often the queue checks for work
 
+	-- Messages from the Node.js bridge arrive on this topic (must match ROBLOX_TOPIC in bridge/.env)
+	MessagingTopic = "TikTokStage",
+
 	-- Gift -> effect mapping (placeholder)
 	-- Effect must match a key in Effects.luau. Action "Effect" plays a visual,
 	-- "Stay" adds stay time to the newest avatar on stage.
