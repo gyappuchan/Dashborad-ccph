@@ -2,12 +2,26 @@
 
 โครงสร้างเกม Roblox Studio ที่ซิงก์ด้วย Rojo ตั้งค่าทีหลังได้ทั้งหมดใน `src/server/Config.luau`
 
-## การติดตั้ง
-1. ติดตั้ง Rojo (https://rojo.space) และปลั๊กอิน Rojo ใน Roblox Studio
-2. ในโฟลเดอร์ `roblox-stage/` รัน `rojo serve`
-3. ใน Studio กด Connect ที่ปลั๊กอิน Rojo
-4. ใน Game Settings เปิด Studio Access to APIs (จำเป็นสำหรับ `GetHumanoidDescriptionFromUserId` ในบางกรณี)
-5. กด Play แล้วทดสอบด้วยแชท: `/join <ชื่อRoblox>` และ `/gift Rose`
+## การติดตั้งใน Roblox Studio (ไม่ต้องใช้ Rojo)
+1. เปิด Roblox Studio สร้างหรือเปิดเกมของคุณ
+2. ใน **ServerScriptService** สร้าง **Folder** ชื่อ `Stage`
+3. สร้างสคริปต์ในโฟลเดอร์ `Stage` ตามนี้ แล้ววางโค้ดจากไฟล์ใน `src/server/` ชื่อเดียวกัน:
+
+| ชื่อใน Studio | ชนิด | ไฟล์ |
+|---|---|---|
+| `Config` | ModuleScript | `Config.luau` |
+| `GiftQueue` | ModuleScript | `GiftQueue.luau` |
+| `Effects` | ModuleScript | `Effects.luau` |
+| `StageActor` | ModuleScript | `StageActor.luau` |
+| `StageAPI` | ModuleScript | `StageAPI.luau` |
+| `Main` | Script | `Main.server.luau` |
+| `DevCommands` | Script | `DevCommands.server.luau` |
+
+4. ปรับ `StageOrigin` ใน `Config` ให้ตรงกับตำแหน่งเวทีในแมปของคุณ
+5. กด Play แล้วพิมพ์ในแชท: `/join <ชื่อRoblox>` และ `/gift Rose`
+6. (ภายหลัง ตอนต่อ TikTok) เปิด Game Settings > Security > Allow HTTP Requests
+
+ถ้าต้องการซิงก์ไฟล์อัตโนมัติ ใช้ Rojo ได้: รัน `rojo serve` ในโฟลเดอร์นี้แล้วกด Connect ในปลั๊กอิน Rojo
 
 ## ค่าเริ่มต้นที่เสนอ
 | รายการ | ค่า | เหตุผล |
