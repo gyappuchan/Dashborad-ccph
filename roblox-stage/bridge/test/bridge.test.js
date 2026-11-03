@@ -69,3 +69,25 @@ test('bridge: gift is forwarded', () => {
   bridge.onGift({ giftDetails: { giftName: 'Galaxy', giftType: 2 }, repeatCount: 1, user: { uniqueId: 'v9' } });
   assert.deepEqual(sent, [{ kind: 'gift', gift: 'Galaxy', count: 1, by: 'v9' }]);
 });
+
+import { isLocalRequest } from '../src/server.js';
+import { mergeConfig, publicConfig, DEFAULTS } from '../src/config.js';
+
+test('isLocalRequest only accepts localhost host/origin', () => {
+  const ok = (headers) => isLocalRequest({ headers }, 3939);
+  assert.ok(ok({ host: 'localhost:3939' }));
+  assert.ok(ok({ host: '127.0.0.1:3939', origin: 'http://localhost:3939' }));
+  assert.ok(!ok({ host: 'evil.com' }));
+  assert.ok(!ok({ host: 'localhost:3939', origin: 'https://evil.com' }));
+});
+
+test('config: apiKey kept when blank, never exposed', () => {
+  const saved = { ...DEFAULTS, apiKey: 'secret' };
+  const next = mergeConfig(saved, { apiKey: '', joinCooldownSec: '30', dryRun: false });
+  assert.equal(next.apiKey, 'secret');
+  assert.equal(next.joinCooldownSec, 30);
+  assert.equal(next.dryRun, false);
+  const pub = publicConfig(next);
+  assert.equal(pub.apiKey, undefined);
+  assert.equal(pub.hasApiKey, true);
+});

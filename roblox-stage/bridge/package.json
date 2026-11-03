@@ -4,9 +4,10 @@
   "version": "0.1.0",
   "type": "module",
   "scripts": {
-    "start": "node src/index.js",
-    "dry-run": "node src/index.js --dry-run",
-    "test": "node --test"
+    "start": "node --env-file-if-exists=.env src/index.js",
+    "dry-run": "node --env-file-if-exists=.env src/index.js --dry-run",
+    "test": "node --test",
+    "app": "node src/app.js"
   },
   "dependencies": {
     "tiktok-live-connector": "^2.0.0"
