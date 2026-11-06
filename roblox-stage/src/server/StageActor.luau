@@ -41,7 +41,8 @@ local function startDancing(model: Model, humanoid: Humanoid, position: Vector3)
 		local t = 0
 		while model.Parent do
 			t += task.wait(0.03)
-			model:PivotTo(facing(position + Vector3.new(0, math.sin(t * 4) * 0.5, 0)))
+			local lift = model:GetAttribute("YOffset") or 0 -- raised when the avatar is scaled up
+			model:PivotTo(facing(position + Vector3.new(0, lift + math.sin(t * 4) * 0.5, 0)))
 		end
 	end)
 end
@@ -94,11 +95,24 @@ function StageActor.spawn(username: string, slot: number): (Model?, string?)
 	gui.Parent = root
 
 	local position = Layout.slotPosition(slot)
+	model:SetAttribute("SlotPos", position)
 	model:PivotTo(facing(position))
 	model.Parent = workspace
 	startDancing(model, humanoid, position)
 
 	return model, nil
+end
+
+-- Scales the avatar (1 = normal) and lifts it so its feet stay on the floor.
+function StageActor.setScale(model: Model, scale: number)
+	local slotPos = model:GetAttribute("SlotPos")
+	if typeof(slotPos) ~= "Vector3" then
+		return
+	end
+	local lift = Layout.ROOT_TO_FEET * (scale - 1)
+	model:SetAttribute("YOffset", lift)
+	model:ScaleTo(scale)
+	model:PivotTo(facing(slotPos + Vector3.new(0, lift, 0)))
 end
 
 -- True when this username is already dancing on the stage (case-insensitive).
@@ -116,6 +130,15 @@ end
 -- Main.server.luau removes avatars once their LeaveAt time has passed.
 function StageActor.setStay(model: Model, seconds: number)
 	model:SetAttribute("LeaveAt", os.clock() + seconds)
+end
+
+-- Seconds left on stage (0 when expired or when no stay time was set).
+function StageActor.remaining(model: Model): number
+	local leaveAt = model:GetAttribute("LeaveAt")
+	if leaveAt == nil then
+		return math.huge
+	end
+	return math.max(0, leaveAt - os.clock())
 end
 
 function StageActor.isExpired(model: Model): boolean

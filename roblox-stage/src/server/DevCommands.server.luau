@@ -33,7 +33,7 @@ end
 Players.PlayerAdded:Connect(hook)
 
 -- Names for the panel's buttons are published before the remote exists (the panel waits for the remote).
-workspace:SetAttribute("StageGiftNames", table.concat(DevActions.giftNames(), ","))
+workspace:SetAttribute("StageGiftNames", table.concat(DevActions.giftLabels(), ","))
 workspace:SetAttribute("StageThemeNames", table.concat(ThemeManager.names(), ","))
 
 local remote = Instance.new("RemoteEvent")

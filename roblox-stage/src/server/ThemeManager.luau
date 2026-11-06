@@ -11,6 +11,8 @@ local Themes = require(script.Parent.Themes)
 local MAP_NAME = "StageMap"
 local ATMOSPHERE_NAME = "StageAtmosphere"
 local BLOOM_NAME = "StageBloom"
+local COLOR_NAME = "StageColor"
+local DEPTH_NAME = "StageDepth"
 
 local ThemeManager = {}
 ThemeManager.current = nil :: string?
@@ -185,7 +187,7 @@ function builders.Spotlight(parent, prop)
 		Range = prop.range or 60,
 		Brightness = prop.brightness or 4,
 		Color = prop.color or Color3.new(1, 1, 1),
-		Shadows = false,
+		Shadows = prop.shadows ~= false, -- real shadows when the place uses Future lighting
 	})
 end
 
@@ -198,6 +200,83 @@ function builders.NeonTile(parent, prop)
 		Color = prop.color or Color3.new(1, 1, 1),
 		Material = Enum.Material.Neon,
 	})
+end
+
+function builders.Gravestone(parent, prop)
+	local s = prop.scale or 1
+	local frame = CFrame.new(Layout.fromFloor(prop.pos)) * CFrame.Angles(0, prop.yaw or 0, prop.tilt or 0)
+	local stone = { Color = Color3.fromRGB(95, 95, 108), Material = Enum.Material.Slate }
+	newPart(parent, {
+		Name = "Gravestone",
+		Size = Vector3.new(2.4, 3.2, 0.8) * s,
+		CFrame = frame * CFrame.new(0, 1.6 * s, 0),
+		Color = stone.Color,
+		Material = stone.Material,
+	})
+	-- Rounded top: a cylinder as wide as the slab, lying along the slab's thickness
+	newPart(parent, {
+		Name = "GravestoneTop",
+		Shape = Enum.PartType.Cylinder,
+		Size = Vector3.new(0.8, 2.4, 2.4) * s,
+		CFrame = frame * CFrame.new(0, 3.2 * s, 0) * CFrame.Angles(0, math.pi / 2, 0),
+		Color = stone.Color,
+		Material = stone.Material,
+	})
+end
+
+function builders.Fence(parent, prop)
+	local from, to = Layout.fromFloor(prop.pos), Layout.fromFloor(prop.to)
+	local height = prop.height or 5
+	local up = Vector3.new(0, height, 0)
+	local iron = { Color = Color3.fromRGB(25, 25, 30), Material = Enum.Material.Metal }
+	local posts = math.max(2, math.floor((to - from).Magnitude / 3) + 1)
+	for i = 0, posts - 1 do
+		local p = from + (to - from) * (i / (posts - 1))
+		cylinderBetween(parent, p, p + up, 0.4, { Name = "FencePost", Color = iron.Color, Material = iron.Material })
+	end
+	for _, fraction in { 0.45, 0.85 } do
+		local lift = Vector3.new(0, height * fraction, 0)
+		cylinderBetween(parent, from + lift, to + lift, 0.25, { Name = "FenceRail", Color = iron.Color, Material = iron.Material })
+	end
+end
+
+function builders.Mist(parent, prop)
+	local size = prop.size or Vector3.new(40, 2, 30)
+	local part = newPart(parent, {
+		Name = "Mist",
+		Size = size,
+		CFrame = CFrame.new(Layout.fromFloor(prop.pos) + Vector3.new(0, size.Y / 2, 0)),
+		Transparency = 1,
+	})
+	local emitter = Instance.new("ParticleEmitter")
+	emitter.Color = ColorSequence.new(prop.color or Color3.fromRGB(150, 110, 220))
+	emitter.Size = NumberSequence.new(14)
+	emitter.Transparency = NumberSequence.new(0.85, 1)
+	emitter.Lifetime = NumberRange.new(6, 9)
+	emitter.Speed = NumberRange.new(0.3, 0.8)
+	emitter.Rotation = NumberRange.new(0, 360)
+	emitter.Rate = prop.rate or 6
+	emitter.LightEmission = 0.15
+	emitter.Parent = part
+end
+
+-- A glowing circle drawn on the floor from short neon segments.
+function builders.RingLine(parent, prop)
+	local radius = prop.radius or 10
+	local count = prop.segments or 36
+	local length = 2 * math.pi * radius / count * 1.06
+	for i = 1, count do
+		local theta = (i - 1) / count * math.pi * 2
+		local at = Layout.fromFloor(Vector3.new(math.cos(theta) * radius, 0.03, math.sin(theta) * radius))
+		newPart(parent, {
+			Name = "RingLine",
+			Size = Vector3.new(length, 0.06, prop.width or 0.25),
+			CFrame = CFrame.new(at) * CFrame.Angles(0, -(theta + math.pi / 2), 0), -- long side runs along the circle
+			Color = prop.color or Color3.new(1, 1, 1),
+			Material = Enum.Material.Neon,
+			Transparency = prop.transparency or 0.25,
+		})
+	end
 end
 
 function builders.DiscoBall(parent, prop)
@@ -304,7 +383,7 @@ local function applyLighting(theme)
 	end
 	Lighting.GlobalShadows = true
 
-	for _, name in { ATMOSPHERE_NAME, BLOOM_NAME } do
+	for _, name in { ATMOSPHERE_NAME, BLOOM_NAME, COLOR_NAME, DEPTH_NAME } do
 		local old = Lighting:FindFirstChild(name)
 		if old then
 			old:Destroy()
@@ -323,6 +402,23 @@ local function applyLighting(theme)
 		(bloom :: any)[key] = value
 	end
 	bloom.Parent = Lighting
+
+	if theme.ColorCorrection then
+		local color = Instance.new("ColorCorrectionEffect")
+		color.Name = COLOR_NAME
+		for key, value in theme.ColorCorrection do
+			(color :: any)[key] = value
+		end
+		color.Parent = Lighting
+	end
+	if theme.Depth then
+		local depth = Instance.new("DepthOfFieldEffect")
+		depth.Name = DEPTH_NAME
+		for key, value in theme.Depth do
+			(depth :: any)[key] = value
+		end
+		depth.Parent = Lighting
+	end
 end
 
 -- The client camera script reads these attributes (see StreamCamera.client.luau).

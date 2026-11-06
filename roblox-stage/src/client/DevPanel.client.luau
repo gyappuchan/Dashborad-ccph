@@ -1,9 +1,12 @@
--- On-screen test panel (join / gift / theme buttons) for the game's creator and for Studio.
--- It only sends requests; the server re-checks permission and validates everything.
+-- On-screen test panel for the game's creator and for Studio. It can be collapsed (arrow button) or hidden
+-- completely (press H) so it never shows up in the stream. It only sends requests; the server re-checks
+-- permission and validates everything. For live control use the local bridge app instead.
 local Players = game:GetService("Players")
 local ReplicatedStorage = game:GetService("ReplicatedStorage")
 local RunService = game:GetService("RunService")
+local UserInputService = game:GetService("UserInputService")
 local Workspace = game:GetService("Workspace")
+local CameraRig = require(script.Parent.CameraRig)
 
 local player = Players.LocalPlayer
 if not (RunService:IsStudio() or player.UserId == game.CreatorId) then
@@ -22,7 +25,7 @@ gui.DisplayOrder = 100
 gui.Parent = player:WaitForChild("PlayerGui")
 
 local panel = Instance.new("Frame")
-panel.Position = UDim2.fromOffset(10, 10)
+panel.Position = UDim2.fromOffset(10, 60)
 panel.Size = UDim2.fromOffset(230, 0)
 panel.AutomaticSize = Enum.AutomaticSize.Y
 panel.BackgroundColor3 = Color3.fromRGB(20, 20, 28)
@@ -31,16 +34,54 @@ panel.BorderSizePixel = 0
 panel.Parent = gui
 
 local padding = Instance.new("UIPadding")
-padding.PaddingTop = UDim.new(0, 8)
-padding.PaddingBottom = UDim.new(0, 8)
+padding.PaddingTop = UDim.new(0, 6)
+padding.PaddingBottom = UDim.new(0, 6)
 padding.PaddingLeft = UDim.new(0, 8)
 padding.PaddingRight = UDim.new(0, 8)
 padding.Parent = panel
 
-local list = Instance.new("UIListLayout")
-list.Padding = UDim.new(0, 6)
-list.SortOrder = Enum.SortOrder.LayoutOrder
-list.Parent = panel
+local layout = Instance.new("UIListLayout")
+layout.Padding = UDim.new(0, 6)
+layout.SortOrder = Enum.SortOrder.LayoutOrder
+layout.Parent = panel
+
+-- The part that collapses
+local body = Instance.new("Frame")
+body.LayoutOrder = 2
+body.Size = UDim2.new(1, 0, 0, 0)
+body.AutomaticSize = Enum.AutomaticSize.Y
+body.BackgroundTransparency = 1
+body.Parent = panel
+
+local bodyLayout = Instance.new("UIListLayout")
+bodyLayout.Padding = UDim.new(0, 6)
+bodyLayout.SortOrder = Enum.SortOrder.LayoutOrder
+bodyLayout.Parent = body
+
+local header = Instance.new("TextButton")
+header.LayoutOrder = 1
+header.Size = UDim2.new(1, 0, 0, 26)
+header.BackgroundTransparency = 1
+header.Font = Enum.Font.GothamBold
+header.TextSize = 14
+header.TextXAlignment = Enum.TextXAlignment.Left
+header.TextColor3 = Color3.fromRGB(220, 220, 240)
+header.Parent = panel
+
+local function setCollapsed(collapsed: boolean)
+	body.Visible = not collapsed
+	header.Text = (if collapsed then "▸ " else "▾ ") .. "Stage panel  (H hides)"
+end
+header.Activated:Connect(function()
+	setCollapsed(body.Visible)
+end)
+setCollapsed(false)
+
+UserInputService.InputBegan:Connect(function(input, processed)
+	if not processed and input.KeyCode == Enum.KeyCode.H then
+		gui.Enabled = not gui.Enabled
+	end
+end)
 
 local order = 0
 local function nextOrder(): number
@@ -54,14 +95,14 @@ local function label(text: string)
 	l.Size = UDim2.new(1, 0, 0, 18)
 	l.BackgroundTransparency = 1
 	l.Font = Enum.Font.GothamBold
-	l.TextSize = 14
+	l.TextSize = 13
 	l.TextXAlignment = Enum.TextXAlignment.Left
-	l.TextColor3 = Color3.fromRGB(200, 200, 220)
+	l.TextColor3 = Color3.fromRGB(170, 170, 200)
 	l.Text = text
-	l.Parent = panel
+	l.Parent = body
 end
 
-local function button(text: string, onClick: () -> ())
+local function button(parent: Instance, text: string, onClick: () -> ()): TextButton
 	local b = Instance.new("TextButton")
 	b.LayoutOrder = nextOrder()
 	b.Size = UDim2.new(1, 0, 0, 28)
@@ -71,19 +112,22 @@ local function button(text: string, onClick: () -> ())
 	b.TextSize = 14
 	b.TextColor3 = Color3.new(1, 1, 1)
 	b.Text = text
-	b.Parent = panel
+	b.Parent = parent
 	b.Activated:Connect(onClick)
+	return b
 end
 
-local function names(attribute: string): { string }
+-- Gift / theme names are published by DevCommands as "Name|Detail,Name|Detail"
+local function entries(attribute: string): { { string } }
 	local result = {}
-	for name in string.gmatch(Workspace:GetAttribute(attribute) or "", "[^,]+") do
-		table.insert(result, name)
+	for entry in string.gmatch(Workspace:GetAttribute(attribute) or "", "[^,]+") do
+		local name, detail = string.match(entry, "^(.-)|(.*)$")
+		table.insert(result, { name or entry, detail or "" })
 	end
 	return result
 end
 
-label("Stage test panel")
+label("Join")
 local box = Instance.new("TextBox")
 box.LayoutOrder = nextOrder()
 box.Size = UDim2.new(1, 0, 0, 28)
@@ -95,21 +139,54 @@ box.TextColor3 = Color3.new(1, 1, 1)
 box.PlaceholderText = "Roblox username"
 box.Text = ""
 box.ClearTextOnFocus = false
-box.Parent = panel
-button("Join stage", function()
+box.Parent = body
+button(body, "Join stage", function()
 	remote:FireServer("join", box.Text)
 end)
 
 label("Gifts")
-for _, name in names("StageGiftNames") do
-	button(name, function()
-		remote:FireServer("gift", name)
+for _, gift in entries("StageGiftNames") do
+	button(body, if gift[2] ~= "" then gift[1] .. " · " .. gift[2] else gift[1], function()
+		remote:FireServer("gift", gift[1])
 	end)
 end
 
 label("Theme")
-for _, name in names("StageThemeNames") do
-	button(name, function()
-		remote:FireServer("theme", name)
+for _, theme in entries("StageThemeNames") do
+	button(body, theme[1], function()
+		remote:FireServer("theme", theme[1])
 	end)
+end
+
+label("Camera")
+local cameraRow = Instance.new("Frame")
+cameraRow.LayoutOrder = nextOrder()
+cameraRow.Size = UDim2.new(1, 0, 0, 28)
+cameraRow.BackgroundTransparency = 1
+cameraRow.Parent = body
+local rowLayout = Instance.new("UIListLayout")
+rowLayout.FillDirection = Enum.FillDirection.Horizontal
+rowLayout.SortOrder = Enum.SortOrder.LayoutOrder
+rowLayout.Padding = UDim.new(0, 4)
+rowLayout.Parent = cameraRow
+
+for _, control in
+	{
+		{ "◀", -0.2, 0, 1 },
+		{ "▶", 0.2, 0, 1 },
+		{ "▲", 0, 0.12, 1 },
+		{ "▼", 0, -0.12, 1 },
+		{ "＋", 0, 0, 0.85 },
+		{ "－", 0, 0, 1.18 },
+		{ "⟲", nil, nil, nil },
+	}
+do
+	local b = button(cameraRow, control[1], function()
+		if control[2] == nil then
+			CameraRig.reset()
+		else
+			CameraRig.nudge(control[2], control[3], control[4])
+		end
+	end)
+	b.Size = UDim2.new(1 / 7, -4, 1, 0)
 end

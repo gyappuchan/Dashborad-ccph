@@ -5,6 +5,7 @@ local Layout = {}
 
 -- Distance from an R15 root part to the soles of its feet (HipHeight 2 + half of the 2-stud root).
 local ROOT_TO_FEET = 3
+Layout.ROOT_TO_FEET = ROOT_TO_FEET
 
 function Layout.floorTopY(): number
 	return Config.StageOrigin.Y - ROOT_TO_FEET

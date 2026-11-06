@@ -109,3 +109,14 @@ test('sendTheme publishes a theme message (dry-run) and rejects unknown themes',
   await assert.rejects(controller.sendTheme(cfg, 'NoSuchTheme'), /ไม่มีธีม/);
   await assert.rejects(controller.sendTheme({ ...DEFAULTS, dryRun: false }, 'Halloween'), /Universe ID/);
 });
+
+import { listGifts } from '../src/gifts.js';
+
+test('listGifts reads the gift names and actions from Config.luau', () => {
+  const gifts = listGifts();
+  assert.deepEqual(
+    gifts.map((g) => `${g.name}:${g.action}`),
+    ['Rose:Hearts', 'TikTok:Spotlight', 'Lion:Giant', 'Galaxy:Fireworks', 'Universe:ThemeSwap', 'Interstellar:QueueJump'],
+  );
+  assert.deepEqual(listGifts('/nonexistent/Config.luau'), []);
+});

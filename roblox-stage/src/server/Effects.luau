@@ -24,6 +24,11 @@ end
 
 local Effects = {}
 
+-- Generic particle burst, also used by GiftActions (fireworks).
+function Effects.Burst(position: Vector3, color: Color3, rate: number, life: number)
+	burst(position, color, rate, life)
+end
+
 function Effects.Confetti(position: Vector3)
 	burst(position, Color3.fromRGB(255, 120, 200), 60, 3)
 end

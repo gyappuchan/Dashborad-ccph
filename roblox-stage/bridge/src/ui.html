@@ -12,7 +12,12 @@
   main { max-width:820px; margin:0 auto; padding:16px; display:grid; gap:16px; }
   h1 { font-size:20px; margin:8px 0 0; }
   .card { background:var(--card); border:1px solid var(--line); border-radius:12px; padding:16px; }
-  h2 { font-size:15px; margin:0 0 12px; }
+  h2 { font-size:15px; margin:0 0 12px; cursor:pointer; user-select:none; }
+  h2::before { content:'▾ '; color:var(--muted); }
+  .subhead { font-size:13px; font-weight:600; margin:16px 0 8px; }
+  .card.collapsed h2 { margin-bottom:0; }
+  .card.collapsed h2::before { content:'▸ '; }
+  .card.collapsed > :not(h2) { display:none; }
   label { display:block; font-size:13px; color:var(--muted); margin-bottom:4px; }
   input[type=text], input[type=password], input[type=number] { width:100%; padding:8px 10px; border:1px solid var(--line); border-radius:8px; background:var(--bg); color:var(--text); font:inherit; }
   .grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(220px,1fr)); gap:12px; }
@@ -65,7 +70,10 @@
       <div><label>ชื่อ Roblox</label><input type="text" id="testUser" placeholder="เช่น Roblox"></div>
       <div><label>ชื่อของขวัญ</label><input type="text" id="testGift" value="Rose"></div>
     </div>
-    <div class="row"><button id="testJoin">ส่งคนเข้าเวที</button><button id="testGiftBtn">ส่งของขวัญ</button></div>
+    <div class="row"><button id="testJoin">ส่งคนเข้าเวที</button><button id="testGiftBtn">ส่งของขวัญ (ตามชื่อที่พิมพ์)</button></div>
+    <div class="subhead">ของขวัญที่ตั้งไว้ (ชื่อ · เอฟเฟกต์)</div>
+    <div class="row" id="giftButtons" style="margin-top:0"></div>
+    <div class="hint">อ่านจาก Config.luau ของเกม ต้องเผยแพร่เกมและเปิดเซิร์ฟเวอร์ไว้ (ในโหมดทดลองจะแสดงแค่ใน log) ทดสอบใน Studio ใช้แผงในเกมแทน</div>
   </section>
 
   <section class="card">
@@ -120,9 +128,27 @@ $('testGiftBtn').onclick = async () => { try { await save(); await api('/api/tes
 
 $('themeBtn').onclick = async () => { try { await save(); await api('/api/theme', { name: $('themeSelect').value }); say('ส่งคำสั่งเปลี่ยนธีมแล้ว'); } catch (e) { say(e.message, true); } };
 
+function saved() { try { return JSON.parse(localStorage.getItem('collapsed') || '[]'); } catch { return []; } }
+document.querySelectorAll('.card').forEach((card) => {
+  const title = card.querySelector('h2').textContent;
+  if (saved().includes(title)) card.classList.add('collapsed');
+  card.querySelector('h2').addEventListener('click', () => {
+    card.classList.toggle('collapsed');
+    const now = [...document.querySelectorAll('.card.collapsed')].map((c) => c.querySelector('h2').textContent);
+    try { localStorage.setItem('collapsed', JSON.stringify(now)); } catch { /* storage unavailable */ }
+  });
+});
+
 (async () => {
   const s = await api('/api/state');
   $('themeSelect').innerHTML = s.themes.map((n) => `<option value="${n}">${n}</option>`).join('');
+  $('giftButtons').innerHTML = '';
+  for (const g of s.gifts) {
+    const b = document.createElement('button');
+    b.textContent = g.name + ' · ' + g.action;
+    b.onclick = async () => { try { await save(); await api('/api/test', { kind: 'gift', gift: g.name }); say('ส่ง ' + g.name + ' แล้ว'); } catch (e) { say(e.message, true); } };
+    $('giftButtons').appendChild(b);
+  }
   fill(s.config); setRunning(s.running); s.logs.forEach(addLog);
   new EventSource('/api/events').onmessage = (ev) => addLog(JSON.parse(ev.data));
 })();

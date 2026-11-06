@@ -70,6 +70,32 @@ UDim2 = {
 	end,
 }
 
+Vector2 = {
+	new = function(x, y)
+		return { X = x, Y = y, __type = "Vector2" }
+	end,
+}
+NumberRange = {
+	new = function(min, max)
+		return { Min = min, Max = max or min, __type = "NumberRange" }
+	end,
+}
+NumberSequence = {
+	new = function(a, b)
+		return { Keypoints = { { 0, a }, { 1, b or a } }, __type = "NumberSequence" }
+	end,
+}
+ColorSequence = {
+	new = function(a, b)
+		return { Keypoints = { { 0, a }, { 1, b or a } }, __type = "ColorSequence" }
+	end,
+}
+TweenInfo = {
+	new = function(time)
+		return { Time = time, __type = "TweenInfo" }
+	end,
+}
+
 -- CFrame: position plus orientation as three column vectors (Right, Up, Back), like Roblox.
 local CFmt = {}
 local function CF(position, right, up, back)
@@ -176,7 +202,7 @@ local function checkValue(className, prop, value)
 		ok = actual == "boolean"
 	elseif expected == "String" or expected == "ContentId" or expected == "Content" then
 		ok = actual == "string"
-	elseif expected == "Vector3" or expected == "Color3" or expected == "CFrame" or expected == "UDim2" then
+	elseif expected == "Vector3" or expected == "Color3" or expected == "CFrame" or expected == "UDim2" or expected == "Vector2" or expected == "NumberRange" or expected == "NumberSequence" or expected == "ColorSequence" then
 		ok = actual == expected
 	end
 	if not ok then
@@ -231,6 +257,15 @@ end
 function methods.GetPivot(self)
 	return registry[self].pivot or CFrame.new(0, 0, 0)
 end
+function methods.ScaleTo(self, scale)
+	local data = registry[self]
+	data.scale = scale
+	table.insert(data.scaleLog, scale)
+end
+function methods.GetScale(self)
+	return registry[self].scale
+end
+function methods.Emit() end
 animationLength = 1
 function methods.LoadAnimation(_, _)
 	return {
@@ -245,7 +280,7 @@ function newInstance(className)
 	if not PROPS[className] then
 		error("Instance.new: class '" .. tostring(className) .. "' is not mocked", 2)
 	end
-	local data = { className = className, name = className, children = {}, attributes = {}, props = {} }
+	local data = { className = className, name = className, children = {}, attributes = {}, props = {}, scale = 1, scaleLog = {} }
 	local obj = {}
 	registry[obj] = data
 	return setmetatable(obj, {
@@ -289,15 +324,24 @@ Instance = { new = newInstance }
 workspace = newInstance("Workspace")
 local Lighting = newInstance("Lighting")
 
+-- Fake clock: task.wait advances it, so loops that wait for time to pass finish instantly.
+local now = 0
+local realOs = os
+os = { clock = function() return now end, time = realOs.time, date = realOs.date }
+
 local spawned = {}
+local delayed = {} -- { seconds, fn }: run them from a test with mock.runDelayed()
 task = {
 	spawn = function(fn)
 		table.insert(spawned, fn)
 	end,
 	wait = function(t)
+		now += t or 0.03
 		return t or 0.03
 	end,
-	delay = function() end,
+	delay = function(seconds, fn)
+		table.insert(delayed, { seconds, fn })
+	end,
 }
 
 local Players = {
@@ -434,6 +478,7 @@ local function jsonDecode(s)
 end
 
 local subscribers = {}
+local debris = {}
 
 local services = {
 	Lighting = Lighting,
@@ -448,8 +493,20 @@ local services = {
 		end,
 	},
 	TweenService = {
-		Create = function()
-			return { Play = function() end }
+		-- Applies the goal when played, so wrong property names or types in tweens are caught too
+		Create = function(_, instance, _info, goal)
+			return {
+				Play = function()
+					for key, value in goal do
+						instance[key] = value
+					end
+				end,
+			}
+		end,
+	},
+	Debris = {
+		AddItem = function(_, instance, seconds)
+			table.insert(debris, { instance, seconds })
 		end,
 	},
 	HttpService = {
@@ -488,7 +545,24 @@ local function describe(obj)
 	return out
 end
 
+-- Runs every delayed callback (including ones queued while running) in order
+local function runDelayed()
+	local i = 1
+	while delayed[i] do
+		assert(i < 2000, "too many delayed callbacks")
+		delayed[i][2]()
+		i += 1
+	end
+	table.clear(delayed)
+end
+
 return {
+	runDelayed = runDelayed,
+	delayed = delayed,
+	debris = debris,
+	data = function(obj)
+		return registry[obj]
+	end,
 	warnings = warnings,
 	spawned = spawned,
 	subscribers = subscribers,

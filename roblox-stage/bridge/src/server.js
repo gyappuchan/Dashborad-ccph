@@ -5,6 +5,7 @@ import { dirname, join } from 'node:path';
 import { createController } from './controller.js';
 import { loadConfig, mergeConfig, saveConfig, publicConfig } from './config.js';
 import { listThemes } from './themes.js';
+import { listGifts } from './gifts.js';
 
 const HERE = dirname(fileURLToPath(import.meta.url));
 const HTML = readFileSync(join(HERE, 'ui.html'), 'utf8');
@@ -68,7 +69,7 @@ export function startServer({ port = 3939 } = {}) {
         return res.end(HTML);
       }
       if (req.method === 'GET' && url.pathname === '/api/state') {
-        return json(res, 200, { running: controller.isRunning(), config: publicConfig(config), themes: listThemes(), logs });
+        return json(res, 200, { running: controller.isRunning(), config: publicConfig(config), themes: listThemes(), gifts: listGifts(), logs });
       }
       if (req.method === 'GET' && url.pathname === '/api/events') {
         res.writeHead(200, { 'Content-Type': 'text/event-stream', 'Cache-Control': 'no-cache', Connection: 'keep-alive' });

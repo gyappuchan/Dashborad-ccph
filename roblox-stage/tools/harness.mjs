@@ -11,11 +11,12 @@ export const { reflection, types, createDom, readXml } = require('rbx-dom');
 export const here = dirname(fileURLToPath(import.meta.url));
 // STAGE_SRC lets tests point at a modified copy of the scripts
 export const serverDir = process.env.STAGE_SRC ?? join(here, '..', 'src', 'server');
+const clientDir = process.env.STAGE_CLIENT ?? join(here, '..', 'src', 'client');
 
 // Main and DevCommands need live events/players, so they are only syntax-checked, not run here.
-// [record name, file name without .luau]
-const MODULES = [['Config', 'Config'], ['Layout', 'Layout'], ['Themes', 'Themes'], ['ThemeManager', 'ThemeManager'], ['StageActor', 'StageActor'], ['GiftQueue', 'GiftQueue'], ['Effects', 'Effects'], ['StageAPI', 'StageAPI'], ['DevActions', 'DevActions'], ['Bridge', 'Bridge.server']];
-const CLASSES = ['Part', 'Folder', 'PointLight', 'SpotLight', 'Atmosphere', 'BloomEffect', 'Lighting', 'Workspace', 'Animation', 'Animator', 'BillboardGui', 'TextLabel', 'Humanoid', 'Model'];
+// [record name, file name without .luau, directory (default: server scripts)]
+const MODULES = [['Config', 'Config'], ['Layout', 'Layout'], ['Themes', 'Themes'], ['ThemeManager', 'ThemeManager'], ['StageActor', 'StageActor'], ['GiftQueue', 'GiftQueue'], ['Effects', 'Effects'], ['StageAPI', 'StageAPI'], ['GiftActions', 'GiftActions'], ['DevActions', 'DevActions'], ['Bridge', 'Bridge.server'], ['CameraRig', 'CameraRig', clientDir]];
+const CLASSES = ['Part', 'Folder', 'PointLight', 'SpotLight', 'Atmosphere', 'BloomEffect', 'Lighting', 'Workspace', 'Animation', 'Animator', 'BillboardGui', 'TextLabel', 'Humanoid', 'Model', 'ParticleEmitter', 'ColorCorrectionEffect', 'DepthOfFieldEffect'];
 
 function toLua(value) {
   if (value === null || value === undefined) return 'nil';
@@ -61,7 +62,7 @@ export async function runBody(bodyFile) {
     .replace('local ENUMS = __ENUMS__', `local ENUMS = ${toLua(enums)}`);
 
   const moduleSource = MODULES.map(
-    ([name, file]) => `records[${JSON.stringify(name)}] = { run = function(script)\n${readFileSync(join(serverDir, `${file}.luau`), 'utf8')}\nend }`,
+    ([name, file, dir]) => `records[${JSON.stringify(name)}] = { run = function(script)\n${readFileSync(join(dir ?? serverDir, `${file}.luau`), 'utf8')}\nend }`,
   ).join('\n');
 
   const chunk = `

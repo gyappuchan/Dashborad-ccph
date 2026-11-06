@@ -16,9 +16,11 @@ local function handle(raw: string)
 		return
 	end
 
+	local by = if type(data.by) == "string" and #data.by <= 50 then data.by else ""
+
 	if data.kind == "join" and type(data.username) == "string" then
 		if StageAPI.isValidUsername(data.username) then
-			StageAPI.enqueueJoin(data.username)
+			StageAPI.enqueueJoin(data.username, by)
 		end
 	elseif data.kind == "theme" then
 		if ThemeManager.exists(data.name) then
@@ -26,7 +28,6 @@ local function handle(raw: string)
 		end
 	elseif data.kind == "gift" and type(data.gift) == "string" and #data.gift <= 50 then
 		local count = math.clamp(math.floor(tonumber(data.count) or 1), 1, MAX_GIFT_REPEAT)
-		local by = if type(data.by) == "string" then data.by else ""
 		for _ = 1, count do
 			StageAPI.enqueueGift(data.gift, by)
 		end

@@ -1,6 +1,8 @@
 -- Map themes: pure data. To add a theme, copy one block and change the values.
 -- Positions in Props are offsets from the stage centre; y = 0 means "on the floor".
--- Prop kinds (see ThemeManager.luau): Pumpkin, Candle, Pillar, DeadTree, Moon, Spotlight, NeonTile, DiscoBall.
+-- Prop kinds (see ThemeManager.luau): Pumpkin, Candle, Pillar, DeadTree, Gravestone, Fence, Mist,
+-- RingLine, Moon, Spotlight, NeonTile, DiscoBall.
+-- Optional per theme: ColorCorrection = { Saturation, Contrast, TintColor }, Depth = { FarIntensity, FocusDistance, InFocusRadius, NearIntensity }.
 -- Camera positions are offsets from Config.StageOrigin.
 local V3 = Vector3.new
 local RGB = Color3.fromRGB
@@ -53,6 +55,14 @@ do
 	add(props, { kind = "DeadTree", pos = V3(32, 0, -20), scale = 1.2 })
 	add(props, { kind = "DeadTree", pos = V3(-44, 0, -6), scale = 1.1 })
 	add(props, { kind = "DeadTree", pos = V3(44, 0, -8), scale = 1 })
+	for _, g in { { -12, -11, 1.1, 0.15, -0.08 }, { -25, -1, 1.2, 0.5, 0.06 }, { 12, -12, 1, -0.2, 0.05 }, { 26, 2, 1.2, -0.4, -0.05 }, { 20, -13, 0.9, 0.1, 0.1 }, { -19, -14, 1, 0, -0.1 } } do
+		add(props, { kind = "Gravestone", pos = V3(g[1], 0, g[2]), scale = g[3], yaw = g[4], tilt = g[5] })
+	end
+	add(props, { kind = "Fence", pos = V3(-34, 0, -30), to = V3(-8, 0, -30) })
+	add(props, { kind = "Fence", pos = V3(8, 0, -30), to = V3(34, 0, -30) })
+	add(props, { kind = "Mist", pos = V3(0, 0, -4), size = V3(60, 3, 40), color = RGB(150, 110, 220), rate = 7 })
+	add(props, { kind = "RingLine", radius = 13.5, color = RGB(190, 90, 255), width = 0.3 })
+	add(props, { kind = "RingLine", radius = 19, color = RGB(255, 140, 40), width = 0.3 })
 	add(props, { kind = "Moon", pos = V3(-45, 75, -150), size = 40, color = RGB(255, 245, 200) })
 	add(props, { kind = "Spotlight", pos = V3(-16, 20, -10), aim = V3(0, 2, 0), color = RGB(170, 80, 255) })
 	add(props, { kind = "Spotlight", pos = V3(16, 20, -10), aim = V3(0, 2, 0), color = RGB(255, 140, 40) })
@@ -70,6 +80,8 @@ do
 		},
 		Atmosphere = { Density = 0.3, Offset = 0.2, Color = RGB(120, 80, 200), Decay = RGB(60, 30, 100), Glare = 0, Haze = 1 },
 		Bloom = { Intensity = 0.5, Size = 24, Threshold = 1 },
+		ColorCorrection = { Saturation = 0.2, Contrast = 0.12, TintColor = RGB(235, 225, 255) },
+		Depth = { FarIntensity = 0.3, FocusDistance = 30, InFocusRadius = 28, NearIntensity = 0 },
 		Ground = { Color = RGB(18, 14, 28), Material = Enum.Material.Slate },
 		Floor = { Radius = 22, Thickness = 2, Color = RGB(60, 25, 110), Material = Enum.Material.Marble, RingColor = RGB(200, 100, 255) },
 		Props = props,
@@ -85,6 +97,8 @@ do
 	local colors = { RGB(255, 0, 170), RGB(0, 255, 230), RGB(255, 230, 0) }
 	neonRing(props, 16, 15, colors, 3.4)
 	neonRing(props, 8, 8, colors, 2.6, math.pi / 8)
+	add(props, { kind = "RingLine", radius = 18, color = RGB(255, 0, 170), width = 0.3 })
+	add(props, { kind = "RingLine", radius = 11, color = RGB(0, 255, 230), width = 0.3 })
 	add(props, { kind = "DiscoBall", pos = V3(0, 24, -2), size = 6 })
 	add(props, { kind = "Spotlight", pos = V3(-20, 24, -12), aim = V3(0, 2, 0), color = RGB(255, 0, 170) })
 	add(props, { kind = "Spotlight", pos = V3(20, 24, -12), aim = V3(0, 2, 0), color = RGB(0, 255, 230) })
@@ -106,6 +120,8 @@ do
 		},
 		Atmosphere = { Density = 0.15, Offset = 0, Color = RGB(60, 0, 120), Decay = RGB(20, 0, 60), Glare = 0, Haze = 0.5 },
 		Bloom = { Intensity = 1.2, Size = 30, Threshold = 0.8 },
+		ColorCorrection = { Saturation = 0.3, Contrast = 0.15, TintColor = RGB(255, 245, 255) },
+		Depth = { FarIntensity = 0.2, FocusDistance = 30, InFocusRadius = 30, NearIntensity = 0 },
 		Ground = { Color = RGB(8, 6, 16), Material = Enum.Material.SmoothPlastic },
 		Floor = { Radius = 20, Thickness = 2, Color = RGB(15, 10, 30), Material = Enum.Material.SmoothPlastic, RingColor = RGB(0, 255, 230) },
 		Props = props,
@@ -120,6 +136,7 @@ do
 	local props = {}
 	add(props, { kind = "Pillar", pos = V3(-22, 0, -8), height = 12, radius = 1.2, color = RGB(235, 235, 240) })
 	add(props, { kind = "Pillar", pos = V3(22, 0, -8), height = 12, radius = 1.2, color = RGB(235, 235, 240) })
+	add(props, { kind = "RingLine", radius = 12, color = RGB(80, 160, 255), width = 0.3 })
 
 	Themes.Simple = {
 		Display = "Simple",

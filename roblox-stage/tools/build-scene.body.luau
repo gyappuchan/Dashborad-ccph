@@ -32,6 +32,22 @@ function encode(v)
 		return '{"t":"Vector3","v":' .. vec(v) .. "}"
 	elseif kind == "Color3" then
 		return '{"t":"Color3","v":[' .. number(v.R) .. "," .. number(v.G) .. "," .. number(v.B) .. "]}"
+	elseif kind == "Vector2" then
+		return '{"t":"Vector2","v":[' .. number(v.X) .. "," .. number(v.Y) .. "]}"
+	elseif kind == "NumberRange" then
+		return '{"t":"NumberRange","v":[' .. number(v.Min) .. "," .. number(v.Max) .. "]}"
+	elseif kind == "NumberSequence" then
+		local keys = {}
+		for _, k in v.Keypoints do
+			table.insert(keys, "[" .. number(k[1]) .. "," .. number(k[2]) .. "]")
+		end
+		return '{"t":"NumberSequence","k":[' .. table.concat(keys, ",") .. "]}"
+	elseif kind == "ColorSequence" then
+		local keys = {}
+		for _, k in v.Keypoints do
+			table.insert(keys, "[" .. number(k[1]) .. ",[" .. number(k[2].R) .. "," .. number(k[2].G) .. "," .. number(k[2].B) .. "]]")
+		end
+		return '{"t":"ColorSequence","k":[' .. table.concat(keys, ",") .. "]}"
 	elseif kind == "CFrame" then
 		return '{"t":"CFrame","p":' .. vec(v.Position) .. ',"r":' .. vec(v.RightVector) .. ',"u":' .. vec(v.UpVector) .. ',"b":' .. vec(v.BackVector) .. "}"
 	elseif kind == "table" then

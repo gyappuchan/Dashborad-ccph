@@ -12,15 +12,27 @@ return {
 	-- Messages from the Node.js bridge arrive on this topic (must match ROBLOX_TOPIC in bridge/.env)
 	MessagingTopic = "TikTokStage",
 
-	-- Gift -> effect mapping (placeholder)
-	-- Effect must match a key in Effects.luau. Action "Effect" plays a visual,
-	-- "Stay" adds stay time to the newest avatar on stage.
+	-- Gift -> action. Gift names are PLACEHOLDERS: rename them to the real TikTok gift names.
+	-- Action (see GiftActions.luau):
+	--   Hearts     floating hearts over the newest dancer
+	--   Spotlight  a spotlight on the newest dancer        (Seconds)
+	--   Giant      the newest dancer grows                 (Seconds, Scale)
+	--   Fireworks  fireworks over the whole stage
+	--   ThemeSwap  switch the map theme for a while        (Theme, Seconds)
+	--   QueueJump  the sender's join goes to the front of the queue
+	-- Or use Effect = "Confetti" | "Fire" | "Stars" for a plain particle burst.
+	-- Stay = extra seconds added to the newest dancer's time on stage.
 	Gifts = {
-		Rose = { Effect = "Confetti", Stay = 0 },
-		Lion = { Effect = "Fire", Stay = 5 },
-		Galaxy = { Effect = "Stars", Stay = 10 },
+		Rose = { Action = "Hearts", Stay = 0 }, -- small
+		TikTok = { Action = "Spotlight", Seconds = 6, Stay = 0 }, -- small
+		Lion = { Action = "Giant", Seconds = 8, Scale = 2, Stay = 5 }, -- medium
+		Galaxy = { Action = "Fireworks", Stay = 10 }, -- large
+		Universe = { Action = "ThemeSwap", Theme = "DiscoNeon", Seconds = 30, Stay = 0 }, -- large
+		Interstellar = { Action = "QueueJump", Stay = 0 }, -- large
 	},
 	DefaultGift = { Effect = "Confetti", Stay = 0 },
+	MaxActiveEffects = 3, -- gifts wait in the queue while this many effects are still playing
+	PriorityWindow = 120, -- seconds a QueueJump gift stays valid if the sender has not joined yet
 
 	-- Stage layout. StageOrigin is where the middle avatar's root part stands:
 	-- an R15 avatar's feet are about 3 studs lower, so the floor top is StageOrigin.Y - 3.

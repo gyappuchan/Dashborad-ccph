@@ -12,7 +12,7 @@ function DevActions.run(action: any, arg: any, extra: any): string
 		if not StageAPI.isValidUsername(arg) then
 			return "invalid username"
 		end
-		return if StageAPI.enqueueJoin(arg) then "join queued" else "not queued (queue full or already waiting)"
+		return if StageAPI.enqueueJoin(arg, "dev") then "join queued" else "not queued (queue full or already waiting)"
 	elseif action == "gift" then
 		if type(arg) ~= "string" or #arg == 0 or #arg > 50 then
 			return "invalid gift"
@@ -27,6 +27,16 @@ function DevActions.run(action: any, arg: any, extra: any): string
 		return "theme: " .. (arg :: string)
 	end
 	return "unknown action"
+end
+
+-- "Name|Action" labels for the panel's buttons, sorted by name.
+function DevActions.giftLabels(): { string }
+	local labels = {}
+	for _, name in DevActions.giftNames() do
+		local rule = Config.Gifts[name]
+		table.insert(labels, name .. "|" .. (rule.Action or rule.Effect or "-"))
+	end
+	return labels
 end
 
 -- Gift names from Config.Gifts, sorted (used to build the panel's buttons).

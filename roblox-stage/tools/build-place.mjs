@@ -16,6 +16,14 @@ function convert(className, prop, value) {
   if (value && typeof value === 'object') {
     if (value.t === 'Vector3') return t.taggedVariant('Vector3', t.vector3(...value.v));
     if (value.t === 'Color3') return t.taggedVariant('Color3', t.color3(...value.v));
+    if (value.t === 'Vector2') return t.taggedVariant('Vector2', t.vector2(...value.v));
+    if (value.t === 'NumberRange') return t.taggedVariant('NumberRange', t.numberRange(...value.v));
+    if (value.t === 'NumberSequence') {
+      return t.taggedVariant('NumberSequence', t.numberSequence(value.k.map(([time, v]) => t.numberSequenceKeypoint(time, v, 0))));
+    }
+    if (value.t === 'ColorSequence') {
+      return t.taggedVariant('ColorSequence', t.colorSequence(value.k.map(([time, c]) => t.colorSequenceKeypoint(time, t.color3(...c)))));
+    }
     if (value.t === 'CFrame') {
       // rbx-dom takes the rows of the rotation matrix; ours are the Right/Up/Back columns
       const [r, u, b] = [value.r, value.u, value.b];
@@ -62,6 +70,8 @@ function scriptSpecs(dir) {
 const scene = JSON.parse(await runBody('build-scene.body.luau'));
 const stageMap = toSpec(scene.map);
 const lighting = toSpec(scene.lighting);
+// Future lighting (real shadows from lights) can only be chosen in the place file, not from a script
+lighting.properties.Technology = t.taggedVariant('Enum', t.enumValue(reflection.enumItems('Technology').Future));
 
 const place = {
   className: 'DataModel',

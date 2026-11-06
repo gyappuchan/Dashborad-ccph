@@ -4,6 +4,7 @@ local StageAPI = require(script.Parent.StageAPI)
 local StageActor = require(script.Parent.StageActor)
 local Effects = require(script.Parent.Effects)
 local ThemeManager = require(script.Parent.ThemeManager)
+local GiftActions = require(script.Parent.GiftActions)
 
 local queue = StageAPI.getQueue()
 local onStage: { Model } = {}
@@ -60,10 +61,13 @@ end
 
 local function handleGift(item)
 	local rule = Config.Gifts[item.gift] or Config.DefaultGift
+	if rule.Action and GiftActions.busy() then
+		return false -- too many effects playing: keep the gift in the queue until one finishes
+	end
 	cleanupStage()
 	local target = onStage[#onStage]
 	local pos = target and target:GetPivot().Position or Config.StageOrigin
-	Effects.Play(rule.Effect, pos)
+	GiftActions.run(rule, { target = target, position = pos, onStage = onStage, sender = item.sender or "" })
 	if target and rule.Stay > 0 then
 		local current = math.max(0, (target:GetAttribute("LeaveAt") or os.clock()) - os.clock())
 		local extra = math.min(current + rule.Stay + Config.GiftStayBonus, Config.MaxStayTime)
