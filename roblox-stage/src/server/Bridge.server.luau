@@ -4,6 +4,7 @@ local MessagingService = game:GetService("MessagingService")
 local HttpService = game:GetService("HttpService")
 local Config = require(script.Parent.Config)
 local StageAPI = require(script.Parent.StageAPI)
+local ThemeManager = require(script.Parent.ThemeManager)
 
 local MAX_GIFT_REPEAT = 5
 
@@ -16,9 +17,12 @@ local function handle(raw: string)
 	end
 
 	if data.kind == "join" and type(data.username) == "string" then
-		-- Roblox usernames: 3-20 chars, letters/digits/underscore only
-		if data.username:match("^[%w_]+$") and #data.username >= 3 and #data.username <= 20 then
+		if StageAPI.isValidUsername(data.username) then
 			StageAPI.enqueueJoin(data.username)
+		end
+	elseif data.kind == "theme" then
+		if ThemeManager.exists(data.name) then
+			ThemeManager.apply(data.name)
 		end
 	elseif data.kind == "gift" and type(data.gift) == "string" and #data.gift <= 50 then
 		local count = math.clamp(math.floor(tonumber(data.count) or 1), 1, MAX_GIFT_REPEAT)

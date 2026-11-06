@@ -1,0 +1,2 @@
+# The repo root ignores build/; the generated game file is the deliverable, so keep it tracked.
+!build/

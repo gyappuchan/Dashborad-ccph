@@ -2,6 +2,7 @@ import { TikTokLiveConnection, WebcastEvent, ControlEvent } from 'tiktok-live-co
 import { createBridge } from './bridge.js';
 import { Cooldown, Sender } from './limits.js';
 import { createPublisher, createUsernameChecker } from './roblox.js';
+import { listThemes } from './themes.js';
 
 /** Owns the TikTok connection. Used by both the CLI and the local web app. */
 export function createController({ log = console.log } = {}) {
@@ -82,5 +83,13 @@ export function createController({ log = console.log } = {}) {
     log(`ส่งทดสอบ ${test.kind} แล้ว`);
   }
 
-  return { start, stop, sendTest, isRunning: () => connection !== null };
+  /** Ask the game to switch the map theme (works while the stream is running). */
+  async function sendTheme(cfg, name) {
+    validate(cfg, { needTikTok: false });
+    if (!listThemes().includes(name)) throw new Error(`ไม่มีธีมชื่อ "${name}"`);
+    await makePublish(cfg)({ kind: 'theme', name });
+    log(`ส่งคำสั่งเปลี่ยนธีมเป็น ${name} แล้ว`);
+  }
+
+  return { start, stop, sendTest, sendTheme, isRunning: () => connection !== null };
 }

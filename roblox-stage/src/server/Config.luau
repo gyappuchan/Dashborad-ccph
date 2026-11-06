@@ -22,7 +22,20 @@ return {
 	},
 	DefaultGift = { Effect = "Confetti", Stay = 0 },
 
-	-- Spawn positions for stage slots (edit to match your place)
+	-- Stage layout. StageOrigin is where the middle avatar's root part stands:
+	-- an R15 avatar's feet are about 3 studs lower, so the floor top is StageOrigin.Y - 3.
 	StageOrigin = Vector3.new(0, 5, 0),
 	SlotSpacing = 8,
+	FaceDirection = Vector3.new(0, 0, 1), -- avatars face this way (towards the stream camera)
+
+	-- Map theme applied at game start. Names live in Themes.luau; switch live with /theme <name>.
+	Theme = "Halloween",
+
+	-- Dance animations for R15 avatars (a random one per avatar). These are Roblox's standard
+	-- emote animations; if one fails to load the avatar falls back to a simple bob.
+	DanceAnimations = {
+		"rbxassetid://507771019",
+		"rbxassetid://507776043",
+		"rbxassetid://507777268",
+	},
 }

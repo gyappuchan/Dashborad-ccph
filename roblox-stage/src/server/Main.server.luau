@@ -3,6 +3,7 @@ local Config = require(script.Parent.Config)
 local StageAPI = require(script.Parent.StageAPI)
 local StageActor = require(script.Parent.StageActor)
 local Effects = require(script.Parent.Effects)
+local ThemeManager = require(script.Parent.ThemeManager)
 
 local queue = StageAPI.getQueue()
 local onStage: { Model } = {}
@@ -66,6 +67,8 @@ local function handleGift(item)
 	end
 	return true
 end
+
+ThemeManager.apply(Config.Theme)
 
 task.spawn(function()
 	while true do

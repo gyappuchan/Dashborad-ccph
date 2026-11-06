@@ -4,6 +4,7 @@ import { fileURLToPath } from 'node:url';
 import { dirname, join } from 'node:path';
 import { createController } from './controller.js';
 import { loadConfig, mergeConfig, saveConfig, publicConfig } from './config.js';
+import { listThemes } from './themes.js';
 
 const HERE = dirname(fileURLToPath(import.meta.url));
 const HTML = readFileSync(join(HERE, 'ui.html'), 'utf8');
@@ -67,7 +68,7 @@ export function startServer({ port = 3939 } = {}) {
         return res.end(HTML);
       }
       if (req.method === 'GET' && url.pathname === '/api/state') {
-        return json(res, 200, { running: controller.isRunning(), config: publicConfig(config), logs });
+        return json(res, 200, { running: controller.isRunning(), config: publicConfig(config), themes: listThemes(), logs });
       }
       if (req.method === 'GET' && url.pathname === '/api/events') {
         res.writeHead(200, { 'Content-Type': 'text/event-stream', 'Cache-Control': 'no-cache', Connection: 'keep-alive' });
@@ -93,6 +94,10 @@ export function startServer({ port = 3939 } = {}) {
         if (url.pathname === '/api/stop') {
           controller.stop();
           return json(res, 200, { running: false });
+        }
+        if (url.pathname === '/api/theme') {
+          await controller.sendTheme(config, String(body.name ?? ''));
+          return json(res, 200, { ok: true });
         }
         if (url.pathname === '/api/test') {
           await controller.sendTest(config, body);

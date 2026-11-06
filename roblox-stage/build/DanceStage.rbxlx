@@ -1,0 +1,4453 @@
+<roblox version="4">
+  <Item class="Workspace" referent="0">
+    <Properties>
+      <string name="Name">Workspace</string>
+    </Properties>
+    <Item class="Folder" referent="1">
+      <Properties>
+        <string name="Name">StageMap</string>
+      </Properties>
+      <Item class="Part" referent="2">
+        <Properties>
+          <string name="Name">Ground</string>
+          <bool name="Anchored">true</bool>
+          <token name="BottomSurface">0</token>
+          <CoordinateFrame name="CFrame">
+            <X>0</X>
+            <Y>-0.5</Y>
+            <Z>0</Z>
+            <R00>1</R00>
+            <R01>0</R01>
+            <R02>0</R02>
+            <R10>0</R10>
+            <R11>1</R11>
+            <R12>0</R12>
+            <R20>0</R20>
+            <R21>0</R21>
+            <R22>1</R22>
+          </CoordinateFrame>
+          <bool name="CanCollide">true</bool>
+          <bool name="CanTouch">false</bool>
+          <Color3uint8 name="Color3uint8">1183260</Color3uint8>
+          <token name="Material">800</token>
+          <Vector3 name="size">
+            <X>500</X>
+            <Y>1</Y>
+            <Z>500</Z>
+          </Vector3>
+          <token name="TopSurface">0</token>
+        </Properties>
+      </Item>
+      <Item class="Part" referent="3">
+        <Properties>
+          <string name="Name">Floor</string>
+          <bool name="Anchored">true</bool>
+          <token name="BottomSurface">0</token>
+          <CoordinateFrame name="CFrame">
+            <X>0</X>
+            <Y>1</Y>
+            <Z>0</Z>
+            <R00>0.00000000000000006123234</R00>
+            <R01>-1</R01>
+            <R02>0</R02>
+            <R10>1</R10>
+            <R11>0.00000000000000006123234</R11>
+            <R12>0</R12>
+            <R20>0</R20>
+            <R21>0</R21>
+            <R22>1</R22>
+          </CoordinateFrame>
+          <bool name="CanCollide">true</bool>
+          <bool name="CanTouch">false</bool>
+          <Color3uint8 name="Color3uint8">3938670</Color3uint8>
+          <token name="Material">784</token>
+          <token name="shape">2</token>
+          <Vector3 name="size">
+            <X>2</X>
+            <Y>44</Y>
+            <Z>44</Z>
+          </Vector3>
+          <token name="TopSurface">0</token>
+        </Properties>
+      </Item>
+      <Item class="Part" referent="4">
+        <Properties>
+          <string name="Name">FloorRim</string>
+          <bool name="Anchored">true</bool>
+          <token name="BottomSurface">0</token>
+          <CoordinateFrame name="CFrame">
+            <X>0</X>
+            <Y>1.75</Y>
+            <Z>0</Z>
+            <R00>0.00000000000000006123234</R00>
+            <R01>-1</R01>
+            <R02>0</R02>
+            <R10>1</R10>
+            <R11>0.00000000000000006123234</R11>
+            <R12>0</R12>
+            <R20>0</R20>
+            <R21>0</R21>
+            <R22>1</R22>
+          </CoordinateFrame>
+          <bool name="CanCollide">false</bool>
+          <bool name="CanTouch">false</bool>
+          <Color3uint8 name="Color3uint8">13133055</Color3uint8>
+          <token name="Material">288</token>
+          <token name="shape">2</token>
+          <Vector3 name="size">
+            <X>0.4</X>
+            <Y>45.2</Y>
+            <Z>45.2</Z>
+          </Vector3>
+          <token name="TopSurface">0</token>
+        </Properties>
+      </Item>
+      <Item class="Part" referent="5">
+        <Properties>
+          <string name="Name">SlotMarker1</string>
+          <bool name="Anchored">true</bool>
+          <token name="BottomSurface">0</token>
+          <CoordinateFrame name="CFrame">
+            <X>-8</X>
+            <Y>2.05</Y>
+            <Z>0</Z>
+            <R00>0.00000000000000006123234</R00>
+            <R01>-1</R01>
+            <R02>0</R02>
+            <R10>1</R10>
+            <R11>0.00000000000000006123234</R11>
+            <R12>0</R12>
+            <R20>0</R20>
+            <R21>0</R21>
+            <R22>1</R22>
+          </CoordinateFrame>
+          <bool name="CanCollide">false</bool>
+          <bool name="CanTouch">false</bool>
+          <Color3uint8 name="Color3uint8">13133055</Color3uint8>
+          <token name="Material">288</token>
+          <token name="shape">2</token>
+          <Vector3 name="size">
+            <X>0.1</X>
+            <Y>5</Y>
+            <Z>5</Z>
+          </Vector3>
+          <token name="TopSurface">0</token>
+          <float name="Transparency">0.4</float>
+        </Properties>
+      </Item>
+      <Item class="Part" referent="6">
+        <Properties>
+          <string name="Name">SlotMarker2</string>
+          <bool name="Anchored">true</bool>
+          <token name="BottomSurface">0</token>
+          <CoordinateFrame name="CFrame">
+            <X>0</X>
+            <Y>2.05</Y>
+            <Z>0</Z>
+            <R00>0.00000000000000006123234</R00>
+            <R01>-1</R01>
+            <R02>0</R02>
+            <R10>1</R10>
+            <R11>0.00000000000000006123234</R11>
+            <R12>0</R12>
+            <R20>0</R20>
+            <R21>0</R21>
+            <R22>1</R22>
+          </CoordinateFrame>
+          <bool name="CanCollide">false</bool>
+          <bool name="CanTouch">false</bool>
+          <Color3uint8 name="Color3uint8">13133055</Color3uint8>
+          <token name="Material">288</token>
+          <token name="shape">2</token>
+          <Vector3 name="size">
+            <X>0.1</X>
+            <Y>5</Y>
+            <Z>5</Z>
+          </Vector3>
+          <token name="TopSurface">0</token>
+          <float name="Transparency">0.4</float>
+        </Properties>
+      </Item>
+      <Item class="Part" referent="7">
+        <Properties>
+          <string name="Name">SlotMarker3</string>
+          <bool name="Anchored">true</bool>
+          <token name="BottomSurface">0</token>
+          <CoordinateFrame name="CFrame">
+            <X>8</X>
+            <Y>2.05</Y>
+            <Z>0</Z>
+            <R00>0.00000000000000006123234</R00>
+            <R01>-1</R01>
+            <R02>0</R02>
+            <R10>1</R10>
+            <R11>0.00000000000000006123234</R11>
+            <R12>0</R12>
+            <R20>0</R20>
+            <R21>0</R21>
+            <R22>1</R22>
+          </CoordinateFrame>
+          <bool name="CanCollide">false</bool>
+          <bool name="CanTouch">false</bool>
+          <Color3uint8 name="Color3uint8">13133055</Color3uint8>
+          <token name="Material">288</token>
+          <token name="shape">2</token>
+          <Vector3 name="size">
+            <X>0.1</X>
+            <Y>5</Y>
+            <Z>5</Z>
+          </Vector3>
+          <token name="TopSurface">0</token>
+          <float name="Transparency">0.4</float>
+        </Properties>
+      </Item>
+      <Item class="Part" referent="8">
+        <Properties>
+          <string name="Name">Pumpkin</string>
+          <bool name="Anchored">true</bool>
+          <token name="BottomSurface">0</token>
+          <CoordinateFrame name="CFrame">
+            <X>-17</X>
+            <Y>4.6</Y>
+            <Z>-3</Z>
+            <R00>1</R00>
+            <R01>0</R01>
+            <R02>0</R02>
+            <R10>0</R10>
+            <R11>1</R11>
+            <R12>0</R12>
+            <R20>0</R20>
+            <R21>0</R21>
+            <R22>1</R22>
+          </CoordinateFrame>
+          <bool name="CanCollide">false</bool>
+          <bool name="CanTouch">false</bool>
+          <Color3uint8 name="Color3uint8">15756820</Color3uint8>
+          <token name="Material">272</token>
+          <token name="shape">0</token>
+          <Vector3 name="size">
+            <X>5.2</X>
+            <Y>5.2</Y>
+            <Z>5.2</Z>
+          </Vector3>
+          <token name="TopSurface">0</token>
+        </Properties>
+      </Item>
+      <Item class="Part" referent="9">
+        <Properties>
+          <string name="Name">Stem</string>
+          <bool name="Anchored">true</bool>
+          <token name="BottomSurface">0</token>
+          <CoordinateFrame name="CFrame">
+            <X>-17</X>
+            <Y>7.33</Y>
+            <Z>-3</Z>
+            <R00>1</R00>
+            <R01>0</R01>
+            <R02>0</R02>
+            <R10>0</R10>
+            <R11>1</R11>
+            <R12>0</R12>
+            <R20>0</R20>
+            <R21>0</R21>
+            <R22>1</R22>
+          </CoordinateFrame>
+          <bool name="CanCollide">false</bool>
+          <bool name="CanTouch">false</bool>
+          <Color3uint8 name="Color3uint8">4599060</Color3uint8>
+          <token name="Material">512</token>
+          <Vector3 name="size">
+            <X>0.65</X>
+            <Y>1.3</Y>
+            <Z>0.65</Z>
+          </Vector3>
+          <token name="TopSurface">0</token>
+        </Properties>
+      </Item>
+      <Item class="Part" referent="10">
+        <Properties>
+          <string name="Name">Eye</string>
+          <bool name="Anchored">true</bool>
+          <token name="BottomSurface">0</token>
+          <CoordinateFrame name="CFrame">
+            <X>-18.04</X>
+            <Y>5.25</Y>
+            <Z>-0.712</Z>
+            <R00>1</R00>
+            <R01>0</R01>
+            <R02>0</R02>
+            <R10>0</R10>
+            <R11>1</R11>
+            <R12>0</R12>
+            <R20>0</R20>
+            <R21>0</R21>
+            <R22>1</R22>
+          </CoordinateFrame>
+          <bool name="CanCollide">false</bool>
+          <bool name="CanTouch">false</bool>
+          <Color3uint8 name="Color3uint8">16762940</Color3uint8>
+          <token name="Material">288</token>
+          <Vector3 name="size">
+            <X>0.78</X>
+            <Y>0.78</Y>
+            <Z>0.52</Z>
+          </Vector3>
+          <token name="TopSurface">0</token>
+        </Properties>
+      </Item>
+      <Item class="Part" referent="11">
+        <Properties>
+          <string name="Name">Eye</string>
+          <bool name="Anchored">true</bool>
+          <token name="BottomSurface">0</token>
+          <CoordinateFrame name="CFrame">
+            <X>-15.96</X>
+            <Y>5.25</Y>
+            <Z>-0.712</Z>
+            <R00>1</R00>
+            <R01>0</R01>
+            <R02>0</R02>
+            <R10>0</R10>
+            <R11>1</R11>
+            <R12>0</R12>
+            <R20>0</R20>
+            <R21>0</R21>
+            <R22>1</R22>
+          </CoordinateFrame>
+          <bool name="CanCollide">false</bool>
+          <bool name="CanTouch">false</bool>
+          <Color3uint8 name="Color3uint8">16762940</Color3uint8>
+          <token name="Material">288</token>
+          <Vector3 name="size">
+            <X>0.78</X>
+            <Y>0.78</Y>
+            <Z>0.52</Z>
+          </Vector3>
+          <token name="TopSurface">0</token>
+        </Properties>
+      </Item>
+      <Item class="Part" referent="12">
+        <Properties>
+          <string name="Name">Mouth</string>
+          <bool name="Anchored">true</bool>
+          <token name="BottomSurface">0</token>
+          <CoordinateFrame name="CFrame">
+            <X>-17</X>
+            <Y>3.69</Y>
+            <Z>-0.569</Z>
+            <R00>1</R00>
+            <R01>0</R01>
+            <R02>0</R02>
+            <R10>0</R10>
+            <R11>1</R11>
+            <R12>0</R12>
+            <R20>0</R20>
+            <R21>0</R21>
+            <R22>1</R22>
+          </CoordinateFrame>
+          <bool name="CanCollide">false</bool>
+          <bool name="CanTouch">false</bool>
+          <Color3uint8 name="Color3uint8">16762940</Color3uint8>
+          <token name="Material">288</token>
+          <Vector3 name="size">
+            <X>2.08</X>
+            <Y>0.52</Y>
+            <Z>0.52</Z>
+          </Vector3>
+          <token name="TopSurface">0</token>
+        </Properties>
+        <Item class="PointLight" referent="13">
+          <Properties>
+            <string name="Name">PointLight</string>
+            <float name="Brightness">2</float>
+            <Color3 name="Color">
+              <R>1</R>
+              <G>0.5882353</G>
+              <B>0.19607843</B>
+            </Color3>
+            <float name="Range">15.6</float>
+            <bool name="Shadows">false</bool>
+          </Properties>
+        </Item>
+      </Item>
+      <Item class="Part" referent="14">
+        <Properties>
+          <string name="Name">Pumpkin</string>
+          <bool name="Anchored">true</bool>
+          <token name="BottomSurface">0</token>
+          <CoordinateFrame name="CFrame">
+            <X>-20.5</X>
+            <Y>4</Y>
+            <Z>0</Z>
+            <R00>1</R00>
+            <R01>0</R01>
+            <R02>0</R02>
+            <R10>0</R10>
+            <R11>1</R11>
+            <R12>0</R12>
+            <R20>0</R20>
+            <R21>0</R21>
+            <R22>1</R22>
+          </CoordinateFrame>
+          <bool name="CanCollide">false</bool>
+          <bool name="CanTouch">false</bool>
+          <Color3uint8 name="Color3uint8">15756820</Color3uint8>
+          <token name="Material">272</token>
+          <token name="shape">0</token>
+          <Vector3 name="size">
+            <X>4</X>
+            <Y>4</Y>
+            <Z>4</Z>
+          </Vector3>
+          <token name="TopSurface">0</token>
+        </Properties>
+      </Item>
+      <Item class="Part" referent="15">
+        <Properties>
+          <string name="Name">Stem</string>
+          <bool name="Anchored">true</bool>
+          <token name="BottomSurface">0</token>
+          <CoordinateFrame name="CFrame">
+            <X>-20.5</X>
+            <Y>6.1</Y>
+            <Z>0</Z>
+            <R00>1</R00>
+            <R01>0</R01>
+            <R02>0</R02>
+            <R10>0</R10>
+            <R11>1</R11>
+            <R12>0</R12>
+            <R20>0</R20>
+            <R21>0</R21>
+            <R22>1</R22>
+          </CoordinateFrame>
+          <bool name="CanCollide">false</bool>
+          <bool name="CanTouch">false</bool>
+          <Color3uint8 name="Color3uint8">4599060</Color3uint8>
+          <token name="Material">512</token>
+          <Vector3 name="size">
+            <X>0.5</X>
+            <Y>1</Y>
+            <Z>0.5</Z>
+          </Vector3>
+          <token name="TopSurface">0</token>
+        </Properties>
+      </Item>
+      <Item class="Part" referent="16">
+        <Properties>
+          <string name="Name">Eye</string>
+          <bool name="Anchored">true</bool>
+          <token name="BottomSurface">0</token>
+          <CoordinateFrame name="CFrame">
+            <X>-21.3</X>
+            <Y>4.5</Y>
+            <Z>1.76</Z>
+            <R00>1</R00>
+            <R01>0</R01>
+            <R02>0</R02>
+            <R10>0</R10>
+            <R11>1</R11>
+            <R12>0</R12>
+            <R20>0</R20>
+            <R21>0</R21>
+            <R22>1</R22>
+          </CoordinateFrame>
+          <bool name="CanCollide">false</bool>
+          <bool name="CanTouch">false</bool>
+          <Color3uint8 name="Color3uint8">16762940</Color3uint8>
+          <token name="Material">288</token>
+          <Vector3 name="size">
+            <X>0.6</X>
+            <Y>0.6</Y>
+            <Z>0.4</Z>
+          </Vector3>
+          <token name="TopSurface">0</token>
+        </Properties>
+      </Item>
+      <Item class="Part" referent="17">
+        <Properties>
+          <string name="Name">Eye</string>
+          <bool name="Anchored">true</bool>
+          <token name="BottomSurface">0</token>
+          <CoordinateFrame name="CFrame">
+            <X>-19.7</X>
+            <Y>4.5</Y>
+            <Z>1.76</Z>
+            <R00>1</R00>
+            <R01>0</R01>
+            <R02>0</R02>
+            <R10>0</R10>
+            <R11>1</R11>
+            <R12>0</R12>
+            <R20>0</R20>
+            <R21>0</R21>
+            <R22>1</R22>
+          </CoordinateFrame>
+          <bool name="CanCollide">false</bool>
+          <bool name="CanTouch">false</bool>
+          <Color3uint8 name="Color3uint8">16762940</Color3uint8>
+          <token name="Material">288</token>
+          <Vector3 name="size">
+            <X>0.6</X>
+            <Y>0.6</Y>
+            <Z>0.4</Z>
+          </Vector3>
+          <token name="TopSurface">0</token>
+        </Properties>
+      </Item>
+      <Item class="Part" referent="18">
+        <Properties>
+          <string name="Name">Mouth</string>
+          <bool name="Anchored">true</bool>
+          <token name="BottomSurface">0</token>
+          <CoordinateFrame name="CFrame">
+            <X>-20.5</X>
+            <Y>3.3</Y>
+            <Z>1.87</Z>
+            <R00>1</R00>
+            <R01>0</R01>
+            <R02>0</R02>
+            <R10>0</R10>
+            <R11>1</R11>
+            <R12>0</R12>
+            <R20>0</R20>
+            <R21>0</R21>
+            <R22>1</R22>
+          </CoordinateFrame>
+          <bool name="CanCollide">false</bool>
+          <bool name="CanTouch">false</bool>
+          <Color3uint8 name="Color3uint8">16762940</Color3uint8>
+          <token name="Material">288</token>
+          <Vector3 name="size">
+            <X>1.6</X>
+            <Y>0.4</Y>
+            <Z>0.4</Z>
+          </Vector3>
+          <token name="TopSurface">0</token>
+        </Properties>
+        <Item class="PointLight" referent="19">
+          <Properties>
+            <string name="Name">PointLight</string>
+            <float name="Brightness">2</float>
+            <Color3 name="Color">
+              <R>1</R>
+              <G>0.5882353</G>
+              <B>0.19607843</B>
+            </Color3>
+            <float name="Range">12</float>
+            <bool name="Shadows">false</bool>
+          </Properties>
+        </Item>
+      </Item>
+      <Item class="Part" referent="20">
+        <Properties>
+          <string name="Name">Pumpkin</string>
+          <bool name="Anchored">true</bool>
+          <token name="BottomSurface">0</token>
+          <CoordinateFrame name="CFrame">
+            <X>-18.5</X>
+            <Y>4.2</Y>
+            <Z>-7</Z>
+            <R00>1</R00>
+            <R01>0</R01>
+            <R02>0</R02>
+            <R10>0</R10>
+            <R11>1</R11>
+            <R12>0</R12>
+            <R20>0</R20>
+            <R21>0</R21>
+            <R22>1</R22>
+          </CoordinateFrame>
+          <bool name="CanCollide">false</bool>
+          <bool name="CanTouch">false</bool>
+          <Color3uint8 name="Color3uint8">15756820</Color3uint8>
+          <token name="Material">272</token>
+          <token name="shape">0</token>
+          <Vector3 name="size">
+            <X>4.4</X>
+            <Y>4.4</Y>
+            <Z>4.4</Z>
+          </Vector3>
+          <token name="TopSurface">0</token>
+        </Properties>
+      </Item>
+      <Item class="Part" referent="21">
+        <Properties>
+          <string name="Name">Stem</string>
+          <bool name="Anchored">true</bool>
+          <token name="BottomSurface">0</token>
+          <CoordinateFrame name="CFrame">
+            <X>-18.5</X>
+            <Y>6.51</Y>
+            <Z>-7</Z>
+            <R00>1</R00>
+            <R01>0</R01>
+            <R02>0</R02>
+            <R10>0</R10>
+            <R11>1</R11>
+            <R12>0</R12>
+            <R20>0</R20>
+            <R21>0</R21>
+            <R22>1</R22>
+          </CoordinateFrame>
+          <bool name="CanCollide">false</bool>
+          <bool name="CanTouch">false</bool>
+          <Color3uint8 name="Color3uint8">4599060</Color3uint8>
+          <token name="Material">512</token>
+          <Vector3 name="size">
+            <X>0.55</X>
+            <Y>1.1</Y>
+            <Z>0.55</Z>
+          </Vector3>
+          <token name="TopSurface">0</token>
+        </Properties>
+      </Item>
+      <Item class="Part" referent="22">
+        <Properties>
+          <string name="Name">Eye</string>
+          <bool name="Anchored">true</bool>
+          <token name="BottomSurface">0</token>
+          <CoordinateFrame name="CFrame">
+            <X>-19.38</X>
+            <Y>4.75</Y>
+            <Z>-5.064</Z>
+            <R00>1</R00>
+            <R01>0</R01>
+            <R02>0</R02>
+            <R10>0</R10>
+            <R11>1</R11>
+            <R12>0</R12>
+            <R20>0</R20>
+            <R21>0</R21>
+            <R22>1</R22>
+          </CoordinateFrame>
+          <bool name="CanCollide">false</bool>
+          <bool name="CanTouch">false</bool>
+          <Color3uint8 name="Color3uint8">16762940</Color3uint8>
+          <token name="Material">288</token>
+          <Vector3 name="size">
+            <X>0.66</X>
+            <Y>0.66</Y>
+            <Z>0.44</Z>
+          </Vector3>
+          <token name="TopSurface">0</token>
+        </Properties>
+      </Item>
+      <Item class="Part" referent="23">
+        <Properties>
+          <string name="Name">Eye</string>
+          <bool name="Anchored">true</bool>
+          <token name="BottomSurface">0</token>
+          <CoordinateFrame name="CFrame">
+            <X>-17.62</X>
+            <Y>4.75</Y>
+            <Z>-5.064</Z>
+            <R00>1</R00>
+            <R01>0</R01>
+            <R02>0</R02>
+            <R10>0</R10>
+            <R11>1</R11>
+            <R12>0</R12>
+            <R20>0</R20>
+            <R21>0</R21>
+            <R22>1</R22>
+          </CoordinateFrame>
+          <bool name="CanCollide">false</bool>
+          <bool name="CanTouch">false</bool>
+          <Color3uint8 name="Color3uint8">16762940</Color3uint8>
+          <token name="Material">288</token>
+          <Vector3 name="size">
+            <X>0.66</X>
+            <Y>0.66</Y>
+            <Z>0.44</Z>
+          </Vector3>
+          <token name="TopSurface">0</token>
+        </Properties>
+      </Item>
+      <Item class="Part" referent="24">
+        <Properties>
+          <string name="Name">Mouth</string>
+          <bool name="Anchored">true</bool>
+          <token name="BottomSurface">0</token>
+          <CoordinateFrame name="CFrame">
+            <X>-18.5</X>
+            <Y>3.43</Y>
+            <Z>-4.943</Z>
+            <R00>1</R00>
+            <R01>0</R01>
+            <R02>0</R02>
+            <R10>0</R10>
+            <R11>1</R11>
+            <R12>0</R12>
+            <R20>0</R20>
+            <R21>0</R21>
+            <R22>1</R22>
+          </CoordinateFrame>
+          <bool name="CanCollide">false</bool>
+          <bool name="CanTouch">false</bool>
+          <Color3uint8 name="Color3uint8">16762940</Color3uint8>
+          <token name="Material">288</token>
+          <Vector3 name="size">
+            <X>1.76</X>
+            <Y>0.44</Y>
+            <Z>0.44</Z>
+          </Vector3>
+          <token name="TopSurface">0</token>
+        </Properties>
+        <Item class="PointLight" referent="25">
+          <Properties>
+            <string name="Name">PointLight</string>
+            <float name="Brightness">2</float>
+            <Color3 name="Color">
+              <R>1</R>
+              <G>0.5882353</G>
+              <B>0.19607843</B>
+            </Color3>
+            <float name="Range">13.2</float>
+            <bool name="Shadows">false</bool>
+          </Properties>
+        </Item>
+      </Item>
+      <Item class="Part" referent="26">
+        <Properties>
+          <string name="Name">Pumpkin</string>
+          <bool name="Anchored">true</bool>
+          <token name="BottomSurface">0</token>
+          <CoordinateFrame name="CFrame">
+            <X>17</X>
+            <Y>4.6</Y>
+            <Z>-3</Z>
+            <R00>1</R00>
+            <R01>0</R01>
+            <R02>0</R02>
+            <R10>0</R10>
+            <R11>1</R11>
+            <R12>0</R12>
+            <R20>0</R20>
+            <R21>0</R21>
+            <R22>1</R22>
+          </CoordinateFrame>
+          <bool name="CanCollide">false</bool>
+          <bool name="CanTouch">false</bool>
+          <Color3uint8 name="Color3uint8">15756820</Color3uint8>
+          <token name="Material">272</token>
+          <token name="shape">0</token>
+          <Vector3 name="size">
+            <X>5.2</X>
+            <Y>5.2</Y>
+            <Z>5.2</Z>
+          </Vector3>
+          <token name="TopSurface">0</token>
+        </Properties>
+      </Item>
+      <Item class="Part" referent="27">
+        <Properties>
+          <string name="Name">Stem</string>
+          <bool name="Anchored">true</bool>
+          <token name="BottomSurface">0</token>
+          <CoordinateFrame name="CFrame">
+            <X>17</X>
+            <Y>7.33</Y>
+            <Z>-3</Z>
+            <R00>1</R00>
+            <R01>0</R01>
+            <R02>0</R02>
+            <R10>0</R10>
+            <R11>1</R11>
+            <R12>0</R12>
+            <R20>0</R20>
+            <R21>0</R21>
+            <R22>1</R22>
+          </CoordinateFrame>
+          <bool name="CanCollide">false</bool>
+          <bool name="CanTouch">false</bool>
+          <Color3uint8 name="Color3uint8">4599060</Color3uint8>
+          <token name="Material">512</token>
+          <Vector3 name="size">
+            <X>0.65</X>
+            <Y>1.3</Y>
+            <Z>0.65</Z>
+          </Vector3>
+          <token name="TopSurface">0</token>
+        </Properties>
+      </Item>
+      <Item class="Part" referent="28">
+        <Properties>
+          <string name="Name">Eye</string>
+          <bool name="Anchored">true</bool>
+          <token name="BottomSurface">0</token>
+          <CoordinateFrame name="CFrame">
+            <X>15.96</X>
+            <Y>5.25</Y>
+            <Z>-0.712</Z>
+            <R00>1</R00>
+            <R01>0</R01>
+            <R02>0</R02>
+            <R10>0</R10>
+            <R11>1</R11>
+            <R12>0</R12>
+            <R20>0</R20>
+            <R21>0</R21>
+            <R22>1</R22>
+          </CoordinateFrame>
+          <bool name="CanCollide">false</bool>
+          <bool name="CanTouch">false</bool>
+          <Color3uint8 name="Color3uint8">16762940</Color3uint8>
+          <token name="Material">288</token>
+          <Vector3 name="size">
+            <X>0.78</X>
+            <Y>0.78</Y>
+            <Z>0.52</Z>
+          </Vector3>
+          <token name="TopSurface">0</token>
+        </Properties>
+      </Item>
+      <Item class="Part" referent="29">
+        <Properties>
+          <string name="Name">Eye</string>
+          <bool name="Anchored">true</bool>
+          <token name="BottomSurface">0</token>
+          <CoordinateFrame name="CFrame">
+            <X>18.04</X>
+            <Y>5.25</Y>
+            <Z>-0.712</Z>
+            <R00>1</R00>
+            <R01>0</R01>
+            <R02>0</R02>
+            <R10>0</R10>
+            <R11>1</R11>
+            <R12>0</R12>
+            <R20>0</R20>
+            <R21>0</R21>
+            <R22>1</R22>
+          </CoordinateFrame>
+          <bool name="CanCollide">false</bool>
+          <bool name="CanTouch">false</bool>
+          <Color3uint8 name="Color3uint8">16762940</Color3uint8>
+          <token name="Material">288</token>
+          <Vector3 name="size">
+            <X>0.78</X>
+            <Y>0.78</Y>
+            <Z>0.52</Z>
+          </Vector3>
+          <token name="TopSurface">0</token>
+        </Properties>
+      </Item>
+      <Item class="Part" referent="30">
+        <Properties>
+          <string name="Name">Mouth</string>
+          <bool name="Anchored">true</bool>
+          <token name="BottomSurface">0</token>
+          <CoordinateFrame name="CFrame">
+            <X>17</X>
+            <Y>3.69</Y>
+            <Z>-0.569</Z>
+            <R00>1</R00>
+            <R01>0</R01>
+            <R02>0</R02>
+            <R10>0</R10>
+            <R11>1</R11>
+            <R12>0</R12>
+            <R20>0</R20>
+            <R21>0</R21>
+            <R22>1</R22>
+          </CoordinateFrame>
+          <bool name="CanCollide">false</bool>
+          <bool name="CanTouch">false</bool>
+          <Color3uint8 name="Color3uint8">16762940</Color3uint8>
+          <token name="Material">288</token>
+          <Vector3 name="size">
+            <X>2.08</X>
+            <Y>0.52</Y>
+            <Z>0.52</Z>
+          </Vector3>
+          <token name="TopSurface">0</token>
+        </Properties>
+        <Item class="PointLight" referent="31">
+          <Properties>
+            <string name="Name">PointLight</string>
+            <float name="Brightness">2</float>
+            <Color3 name="Color">
+              <R>1</R>
+              <G>0.5882353</G>
+              <B>0.19607843</B>
+            </Color3>
+            <float name="Range">15.6</float>
+            <bool name="Shadows">false</bool>
+          </Properties>
+        </Item>
+      </Item>
+      <Item class="Part" referent="32">
+        <Properties>
+          <string name="Name">Pumpkin</string>
+          <bool name="Anchored">true</bool>
+          <token name="BottomSurface">0</token>
+          <CoordinateFrame name="CFrame">
+            <X>20.5</X>
+            <Y>4</Y>
+            <Z>0</Z>
+            <R00>1</R00>
+            <R01>0</R01>
+            <R02>0</R02>
+            <R10>0</R10>
+            <R11>1</R11>
+            <R12>0</R12>
+            <R20>0</R20>
+            <R21>0</R21>
+            <R22>1</R22>
+          </CoordinateFrame>
+          <bool name="CanCollide">false</bool>
+          <bool name="CanTouch">false</bool>
+          <Color3uint8 name="Color3uint8">15756820</Color3uint8>
+          <token name="Material">272</token>
+          <token name="shape">0</token>
+          <Vector3 name="size">
+            <X>4</X>
+            <Y>4</Y>
+            <Z>4</Z>
+          </Vector3>
+          <token name="TopSurface">0</token>
+        </Properties>
+      </Item>
+      <Item class="Part" referent="33">
+        <Properties>
+          <string name="Name">Stem</string>
+          <bool name="Anchored">true</bool>
+          <token name="BottomSurface">0</token>
+          <CoordinateFrame name="CFrame">
+            <X>20.5</X>
+            <Y>6.1</Y>
+            <Z>0</Z>
+            <R00>1</R00>
+            <R01>0</R01>
+            <R02>0</R02>
+            <R10>0</R10>
+            <R11>1</R11>
+            <R12>0</R12>
+            <R20>0</R20>
+            <R21>0</R21>
+            <R22>1</R22>
+          </CoordinateFrame>
+          <bool name="CanCollide">false</bool>
+          <bool name="CanTouch">false</bool>
+          <Color3uint8 name="Color3uint8">4599060</Color3uint8>
+          <token name="Material">512</token>
+          <Vector3 name="size">
+            <X>0.5</X>
+            <Y>1</Y>
+            <Z>0.5</Z>
+          </Vector3>
+          <token name="TopSurface">0</token>
+        </Properties>
+      </Item>
+      <Item class="Part" referent="34">
+        <Properties>
+          <string name="Name">Eye</string>
+          <bool name="Anchored">true</bool>
+          <token name="BottomSurface">0</token>
+          <CoordinateFrame name="CFrame">
+            <X>19.7</X>
+            <Y>4.5</Y>
+            <Z>1.76</Z>
+            <R00>1</R00>
+            <R01>0</R01>
+            <R02>0</R02>
+            <R10>0</R10>
+            <R11>1</R11>
+            <R12>0</R12>
+            <R20>0</R20>
+            <R21>0</R21>
+            <R22>1</R22>
+          </CoordinateFrame>
+          <bool name="CanCollide">false</bool>
+          <bool name="CanTouch">false</bool>
+          <Color3uint8 name="Color3uint8">16762940</Color3uint8>
+          <token name="Material">288</token>
+          <Vector3 name="size">
+            <X>0.6</X>
+            <Y>0.6</Y>
+            <Z>0.4</Z>
+          </Vector3>
+          <token name="TopSurface">0</token>
+        </Properties>
+      </Item>
+      <Item class="Part" referent="35">
+        <Properties>
+          <string name="Name">Eye</string>
+          <bool name="Anchored">true</bool>
+          <token name="BottomSurface">0</token>
+          <CoordinateFrame name="CFrame">
+            <X>21.3</X>
+            <Y>4.5</Y>
+            <Z>1.76</Z>
+            <R00>1</R00>
+            <R01>0</R01>
+            <R02>0</R02>
+            <R10>0</R10>
+            <R11>1</R11>
+            <R12>0</R12>
+            <R20>0</R20>
+            <R21>0</R21>
+            <R22>1</R22>
+          </CoordinateFrame>
+          <bool name="CanCollide">false</bool>
+          <bool name="CanTouch">false</bool>
+          <Color3uint8 name="Color3uint8">16762940</Color3uint8>
+          <token name="Material">288</token>
+          <Vector3 name="size">
+            <X>0.6</X>
+            <Y>0.6</Y>
+            <Z>0.4</Z>
+          </Vector3>
+          <token name="TopSurface">0</token>
+        </Properties>
+      </Item>
+      <Item class="Part" referent="36">
+        <Properties>
+          <string name="Name">Mouth</string>
+          <bool name="Anchored">true</bool>
+          <token name="BottomSurface">0</token>
+          <CoordinateFrame name="CFrame">
+            <X>20.5</X>
+            <Y>3.3</Y>
+            <Z>1.87</Z>
+            <R00>1</R00>
+            <R01>0</R01>
+            <R02>0</R02>
+            <R10>0</R10>
+            <R11>1</R11>
+            <R12>0</R12>
+            <R20>0</R20>
+            <R21>0</R21>
+            <R22>1</R22>
+          </CoordinateFrame>
+          <bool name="CanCollide">false</bool>
+          <bool name="CanTouch">false</bool>
+          <Color3uint8 name="Color3uint8">16762940</Color3uint8>
+          <token name="Material">288</token>
+          <Vector3 name="size">
+            <X>1.6</X>
+            <Y>0.4</Y>
+            <Z>0.4</Z>
+          </Vector3>
+          <token name="TopSurface">0</token>
+        </Properties>
+        <Item class="PointLight" referent="37">
+          <Properties>
+            <string name="Name">PointLight</string>
+            <float name="Brightness">2</float>
+            <Color3 name="Color">
+              <R>1</R>
+              <G>0.5882353</G>
+              <B>0.19607843</B>
+            </Color3>
+            <float name="Range">12</float>
+            <bool name="Shadows">false</bool>
+          </Properties>
+        </Item>
+      </Item>
+      <Item class="Part" referent="38">
+        <Properties>
+          <string name="Name">Pumpkin</string>
+          <bool name="Anchored">true</bool>
+          <token name="BottomSurface">0</token>
+          <CoordinateFrame name="CFrame">
+            <X>18.5</X>
+            <Y>4.2</Y>
+            <Z>-7</Z>
+            <R00>1</R00>
+            <R01>0</R01>
+            <R02>0</R02>
+            <R10>0</R10>
+            <R11>1</R11>
+            <R12>0</R12>
+            <R20>0</R20>
+            <R21>0</R21>
+            <R22>1</R22>
+          </CoordinateFrame>
+          <bool name="CanCollide">false</bool>
+          <bool name="CanTouch">false</bool>
+          <Color3uint8 name="Color3uint8">15756820</Color3uint8>
+          <token name="Material">272</token>
+          <token name="shape">0</token>
+          <Vector3 name="size">
+            <X>4.4</X>
+            <Y>4.4</Y>
+            <Z>4.4</Z>
+          </Vector3>
+          <token name="TopSurface">0</token>
+        </Properties>
+      </Item>
+      <Item class="Part" referent="39">
+        <Properties>
+          <string name="Name">Stem</string>
+          <bool name="Anchored">true</bool>
+          <token name="BottomSurface">0</token>
+          <CoordinateFrame name="CFrame">
+            <X>18.5</X>
+            <Y>6.51</Y>
+            <Z>-7</Z>
+            <R00>1</R00>
+            <R01>0</R01>
+            <R02>0</R02>
+            <R10>0</R10>
+            <R11>1</R11>
+            <R12>0</R12>
+            <R20>0</R20>
+            <R21>0</R21>
+            <R22>1</R22>
+          </CoordinateFrame>
+          <bool name="CanCollide">false</bool>
+          <bool name="CanTouch">false</bool>
+          <Color3uint8 name="Color3uint8">4599060</Color3uint8>
+          <token name="Material">512</token>
+          <Vector3 name="size">
+            <X>0.55</X>
+            <Y>1.1</Y>
+            <Z>0.55</Z>
+          </Vector3>
+          <token name="TopSurface">0</token>
+        </Properties>
+      </Item>
+      <Item class="Part" referent="40">
+        <Properties>
+          <string name="Name">Eye</string>
+          <bool name="Anchored">true</bool>
+          <token name="BottomSurface">0</token>
+          <CoordinateFrame name="CFrame">
+            <X>17.62</X>
+            <Y>4.75</Y>
+            <Z>-5.064</Z>
+            <R00>1</R00>
+            <R01>0</R01>
+            <R02>0</R02>
+            <R10>0</R10>
+            <R11>1</R11>
+            <R12>0</R12>
+            <R20>0</R20>
+            <R21>0</R21>
+            <R22>1</R22>
+          </CoordinateFrame>
+          <bool name="CanCollide">false</bool>
+          <bool name="CanTouch">false</bool>
+          <Color3uint8 name="Color3uint8">16762940</Color3uint8>
+          <token name="Material">288</token>
+          <Vector3 name="size">
+            <X>0.66</X>
+            <Y>0.66</Y>
+            <Z>0.44</Z>
+          </Vector3>
+          <token name="TopSurface">0</token>
+        </Properties>
+      </Item>
+      <Item class="Part" referent="41">
+        <Properties>
+          <string name="Name">Eye</string>
+          <bool name="Anchored">true</bool>
+          <token name="BottomSurface">0</token>
+          <CoordinateFrame name="CFrame">
+            <X>19.38</X>
+            <Y>4.75</Y>
+            <Z>-5.064</Z>
+            <R00>1</R00>
+            <R01>0</R01>
+            <R02>0</R02>
+            <R10>0</R10>
+            <R11>1</R11>
+            <R12>0</R12>
+            <R20>0</R20>
+            <R21>0</R21>
+            <R22>1</R22>
+          </CoordinateFrame>
+          <bool name="CanCollide">false</bool>
+          <bool name="CanTouch">false</bool>
+          <Color3uint8 name="Color3uint8">16762940</Color3uint8>
+          <token name="Material">288</token>
+          <Vector3 name="size">
+            <X>0.66</X>
+            <Y>0.66</Y>
+            <Z>0.44</Z>
+          </Vector3>
+          <token name="TopSurface">0</token>
+        </Properties>
+      </Item>
+      <Item class="Part" referent="42">
+        <Properties>
+          <string name="Name">Mouth</string>
+          <bool name="Anchored">true</bool>
+          <token name="BottomSurface">0</token>
+          <CoordinateFrame name="CFrame">
+            <X>18.5</X>
+            <Y>3.43</Y>
+            <Z>-4.943</Z>
+            <R00>1</R00>
+            <R01>0</R01>
+            <R02>0</R02>
+            <R10>0</R10>
+            <R11>1</R11>
+            <R12>0</R12>
+            <R20>0</R20>
+            <R21>0</R21>
+            <R22>1</R22>
+          </CoordinateFrame>
+          <bool name="CanCollide">false</bool>
+          <bool name="CanTouch">false</bool>
+          <Color3uint8 name="Color3uint8">16762940</Color3uint8>
+          <token name="Material">288</token>
+          <Vector3 name="size">
+            <X>1.76</X>
+            <Y>0.44</Y>
+            <Z>0.44</Z>
+          </Vector3>
+          <token name="TopSurface">0</token>
+        </Properties>
+        <Item class="PointLight" referent="43">
+          <Properties>
+            <string name="Name">PointLight</string>
+            <float name="Brightness">2</float>
+            <Color3 name="Color">
+              <R>1</R>
+              <G>0.5882353</G>
+              <B>0.19607843</B>
+            </Color3>
+            <float name="Range">13.2</float>
+            <bool name="Shadows">false</bool>
+          </Properties>
+        </Item>
+      </Item>
+      <Item class="Part" referent="44">
+        <Properties>
+          <string name="Name">Pumpkin</string>
+          <bool name="Anchored">true</bool>
+          <token name="BottomSurface">0</token>
+          <CoordinateFrame name="CFrame">
+            <X>-9</X>
+            <Y>4.4</Y>
+            <Z>-14</Z>
+            <R00>1</R00>
+            <R01>0</R01>
+            <R02>0</R02>
+            <R10>0</R10>
+            <R11>1</R11>
+            <R12>0</R12>
+            <R20>0</R20>
+            <R21>0</R21>
+            <R22>1</R22>
+          </CoordinateFrame>
+          <bool name="CanCollide">false</bool>
+          <bool name="CanTouch">false</bool>
+          <Color3uint8 name="Color3uint8">15756820</Color3uint8>
+          <token name="Material">272</token>
+          <token name="shape">0</token>
+          <Vector3 name="size">
+            <X>4.8</X>
+            <Y>4.8</Y>
+            <Z>4.8</Z>
+          </Vector3>
+          <token name="TopSurface">0</token>
+        </Properties>
+      </Item>
+      <Item class="Part" referent="45">
+        <Properties>
+          <string name="Name">Stem</string>
+          <bool name="Anchored">true</bool>
+          <token name="BottomSurface">0</token>
+          <CoordinateFrame name="CFrame">
+            <X>-9</X>
+            <Y>6.92</Y>
+            <Z>-14</Z>
+            <R00>1</R00>
+            <R01>0</R01>
+            <R02>0</R02>
+            <R10>0</R10>
+            <R11>1</R11>
+            <R12>0</R12>
+            <R20>0</R20>
+            <R21>0</R21>
+            <R22>1</R22>
+          </CoordinateFrame>
+          <bool name="CanCollide">false</bool>
+          <bool name="CanTouch">false</bool>
+          <Color3uint8 name="Color3uint8">4599060</Color3uint8>
+          <token name="Material">512</token>
+          <Vector3 name="size">
+            <X>0.6</X>
+            <Y>1.2</Y>
+            <Z>0.6</Z>
+          </Vector3>
+          <token name="TopSurface">0</token>
+        </Properties>
+      </Item>
+      <Item class="Part" referent="46">
+        <Properties>
+          <string name="Name">Eye</string>
+          <bool name="Anchored">true</bool>
+          <token name="BottomSurface">0</token>
+          <CoordinateFrame name="CFrame">
+            <X>-9.96</X>
+            <Y>5</Y>
+            <Z>-11.888</Z>
+            <R00>1</R00>
+            <R01>0</R01>
+            <R02>0</R02>
+            <R10>0</R10>
+            <R11>1</R11>
+            <R12>0</R12>
+            <R20>0</R20>
+            <R21>0</R21>
+            <R22>1</R22>
+          </CoordinateFrame>
+          <bool name="CanCollide">false</bool>
+          <bool name="CanTouch">false</bool>
+          <Color3uint8 name="Color3uint8">16762940</Color3uint8>
+          <token name="Material">288</token>
+          <Vector3 name="size">
+            <X>0.72</X>
+            <Y>0.72</Y>
+            <Z>0.48</Z>
+          </Vector3>
+          <token name="TopSurface">0</token>
+        </Properties>
+      </Item>
+      <Item class="Part" referent="47">
+        <Properties>
+          <string name="Name">Eye</string>
+          <bool name="Anchored">true</bool>
+          <token name="BottomSurface">0</token>
+          <CoordinateFrame name="CFrame">
+            <X>-8.04</X>
+            <Y>5</Y>
+            <Z>-11.888</Z>
+            <R00>1</R00>
+            <R01>0</R01>
+            <R02>0</R02>
+            <R10>0</R10>
+            <R11>1</R11>
+            <R12>0</R12>
+            <R20>0</R20>
+            <R21>0</R21>
+            <R22>1</R22>
+          </CoordinateFrame>
+          <bool name="CanCollide">false</bool>
+          <bool name="CanTouch">false</bool>
+          <Color3uint8 name="Color3uint8">16762940</Color3uint8>
+          <token name="Material">288</token>
+          <Vector3 name="size">
+            <X>0.72</X>
+            <Y>0.72</Y>
+            <Z>0.48</Z>
+          </Vector3>
+          <token name="TopSurface">0</token>
+        </Properties>
+      </Item>
+      <Item class="Part" referent="48">
+        <Properties>
+          <string name="Name">Mouth</string>
+          <bool name="Anchored">true</bool>
+          <token name="BottomSurface">0</token>
+          <CoordinateFrame name="CFrame">
+            <X>-9</X>
+            <Y>3.56</Y>
+            <Z>-11.756</Z>
+            <R00>1</R00>
+            <R01>0</R01>
+            <R02>0</R02>
+            <R10>0</R10>
+            <R11>1</R11>
+            <R12>0</R12>
+            <R20>0</R20>
+            <R21>0</R21>
+            <R22>1</R22>
+          </CoordinateFrame>
+          <bool name="CanCollide">false</bool>
+          <bool name="CanTouch">false</bool>
+          <Color3uint8 name="Color3uint8">16762940</Color3uint8>
+          <token name="Material">288</token>
+          <Vector3 name="size">
+            <X>1.92</X>
+            <Y>0.48</Y>
+            <Z>0.48</Z>
+          </Vector3>
+          <token name="TopSurface">0</token>
+        </Properties>
+        <Item class="PointLight" referent="49">
+          <Properties>
+            <string name="Name">PointLight</string>
+            <float name="Brightness">2</float>
+            <Color3 name="Color">
+              <R>1</R>
+              <G>0.5882353</G>
+              <B>0.19607843</B>
+            </Color3>
+            <float name="Range">14.4</float>
+            <bool name="Shadows">false</bool>
+          </Properties>
+        </Item>
+      </Item>
+      <Item class="Part" referent="50">
+        <Properties>
+          <string name="Name">Pumpkin</string>
+          <bool name="Anchored">true</bool>
+          <token name="BottomSurface">0</token>
+          <CoordinateFrame name="CFrame">
+            <X>9</X>
+            <Y>4.4</Y>
+            <Z>-14</Z>
+            <R00>1</R00>
+            <R01>0</R01>
+            <R02>0</R02>
+            <R10>0</R10>
+            <R11>1</R11>
+            <R12>0</R12>
+            <R20>0</R20>
+            <R21>0</R21>
+            <R22>1</R22>
+          </CoordinateFrame>
+          <bool name="CanCollide">false</bool>
+          <bool name="CanTouch">false</bool>
+          <Color3uint8 name="Color3uint8">15756820</Color3uint8>
+          <token name="Material">272</token>
+          <token name="shape">0</token>
+          <Vector3 name="size">
+            <X>4.8</X>
+            <Y>4.8</Y>
+            <Z>4.8</Z>
+          </Vector3>
+          <token name="TopSurface">0</token>
+        </Properties>
+      </Item>
+      <Item class="Part" referent="51">
+        <Properties>
+          <string name="Name">Stem</string>
+          <bool name="Anchored">true</bool>
+          <token name="BottomSurface">0</token>
+          <CoordinateFrame name="CFrame">
+            <X>9</X>
+            <Y>6.92</Y>
+            <Z>-14</Z>
+            <R00>1</R00>
+            <R01>0</R01>
+            <R02>0</R02>
+            <R10>0</R10>
+            <R11>1</R11>
+            <R12>0</R12>
+            <R20>0</R20>
+            <R21>0</R21>
+            <R22>1</R22>
+          </CoordinateFrame>
+          <bool name="CanCollide">false</bool>
+          <bool name="CanTouch">false</bool>
+          <Color3uint8 name="Color3uint8">4599060</Color3uint8>
+          <token name="Material">512</token>
+          <Vector3 name="size">
+            <X>0.6</X>
+            <Y>1.2</Y>
+            <Z>0.6</Z>
+          </Vector3>
+          <token name="TopSurface">0</token>
+        </Properties>
+      </Item>
+      <Item class="Part" referent="52">
+        <Properties>
+          <string name="Name">Eye</string>
+          <bool name="Anchored">true</bool>
+          <token name="BottomSurface">0</token>
+          <CoordinateFrame name="CFrame">
+            <X>8.04</X>
+            <Y>5</Y>
+            <Z>-11.888</Z>
+            <R00>1</R00>
+            <R01>0</R01>
+            <R02>0</R02>
+            <R10>0</R10>
+            <R11>1</R11>
+            <R12>0</R12>
+            <R20>0</R20>
+            <R21>0</R21>
+            <R22>1</R22>
+          </CoordinateFrame>
+          <bool name="CanCollide">false</bool>
+          <bool name="CanTouch">false</bool>
+          <Color3uint8 name="Color3uint8">16762940</Color3uint8>
+          <token name="Material">288</token>
+          <Vector3 name="size">
+            <X>0.72</X>
+            <Y>0.72</Y>
+            <Z>0.48</Z>
+          </Vector3>
+          <token name="TopSurface">0</token>
+        </Properties>
+      </Item>
+      <Item class="Part" referent="53">
+        <Properties>
+          <string name="Name">Eye</string>
+          <bool name="Anchored">true</bool>
+          <token name="BottomSurface">0</token>
+          <CoordinateFrame name="CFrame">
+            <X>9.96</X>
+            <Y>5</Y>
+            <Z>-11.888</Z>
+            <R00>1</R00>
+            <R01>0</R01>
+            <R02>0</R02>
+            <R10>0</R10>
+            <R11>1</R11>
+            <R12>0</R12>
+            <R20>0</R20>
+            <R21>0</R21>
+            <R22>1</R22>
+          </CoordinateFrame>
+          <bool name="CanCollide">false</bool>
+          <bool name="CanTouch">false</bool>
+          <Color3uint8 name="Color3uint8">16762940</Color3uint8>
+          <token name="Material">288</token>
+          <Vector3 name="size">
+            <X>0.72</X>
+            <Y>0.72</Y>
+            <Z>0.48</Z>
+          </Vector3>
+          <token name="TopSurface">0</token>
+        </Properties>
+      </Item>
+      <Item class="Part" referent="54">
+        <Properties>
+          <string name="Name">Mouth</string>
+          <bool name="Anchored">true</bool>
+          <token name="BottomSurface">0</token>
+          <CoordinateFrame name="CFrame">
+            <X>9</X>
+            <Y>3.56</Y>
+            <Z>-11.756</Z>
+            <R00>1</R00>
+            <R01>0</R01>
+            <R02>0</R02>
+            <R10>0</R10>
+            <R11>1</R11>
+            <R12>0</R12>
+            <R20>0</R20>
+            <R21>0</R21>
+            <R22>1</R22>
+          </CoordinateFrame>
+          <bool name="CanCollide">false</bool>
+          <bool name="CanTouch">false</bool>
+          <Color3uint8 name="Color3uint8">16762940</Color3uint8>
+          <token name="Material">288</token>
+          <Vector3 name="size">
+            <X>1.92</X>
+            <Y>0.48</Y>
+            <Z>0.48</Z>
+          </Vector3>
+          <token name="TopSurface">0</token>
+        </Properties>
+        <Item class="PointLight" referent="55">
+          <Properties>
+            <string name="Name">PointLight</string>
+            <float name="Brightness">2</float>
+            <Color3 name="Color">
+              <R>1</R>
+              <G>0.5882353</G>
+              <B>0.19607843</B>
+            </Color3>
+            <float name="Range">14.4</float>
+            <bool name="Shadows">false</bool>
+          </Properties>
+        </Item>
+      </Item>
+      <Item class="Part" referent="56">
+        <Properties>
+          <string name="Name">Pumpkin</string>
+          <bool name="Anchored">true</bool>
+          <token name="BottomSurface">0</token>
+          <CoordinateFrame name="CFrame">
+            <X>0</X>
+            <Y>5.2</Y>
+            <Z>-17</Z>
+            <R00>1</R00>
+            <R01>0</R01>
+            <R02>0</R02>
+            <R10>0</R10>
+            <R11>1</R11>
+            <R12>0</R12>
+            <R20>0</R20>
+            <R21>0</R21>
+            <R22>1</R22>
+          </CoordinateFrame>
+          <bool name="CanCollide">false</bool>
+          <bool name="CanTouch">false</bool>
+          <Color3uint8 name="Color3uint8">15756820</Color3uint8>
+          <token name="Material">272</token>
+          <token name="shape">0</token>
+          <Vector3 name="size">
+            <X>6.4</X>
+            <Y>6.4</Y>
+            <Z>6.4</Z>
+          </Vector3>
+          <token name="TopSurface">0</token>
+        </Properties>
+      </Item>
+      <Item class="Part" referent="57">
+        <Properties>
+          <string name="Name">Stem</string>
+          <bool name="Anchored">true</bool>
+          <token name="BottomSurface">0</token>
+          <CoordinateFrame name="CFrame">
+            <X>0</X>
+            <Y>8.56</Y>
+            <Z>-17</Z>
+            <R00>1</R00>
+            <R01>0</R01>
+            <R02>0</R02>
+            <R10>0</R10>
+            <R11>1</R11>
+            <R12>0</R12>
+            <R20>0</R20>
+            <R21>0</R21>
+            <R22>1</R22>
+          </CoordinateFrame>
+          <bool name="CanCollide">false</bool>
+          <bool name="CanTouch">false</bool>
+          <Color3uint8 name="Color3uint8">4599060</Color3uint8>
+          <token name="Material">512</token>
+          <Vector3 name="size">
+            <X>0.8</X>
+            <Y>1.6</Y>
+            <Z>0.8</Z>
+          </Vector3>
+          <token name="TopSurface">0</token>
+        </Properties>
+      </Item>
+      <Item class="Part" referent="58">
+        <Properties>
+          <string name="Name">Eye</string>
+          <bool name="Anchored">true</bool>
+          <token name="BottomSurface">0</token>
+          <CoordinateFrame name="CFrame">
+            <X>-1.28</X>
+            <Y>6</Y>
+            <Z>-14.184</Z>
+            <R00>1</R00>
+            <R01>0</R01>
+            <R02>0</R02>
+            <R10>0</R10>
+            <R11>1</R11>
+            <R12>0</R12>
+            <R20>0</R20>
+            <R21>0</R21>
+            <R22>1</R22>
+          </CoordinateFrame>
+          <bool name="CanCollide">false</bool>
+          <bool name="CanTouch">false</bool>
+          <Color3uint8 name="Color3uint8">16762940</Color3uint8>
+          <token name="Material">288</token>
+          <Vector3 name="size">
+            <X>0.96</X>
+            <Y>0.96</Y>
+            <Z>0.64</Z>
+          </Vector3>
+          <token name="TopSurface">0</token>
+        </Properties>
+      </Item>
+      <Item class="Part" referent="59">
+        <Properties>
+          <string name="Name">Eye</string>
+          <bool name="Anchored">true</bool>
+          <token name="BottomSurface">0</token>
+          <CoordinateFrame name="CFrame">
+            <X>1.28</X>
+            <Y>6</Y>
+            <Z>-14.184</Z>
+            <R00>1</R00>
+            <R01>0</R01>
+            <R02>0</R02>
+            <R10>0</R10>
+            <R11>1</R11>
+            <R12>0</R12>
+            <R20>0</R20>
+            <R21>0</R21>
+            <R22>1</R22>
+          </CoordinateFrame>
+          <bool name="CanCollide">false</bool>
+          <bool name="CanTouch">false</bool>
+          <Color3uint8 name="Color3uint8">16762940</Color3uint8>
+          <token name="Material">288</token>
+          <Vector3 name="size">
+            <X>0.96</X>
+            <Y>0.96</Y>
+            <Z>0.64</Z>
+          </Vector3>
+          <token name="TopSurface">0</token>
+        </Properties>
+      </Item>
+      <Item class="Part" referent="60">
+        <Properties>
+          <string name="Name">Mouth</string>
+          <bool name="Anchored">true</bool>
+          <token name="BottomSurface">0</token>
+          <CoordinateFrame name="CFrame">
+            <X>0</X>
+            <Y>4.08</Y>
+            <Z>-14.008</Z>
+            <R00>1</R00>
+            <R01>0</R01>
+            <R02>0</R02>
+            <R10>0</R10>
+            <R11>1</R11>
+            <R12>0</R12>
+            <R20>0</R20>
+            <R21>0</R21>
+            <R22>1</R22>
+          </CoordinateFrame>
+          <bool name="CanCollide">false</bool>
+          <bool name="CanTouch">false</bool>
+          <Color3uint8 name="Color3uint8">16762940</Color3uint8>
+          <token name="Material">288</token>
+          <Vector3 name="size">
+            <X>2.56</X>
+            <Y>0.64</Y>
+            <Z>0.64</Z>
+          </Vector3>
+          <token name="TopSurface">0</token>
+        </Properties>
+        <Item class="PointLight" referent="61">
+          <Properties>
+            <string name="Name">PointLight</string>
+            <float name="Brightness">2</float>
+            <Color3 name="Color">
+              <R>1</R>
+              <G>0.5882353</G>
+              <B>0.19607843</B>
+            </Color3>
+            <float name="Range">19.2</float>
+            <bool name="Shadows">false</bool>
+          </Properties>
+        </Item>
+      </Item>
+      <Item class="Part" referent="62">
+        <Properties>
+          <string name="Name">Candle</string>
+          <bool name="Anchored">true</bool>
+          <token name="BottomSurface">0</token>
+          <CoordinateFrame name="CFrame">
+            <X>-13</X>
+            <Y>3.25</Y>
+            <Z>9</Z>
+            <R00>0.00000000000000006123234</R00>
+            <R01>-1</R01>
+            <R02>0</R02>
+            <R10>1</R10>
+            <R11>0.00000000000000006123234</R11>
+            <R12>0</R12>
+            <R20>0</R20>
+            <R21>0</R21>
+            <R22>1</R22>
+          </CoordinateFrame>
+          <bool name="CanCollide">false</bool>
+          <bool name="CanTouch">false</bool>
+          <Color3uint8 name="Color3uint8">15789015</Color3uint8>
+          <token name="Material">272</token>
+          <token name="shape">2</token>
+          <Vector3 name="size">
+            <X>2.5</X>
+            <Y>0.8</Y>
+            <Z>0.8</Z>
+          </Vector3>
+          <token name="TopSurface">0</token>
+        </Properties>
+      </Item>
+      <Item class="Part" referent="63">
+        <Properties>
+          <string name="Name">Flame</string>
+          <bool name="Anchored">true</bool>
+          <token name="BottomSurface">0</token>
+          <CoordinateFrame name="CFrame">
+            <X>-13</X>
+            <Y>4.8</Y>
+            <Z>9</Z>
+            <R00>1</R00>
+            <R01>0</R01>
+            <R02>0</R02>
+            <R10>0</R10>
+            <R11>1</R11>
+            <R12>0</R12>
+            <R20>0</R20>
+            <R21>0</R21>
+            <R22>1</R22>
+          </CoordinateFrame>
+          <bool name="CanCollide">false</bool>
+          <bool name="CanTouch">false</bool>
+          <Color3uint8 name="Color3uint8">16755260</Color3uint8>
+          <token name="Material">288</token>
+          <token name="shape">0</token>
+          <Vector3 name="size">
+            <X>0.6</X>
+            <Y>0.6</Y>
+            <Z>0.6</Z>
+          </Vector3>
+          <token name="TopSurface">0</token>
+        </Properties>
+        <Item class="PointLight" referent="64">
+          <Properties>
+            <string name="Name">PointLight</string>
+            <float name="Brightness">1.5</float>
+            <Color3 name="Color">
+              <R>1</R>
+              <G>0.6666667</G>
+              <B>0.3137255</B>
+            </Color3>
+            <float name="Range">10</float>
+            <bool name="Shadows">false</bool>
+          </Properties>
+        </Item>
+      </Item>
+      <Item class="Part" referent="65">
+        <Properties>
+          <string name="Name">Candle</string>
+          <bool name="Anchored">true</bool>
+          <token name="BottomSurface">0</token>
+          <CoordinateFrame name="CFrame">
+            <X>13</X>
+            <Y>3.25</Y>
+            <Z>9</Z>
+            <R00>0.00000000000000006123234</R00>
+            <R01>-1</R01>
+            <R02>0</R02>
+            <R10>1</R10>
+            <R11>0.00000000000000006123234</R11>
+            <R12>0</R12>
+            <R20>0</R20>
+            <R21>0</R21>
+            <R22>1</R22>
+          </CoordinateFrame>
+          <bool name="CanCollide">false</bool>
+          <bool name="CanTouch">false</bool>
+          <Color3uint8 name="Color3uint8">15789015</Color3uint8>
+          <token name="Material">272</token>
+          <token name="shape">2</token>
+          <Vector3 name="size">
+            <X>2.5</X>
+            <Y>0.8</Y>
+            <Z>0.8</Z>
+          </Vector3>
+          <token name="TopSurface">0</token>
+        </Properties>
+      </Item>
+      <Item class="Part" referent="66">
+        <Properties>
+          <string name="Name">Flame</string>
+          <bool name="Anchored">true</bool>
+          <token name="BottomSurface">0</token>
+          <CoordinateFrame name="CFrame">
+            <X>13</X>
+            <Y>4.8</Y>
+            <Z>9</Z>
+            <R00>1</R00>
+            <R01>0</R01>
+            <R02>0</R02>
+            <R10>0</R10>
+            <R11>1</R11>
+            <R12>0</R12>
+            <R20>0</R20>
+            <R21>0</R21>
+            <R22>1</R22>
+          </CoordinateFrame>
+          <bool name="CanCollide">false</bool>
+          <bool name="CanTouch">false</bool>
+          <Color3uint8 name="Color3uint8">16755260</Color3uint8>
+          <token name="Material">288</token>
+          <token name="shape">0</token>
+          <Vector3 name="size">
+            <X>0.6</X>
+            <Y>0.6</Y>
+            <Z>0.6</Z>
+          </Vector3>
+          <token name="TopSurface">0</token>
+        </Properties>
+        <Item class="PointLight" referent="67">
+          <Properties>
+            <string name="Name">PointLight</string>
+            <float name="Brightness">1.5</float>
+            <Color3 name="Color">
+              <R>1</R>
+              <G>0.6666667</G>
+              <B>0.3137255</B>
+            </Color3>
+            <float name="Range">10</float>
+            <bool name="Shadows">false</bool>
+          </Properties>
+        </Item>
+      </Item>
+      <Item class="Part" referent="68">
+        <Properties>
+          <string name="Name">Candle</string>
+          <bool name="Anchored">true</bool>
+          <token name="BottomSurface">0</token>
+          <CoordinateFrame name="CFrame">
+            <X>-15</X>
+            <Y>3</Y>
+            <Z>7.5</Z>
+            <R00>0.00000000000000006123234</R00>
+            <R01>-1</R01>
+            <R02>0</R02>
+            <R10>1</R10>
+            <R11>0.00000000000000006123234</R11>
+            <R12>0</R12>
+            <R20>0</R20>
+            <R21>0</R21>
+            <R22>1</R22>
+          </CoordinateFrame>
+          <bool name="CanCollide">false</bool>
+          <bool name="CanTouch">false</bool>
+          <Color3uint8 name="Color3uint8">15789015</Color3uint8>
+          <token name="Material">272</token>
+          <token name="shape">2</token>
+          <Vector3 name="size">
+            <X>2</X>
+            <Y>0.64</Y>
+            <Z>0.64</Z>
+          </Vector3>
+          <token name="TopSurface">0</token>
+        </Properties>
+      </Item>
+      <Item class="Part" referent="69">
+        <Properties>
+          <string name="Name">Flame</string>
+          <bool name="Anchored">true</bool>
+          <token name="BottomSurface">0</token>
+          <CoordinateFrame name="CFrame">
+            <X>-15</X>
+            <Y>4.24</Y>
+            <Z>7.5</Z>
+            <R00>1</R00>
+            <R01>0</R01>
+            <R02>0</R02>
+            <R10>0</R10>
+            <R11>1</R11>
+            <R12>0</R12>
+            <R20>0</R20>
+            <R21>0</R21>
+            <R22>1</R22>
+          </CoordinateFrame>
+          <bool name="CanCollide">false</bool>
+          <bool name="CanTouch">false</bool>
+          <Color3uint8 name="Color3uint8">16755260</Color3uint8>
+          <token name="Material">288</token>
+          <token name="shape">0</token>
+          <Vector3 name="size">
+            <X>0.48</X>
+            <Y>0.48</Y>
+            <Z>0.48</Z>
+          </Vector3>
+          <token name="TopSurface">0</token>
+        </Properties>
+        <Item class="PointLight" referent="70">
+          <Properties>
+            <string name="Name">PointLight</string>
+            <float name="Brightness">1.5</float>
+            <Color3 name="Color">
+              <R>1</R>
+              <G>0.6666667</G>
+              <B>0.3137255</B>
+            </Color3>
+            <float name="Range">10</float>
+            <bool name="Shadows">false</bool>
+          </Properties>
+        </Item>
+      </Item>
+      <Item class="Part" referent="71">
+        <Properties>
+          <string name="Name">Candle</string>
+          <bool name="Anchored">true</bool>
+          <token name="BottomSurface">0</token>
+          <CoordinateFrame name="CFrame">
+            <X>15</X>
+            <Y>3</Y>
+            <Z>7.5</Z>
+            <R00>0.00000000000000006123234</R00>
+            <R01>-1</R01>
+            <R02>0</R02>
+            <R10>1</R10>
+            <R11>0.00000000000000006123234</R11>
+            <R12>0</R12>
+            <R20>0</R20>
+            <R21>0</R21>
+            <R22>1</R22>
+          </CoordinateFrame>
+          <bool name="CanCollide">false</bool>
+          <bool name="CanTouch">false</bool>
+          <Color3uint8 name="Color3uint8">15789015</Color3uint8>
+          <token name="Material">272</token>
+          <token name="shape">2</token>
+          <Vector3 name="size">
+            <X>2</X>
+            <Y>0.64</Y>
+            <Z>0.64</Z>
+          </Vector3>
+          <token name="TopSurface">0</token>
+        </Properties>
+      </Item>
+      <Item class="Part" referent="72">
+        <Properties>
+          <string name="Name">Flame</string>
+          <bool name="Anchored">true</bool>
+          <token name="BottomSurface">0</token>
+          <CoordinateFrame name="CFrame">
+            <X>15</X>
+            <Y>4.24</Y>
+            <Z>7.5</Z>
+            <R00>1</R00>
+            <R01>0</R01>
+            <R02>0</R02>
+            <R10>0</R10>
+            <R11>1</R11>
+            <R12>0</R12>
+            <R20>0</R20>
+            <R21>0</R21>
+            <R22>1</R22>
+          </CoordinateFrame>
+          <bool name="CanCollide">false</bool>
+          <bool name="CanTouch">false</bool>
+          <Color3uint8 name="Color3uint8">16755260</Color3uint8>
+          <token name="Material">288</token>
+          <token name="shape">0</token>
+          <Vector3 name="size">
+            <X>0.48</X>
+            <Y>0.48</Y>
+            <Z>0.48</Z>
+          </Vector3>
+          <token name="TopSurface">0</token>
+        </Properties>
+        <Item class="PointLight" referent="73">
+          <Properties>
+            <string name="Name">PointLight</string>
+            <float name="Brightness">1.5</float>
+            <Color3 name="Color">
+              <R>1</R>
+              <G>0.6666667</G>
+              <B>0.3137255</B>
+            </Color3>
+            <float name="Range">10</float>
+            <bool name="Shadows">false</bool>
+          </Properties>
+        </Item>
+      </Item>
+      <Item class="Part" referent="74">
+        <Properties>
+          <string name="Name">Candle</string>
+          <bool name="Anchored">true</bool>
+          <token name="BottomSurface">0</token>
+          <CoordinateFrame name="CFrame">
+            <X>-6</X>
+            <Y>2.875</Y>
+            <Z>12</Z>
+            <R00>0.00000000000000006123234</R00>
+            <R01>-1</R01>
+            <R02>0</R02>
+            <R10>1</R10>
+            <R11>0.00000000000000006123234</R11>
+            <R12>0</R12>
+            <R20>0</R20>
+            <R21>0</R21>
+            <R22>1</R22>
+          </CoordinateFrame>
+          <bool name="CanCollide">false</bool>
+          <bool name="CanTouch">false</bool>
+          <Color3uint8 name="Color3uint8">15789015</Color3uint8>
+          <token name="Material">272</token>
+          <token name="shape">2</token>
+          <Vector3 name="size">
+            <X>1.75</X>
+            <Y>0.56</Y>
+            <Z>0.56</Z>
+          </Vector3>
+          <token name="TopSurface">0</token>
+        </Properties>
+      </Item>
+      <Item class="Part" referent="75">
+        <Properties>
+          <string name="Name">Flame</string>
+          <bool name="Anchored">true</bool>
+          <token name="BottomSurface">0</token>
+          <CoordinateFrame name="CFrame">
+            <X>-6</X>
+            <Y>3.96</Y>
+            <Z>12</Z>
+            <R00>1</R00>
+            <R01>0</R01>
+            <R02>0</R02>
+            <R10>0</R10>
+            <R11>1</R11>
+            <R12>0</R12>
+            <R20>0</R20>
+            <R21>0</R21>
+            <R22>1</R22>
+          </CoordinateFrame>
+          <bool name="CanCollide">false</bool>
+          <bool name="CanTouch">false</bool>
+          <Color3uint8 name="Color3uint8">16755260</Color3uint8>
+          <token name="Material">288</token>
+          <token name="shape">0</token>
+          <Vector3 name="size">
+            <X>0.42</X>
+            <Y>0.42</Y>
+            <Z>0.42</Z>
+          </Vector3>
+          <token name="TopSurface">0</token>
+        </Properties>
+        <Item class="PointLight" referent="76">
+          <Properties>
+            <string name="Name">PointLight</string>
+            <float name="Brightness">1.5</float>
+            <Color3 name="Color">
+              <R>1</R>
+              <G>0.6666667</G>
+              <B>0.3137255</B>
+            </Color3>
+            <float name="Range">10</float>
+            <bool name="Shadows">false</bool>
+          </Properties>
+        </Item>
+      </Item>
+      <Item class="Part" referent="77">
+        <Properties>
+          <string name="Name">Candle</string>
+          <bool name="Anchored">true</bool>
+          <token name="BottomSurface">0</token>
+          <CoordinateFrame name="CFrame">
+            <X>6</X>
+            <Y>2.875</Y>
+            <Z>12</Z>
+            <R00>0.00000000000000006123234</R00>
+            <R01>-1</R01>
+            <R02>0</R02>
+            <R10>1</R10>
+            <R11>0.00000000000000006123234</R11>
+            <R12>0</R12>
+            <R20>0</R20>
+            <R21>0</R21>
+            <R22>1</R22>
+          </CoordinateFrame>
+          <bool name="CanCollide">false</bool>
+          <bool name="CanTouch">false</bool>
+          <Color3uint8 name="Color3uint8">15789015</Color3uint8>
+          <token name="Material">272</token>
+          <token name="shape">2</token>
+          <Vector3 name="size">
+            <X>1.75</X>
+            <Y>0.56</Y>
+            <Z>0.56</Z>
+          </Vector3>
+          <token name="TopSurface">0</token>
+        </Properties>
+      </Item>
+      <Item class="Part" referent="78">
+        <Properties>
+          <string name="Name">Flame</string>
+          <bool name="Anchored">true</bool>
+          <token name="BottomSurface">0</token>
+          <CoordinateFrame name="CFrame">
+            <X>6</X>
+            <Y>3.96</Y>
+            <Z>12</Z>
+            <R00>1</R00>
+            <R01>0</R01>
+            <R02>0</R02>
+            <R10>0</R10>
+            <R11>1</R11>
+            <R12>0</R12>
+            <R20>0</R20>
+            <R21>0</R21>
+            <R22>1</R22>
+          </CoordinateFrame>
+          <bool name="CanCollide">false</bool>
+          <bool name="CanTouch">false</bool>
+          <Color3uint8 name="Color3uint8">16755260</Color3uint8>
+          <token name="Material">288</token>
+          <token name="shape">0</token>
+          <Vector3 name="size">
+            <X>0.42</X>
+            <Y>0.42</Y>
+            <Z>0.42</Z>
+          </Vector3>
+          <token name="TopSurface">0</token>
+        </Properties>
+        <Item class="PointLight" referent="79">
+          <Properties>
+            <string name="Name">PointLight</string>
+            <float name="Brightness">1.5</float>
+            <Color3 name="Color">
+              <R>1</R>
+              <G>0.6666667</G>
+              <B>0.3137255</B>
+            </Color3>
+            <float name="Range">10</float>
+            <bool name="Shadows">false</bool>
+          </Properties>
+        </Item>
+      </Item>
+      <Item class="Part" referent="80">
+        <Properties>
+          <string name="Name">Pillar</string>
+          <bool name="Anchored">true</bool>
+          <token name="BottomSurface">0</token>
+          <CoordinateFrame name="CFrame">
+            <X>-24</X>
+            <Y>12</Y>
+            <Z>-8</Z>
+            <R00>0.00000000000000006123234</R00>
+            <R01>-1</R01>
+            <R02>0</R02>
+            <R10>1</R10>
+            <R11>0.00000000000000006123234</R11>
+            <R12>0</R12>
+            <R20>0</R20>
+            <R21>0</R21>
+            <R22>1</R22>
+          </CoordinateFrame>
+          <bool name="CanCollide">false</bool>
+          <bool name="CanTouch">false</bool>
+          <Color3uint8 name="Color3uint8">4605525</Color3uint8>
+          <token name="Material">816</token>
+          <token name="shape">2</token>
+          <Vector3 name="size">
+            <X>20</X>
+            <Y>3.2</Y>
+            <Z>3.2</Z>
+          </Vector3>
+          <token name="TopSurface">0</token>
+        </Properties>
+      </Item>
+      <Item class="Part" referent="81">
+        <Properties>
+          <string name="Name">PillarCap</string>
+          <bool name="Anchored">true</bool>
+          <token name="BottomSurface">0</token>
+          <CoordinateFrame name="CFrame">
+            <X>-24</X>
+            <Y>22.4</Y>
+            <Z>-8</Z>
+            <R00>0.00000000000000006123234</R00>
+            <R01>-1</R01>
+            <R02>0</R02>
+            <R10>1</R10>
+            <R11>0.00000000000000006123234</R11>
+            <R12>0</R12>
+            <R20>0</R20>
+            <R21>0</R21>
+            <R22>1</R22>
+          </CoordinateFrame>
+          <bool name="CanCollide">false</bool>
+          <bool name="CanTouch">false</bool>
+          <Color3uint8 name="Color3uint8">4605525</Color3uint8>
+          <token name="Material">816</token>
+          <token name="shape">2</token>
+          <Vector3 name="size">
+            <X>0.8</X>
+            <Y>4.48</Y>
+            <Z>4.48</Z>
+          </Vector3>
+          <token name="TopSurface">0</token>
+        </Properties>
+      </Item>
+      <Item class="Part" referent="82">
+        <Properties>
+          <string name="Name">Pillar</string>
+          <bool name="Anchored">true</bool>
+          <token name="BottomSurface">0</token>
+          <CoordinateFrame name="CFrame">
+            <X>24</X>
+            <Y>12</Y>
+            <Z>-8</Z>
+            <R00>0.00000000000000006123234</R00>
+            <R01>-1</R01>
+            <R02>0</R02>
+            <R10>1</R10>
+            <R11>0.00000000000000006123234</R11>
+            <R12>0</R12>
+            <R20>0</R20>
+            <R21>0</R21>
+            <R22>1</R22>
+          </CoordinateFrame>
+          <bool name="CanCollide">false</bool>
+          <bool name="CanTouch">false</bool>
+          <Color3uint8 name="Color3uint8">4605525</Color3uint8>
+          <token name="Material">816</token>
+          <token name="shape">2</token>
+          <Vector3 name="size">
+            <X>20</X>
+            <Y>3.2</Y>
+            <Z>3.2</Z>
+          </Vector3>
+          <token name="TopSurface">0</token>
+        </Properties>
+      </Item>
+      <Item class="Part" referent="83">
+        <Properties>
+          <string name="Name">PillarCap</string>
+          <bool name="Anchored">true</bool>
+          <token name="BottomSurface">0</token>
+          <CoordinateFrame name="CFrame">
+            <X>24</X>
+            <Y>22.4</Y>
+            <Z>-8</Z>
+            <R00>0.00000000000000006123234</R00>
+            <R01>-1</R01>
+            <R02>0</R02>
+            <R10>1</R10>
+            <R11>0.00000000000000006123234</R11>
+            <R12>0</R12>
+            <R20>0</R20>
+            <R21>0</R21>
+            <R22>1</R22>
+          </CoordinateFrame>
+          <bool name="CanCollide">false</bool>
+          <bool name="CanTouch">false</bool>
+          <Color3uint8 name="Color3uint8">4605525</Color3uint8>
+          <token name="Material">816</token>
+          <token name="shape">2</token>
+          <Vector3 name="size">
+            <X>0.8</X>
+            <Y>4.48</Y>
+            <Z>4.48</Z>
+          </Vector3>
+          <token name="TopSurface">0</token>
+        </Properties>
+      </Item>
+      <Item class="Part" referent="84">
+        <Properties>
+          <string name="Name">Trunk</string>
+          <bool name="Anchored">true</bool>
+          <token name="BottomSurface">0</token>
+          <CoordinateFrame name="CFrame">
+            <X>-32</X>
+            <Y>10.4</Y>
+            <Z>-22</Z>
+            <R00>0.00000000000000006123234</R00>
+            <R01>-1</R01>
+            <R02>0</R02>
+            <R10>1</R10>
+            <R11>0.00000000000000006123234</R11>
+            <R12>0</R12>
+            <R20>0</R20>
+            <R21>0</R21>
+            <R22>1</R22>
+          </CoordinateFrame>
+          <bool name="CanCollide">false</bool>
+          <bool name="CanTouch">false</bool>
+          <Color3uint8 name="Color3uint8">3285785</Color3uint8>
+          <token name="Material">512</token>
+          <token name="shape">2</token>
+          <Vector3 name="size">
+            <X>16.8</X>
+            <Y>2.24</Y>
+            <Z>2.24</Z>
+          </Vector3>
+          <token name="TopSurface">0</token>
+        </Properties>
+      </Item>
+      <Item class="Part" referent="85">
+        <Properties>
+          <string name="Name">Branch</string>
+          <bool name="Anchored">true</bool>
+          <token name="BottomSurface">0</token>
+          <CoordinateFrame name="CFrame">
+            <X>-34.00874</X>
+            <Y>10.4</Y>
+            <Z>-22.991245</Z>
+            <R00>-0.71740675</R00>
+            <R01>0.53805506</R01>
+            <R02>0.44252044</R02>
+            <R10>0.6</R10>
+            <R11>0.8</R11>
+            <R12>-0.000000000000000036739406</R12>
+            <R20>-0.35401636</R20>
+            <R21>0.26551226</R21>
+            <R22>-0.89675844</R22>
+          </CoordinateFrame>
+          <bool name="CanCollide">false</bool>
+          <bool name="CanTouch">false</bool>
+          <Color3uint8 name="Color3uint8">3285785</Color3uint8>
+          <token name="Material">512</token>
+          <token name="shape">2</token>
+          <Vector3 name="size">
+            <X>5.6</X>
+            <Y>0.98</Y>
+            <Z>0.98</Z>
+          </Vector3>
+          <token name="TopSurface">0</token>
+        </Properties>
+      </Item>
+      <Item class="Part" referent="86">
+        <Properties>
+          <string name="Name">Branch</string>
+          <bool name="Anchored">true</bool>
+          <token name="BottomSurface">0</token>
+          <CoordinateFrame name="CFrame">
+            <X>-28.79007</X>
+            <Y>13.76</Y>
+            <Z>-21.007051</Z>
+            <R00>0.7642692</R00>
+            <R01>-0.5732019</R01>
+            <R02>-0.29552022</R02>
+            <R10>0.6</R10>
+            <R11>0.8</R11>
+            <R12>-0.000000000000000036739406</R12>
+            <R20>0.23641616</R20>
+            <R21>-0.17731212</R21>
+            <R22>0.9553365</R22>
+          </CoordinateFrame>
+          <bool name="CanCollide">false</bool>
+          <bool name="CanTouch">false</bool>
+          <Color3uint8 name="Color3uint8">3285785</Color3uint8>
+          <token name="Material">512</token>
+          <token name="shape">2</token>
+          <Vector3 name="size">
+            <X>8.4</X>
+            <Y>0.98</Y>
+            <Z>0.98</Z>
+          </Vector3>
+          <token name="TopSurface">0</token>
+        </Properties>
+      </Item>
+      <Item class="Part" referent="87">
+        <Properties>
+          <string name="Name">Branch</string>
+          <bool name="Anchored">true</bool>
+          <token name="BottomSurface">0</token>
+          <CoordinateFrame name="CFrame">
+            <X>-34.0647</X>
+            <Y>15.86</Y>
+            <Z>-20.108704</Z>
+            <R00>-0.589915</R00>
+            <R01>0.44243622</R01>
+            <R02>-0.6754632</R02>
+            <R10>0.6</R10>
+            <R11>0.8</R11>
+            <R12>-0.000000000000000036739406</R12>
+            <R20>0.5403705</R20>
+            <R21>-0.4052779</R21>
+            <R22>-0.73739374</R22>
+          </CoordinateFrame>
+          <bool name="CanCollide">false</bool>
+          <bool name="CanTouch">false</bool>
+          <Color3uint8 name="Color3uint8">3285785</Color3uint8>
+          <token name="Material">512</token>
+          <token name="shape">2</token>
+          <Vector3 name="size">
+            <X>7</X>
+            <Y>0.98</Y>
+            <Z>0.98</Z>
+          </Vector3>
+          <token name="TopSurface">0</token>
+        </Properties>
+      </Item>
+      <Item class="Part" referent="88">
+        <Properties>
+          <string name="Name">Branch</string>
+          <bool name="Anchored">true</bool>
+          <token name="BottomSurface">0</token>
+          <CoordinateFrame name="CFrame">
+            <X>-33.23546</X>
+            <Y>18.17</Y>
+            <Z>-24.196371</Z>
+            <R00>-0.39220867</R00>
+            <R01>0.2941565</R01>
+            <R02>0.8715758</R02>
+            <R10>0.6</R10>
+            <R11>0.8</R11>
+            <R12>-0.000000000000000036739406</R12>
+            <R20>-0.6972606</R20>
+            <R21>0.52294546</R21>
+            <R22>-0.4902608</R22>
+          </CoordinateFrame>
+          <bool name="CanCollide">false</bool>
+          <bool name="CanTouch">false</bool>
+          <Color3uint8 name="Color3uint8">3285785</Color3uint8>
+          <token name="Material">512</token>
+          <token name="shape">2</token>
+          <Vector3 name="size">
+            <X>6.3</X>
+            <Y>0.98</Y>
+            <Z>0.98</Z>
+          </Vector3>
+          <token name="TopSurface">0</token>
+        </Properties>
+      </Item>
+      <Item class="Part" referent="89">
+        <Properties>
+          <string name="Name">Trunk</string>
+          <bool name="Anchored">true</bool>
+          <token name="BottomSurface">0</token>
+          <CoordinateFrame name="CFrame">
+            <X>32</X>
+            <Y>9.2</Y>
+            <Z>-20</Z>
+            <R00>0.00000000000000006123234</R00>
+            <R01>-1</R01>
+            <R02>0</R02>
+            <R10>1</R10>
+            <R11>0.00000000000000006123234</R11>
+            <R12>0</R12>
+            <R20>0</R20>
+            <R21>0</R21>
+            <R22>1</R22>
+          </CoordinateFrame>
+          <bool name="CanCollide">false</bool>
+          <bool name="CanTouch">false</bool>
+          <Color3uint8 name="Color3uint8">3285785</Color3uint8>
+          <token name="Material">512</token>
+          <token name="shape">2</token>
+          <Vector3 name="size">
+            <X>14.4</X>
+            <Y>1.92</Y>
+            <Z>1.92</Z>
+          </Vector3>
+          <token name="TopSurface">0</token>
+        </Properties>
+      </Item>
+      <Item class="Part" referent="90">
+        <Properties>
+          <string name="Name">Branch</string>
+          <bool name="Anchored">true</bool>
+          <token name="BottomSurface">0</token>
+          <CoordinateFrame name="CFrame">
+            <X>30.278223</X>
+            <Y>9.2</Y>
+            <Z>-20.84964</Z>
+            <R00>-0.71740675</R00>
+            <R01>0.53805506</R01>
+            <R02>0.44252044</R02>
+            <R10>0.6</R10>
+            <R11>0.8</R11>
+            <R12>-0.000000000000000036739406</R12>
+            <R20>-0.35401636</R20>
+            <R21>0.26551226</R21>
+            <R22>-0.89675844</R22>
+          </CoordinateFrame>
+          <bool name="CanCollide">false</bool>
+          <bool name="CanTouch">false</bool>
+          <Color3uint8 name="Color3uint8">3285785</Color3uint8>
+          <token name="Material">512</token>
+          <token name="shape">2</token>
+          <Vector3 name="size">
+            <X>4.8</X>
+            <Y>0.84</Y>
+            <Z>0.84</Z>
+          </Vector3>
+          <token name="TopSurface">0</token>
+        </Properties>
+      </Item>
+      <Item class="Part" referent="91">
+        <Properties>
+          <string name="Name">Branch</string>
+          <bool name="Anchored">true</bool>
+          <token name="BottomSurface">0</token>
+          <CoordinateFrame name="CFrame">
+            <X>34.75137</X>
+            <Y>12.08</Y>
+            <Z>-19.148901</Z>
+            <R00>0.7642692</R00>
+            <R01>-0.5732019</R01>
+            <R02>-0.29552022</R02>
+            <R10>0.6</R10>
+            <R11>0.8</R11>
+            <R12>-0.000000000000000036739406</R12>
+            <R20>0.23641616</R20>
+            <R21>-0.17731212</R21>
+            <R22>0.9553365</R22>
+          </CoordinateFrame>
+          <bool name="CanCollide">false</bool>
+          <bool name="CanTouch">false</bool>
+          <Color3uint8 name="Color3uint8">3285785</Color3uint8>
+          <token name="Material">512</token>
+          <token name="shape">2</token>
+          <Vector3 name="size">
+            <X>7.2</X>
+            <Y>0.84</Y>
+            <Z>0.84</Z>
+          </Vector3>
+          <token name="TopSurface">0</token>
+        </Properties>
+      </Item>
+      <Item class="Part" referent="92">
+        <Properties>
+          <string name="Name">Branch</string>
+          <bool name="Anchored">true</bool>
+          <token name="BottomSurface">0</token>
+          <CoordinateFrame name="CFrame">
+            <X>30.230255</X>
+            <Y>13.88</Y>
+            <Z>-18.37889</Z>
+            <R00>-0.589915</R00>
+            <R01>0.44243622</R01>
+            <R02>-0.6754632</R02>
+            <R10>0.6</R10>
+            <R11>0.8</R11>
+            <R12>-0.000000000000000036739406</R12>
+            <R20>0.5403705</R20>
+            <R21>-0.4052779</R21>
+            <R22>-0.73739374</R22>
+          </CoordinateFrame>
+          <bool name="CanCollide">false</bool>
+          <bool name="CanTouch">false</bool>
+          <Color3uint8 name="Color3uint8">3285785</Color3uint8>
+          <token name="Material">512</token>
+          <token name="shape">2</token>
+          <Vector3 name="size">
+            <X>6</X>
+            <Y>0.84</Y>
+            <Z>0.84</Z>
+          </Vector3>
+          <token name="TopSurface">0</token>
+        </Properties>
+      </Item>
+      <Item class="Part" referent="93">
+        <Properties>
+          <string name="Name">Branch</string>
+          <bool name="Anchored">true</bool>
+          <token name="BottomSurface">0</token>
+          <CoordinateFrame name="CFrame">
+            <X>30.941036</X>
+            <Y>15.86</Y>
+            <Z>-21.882605</Z>
+            <R00>-0.39220867</R00>
+            <R01>0.2941565</R01>
+            <R02>0.8715758</R02>
+            <R10>0.6</R10>
+            <R11>0.8</R11>
+            <R12>-0.000000000000000036739406</R12>
+            <R20>-0.6972606</R20>
+            <R21>0.52294546</R21>
+            <R22>-0.4902608</R22>
+          </CoordinateFrame>
+          <bool name="CanCollide">false</bool>
+          <bool name="CanTouch">false</bool>
+          <Color3uint8 name="Color3uint8">3285785</Color3uint8>
+          <token name="Material">512</token>
+          <token name="shape">2</token>
+          <Vector3 name="size">
+            <X>5.4</X>
+            <Y>0.84</Y>
+            <Z>0.84</Z>
+          </Vector3>
+          <token name="TopSurface">0</token>
+        </Properties>
+      </Item>
+      <Item class="Part" referent="94">
+        <Properties>
+          <string name="Name">Trunk</string>
+          <bool name="Anchored">true</bool>
+          <token name="BottomSurface">0</token>
+          <CoordinateFrame name="CFrame">
+            <X>-44</X>
+            <Y>8.6</Y>
+            <Z>-6</Z>
+            <R00>0.00000000000000006123234</R00>
+            <R01>-1</R01>
+            <R02>0</R02>
+            <R10>1</R10>
+            <R11>0.00000000000000006123234</R11>
+            <R12>0</R12>
+            <R20>0</R20>
+            <R21>0</R21>
+            <R22>1</R22>
+          </CoordinateFrame>
+          <bool name="CanCollide">false</bool>
+          <bool name="CanTouch">false</bool>
+          <Color3uint8 name="Color3uint8">3285785</Color3uint8>
+          <token name="Material">512</token>
+          <token name="shape">2</token>
+          <Vector3 name="size">
+            <X>13.2</X>
+            <Y>1.76</Y>
+            <Z>1.76</Z>
+          </Vector3>
+          <token name="TopSurface">0</token>
+        </Properties>
+      </Item>
+      <Item class="Part" referent="95">
+        <Properties>
+          <string name="Name">Branch</string>
+          <bool name="Anchored">true</bool>
+          <token name="BottomSurface">0</token>
+          <CoordinateFrame name="CFrame">
+            <X>-45.578297</X>
+            <Y>8.6</Y>
+            <Z>-6.778836</Z>
+            <R00>-0.71740675</R00>
+            <R01>0.53805506</R01>
+            <R02>0.44252044</R02>
+            <R10>0.6</R10>
+            <R11>0.8</R11>
+            <R12>-0.000000000000000036739406</R12>
+            <R20>-0.35401636</R20>
+            <R21>0.26551226</R21>
+            <R22>-0.89675844</R22>
+          </CoordinateFrame>
+          <bool name="CanCollide">false</bool>
+          <bool name="CanTouch">false</bool>
+          <Color3uint8 name="Color3uint8">3285785</Color3uint8>
+          <token name="Material">512</token>
+          <token name="shape">2</token>
+          <Vector3 name="size">
+            <X>4.4</X>
+            <Y>0.77</Y>
+            <Z>0.77</Z>
+          </Vector3>
+          <token name="TopSurface">0</token>
+        </Properties>
+      </Item>
+      <Item class="Part" referent="96">
+        <Properties>
+          <string name="Name">Branch</string>
+          <bool name="Anchored">true</bool>
+          <token name="BottomSurface">0</token>
+          <CoordinateFrame name="CFrame">
+            <X>-41.477913</X>
+            <Y>11.24</Y>
+            <Z>-5.2198267</Z>
+            <R00>0.7642692</R00>
+            <R01>-0.5732019</R01>
+            <R02>-0.29552022</R02>
+            <R10>0.6</R10>
+            <R11>0.8</R11>
+            <R12>-0.000000000000000036739406</R12>
+            <R20>0.23641616</R20>
+            <R21>-0.17731212</R21>
+            <R22>0.9553365</R22>
+          </CoordinateFrame>
+          <bool name="CanCollide">false</bool>
+          <bool name="CanTouch">false</bool>
+          <Color3uint8 name="Color3uint8">3285785</Color3uint8>
+          <token name="Material">512</token>
+          <token name="shape">2</token>
+          <Vector3 name="size">
+            <X>6.6</X>
+            <Y>0.77</Y>
+            <Z>0.77</Z>
+          </Vector3>
+          <token name="TopSurface">0</token>
+        </Properties>
+      </Item>
+      <Item class="Part" referent="97">
+        <Properties>
+          <string name="Name">Branch</string>
+          <bool name="Anchored">true</bool>
+          <token name="BottomSurface">0</token>
+          <CoordinateFrame name="CFrame">
+            <X>-45.622265</X>
+            <Y>12.89</Y>
+            <Z>-4.513981</Z>
+            <R00>-0.589915</R00>
+            <R01>0.44243622</R01>
+            <R02>-0.6754632</R02>
+            <R10>0.6</R10>
+            <R11>0.8</R11>
+            <R12>-0.000000000000000036739406</R12>
+            <R20>0.5403705</R20>
+            <R21>-0.4052779</R21>
+            <R22>-0.73739374</R22>
+          </CoordinateFrame>
+          <bool name="CanCollide">false</bool>
+          <bool name="CanTouch">false</bool>
+          <Color3uint8 name="Color3uint8">3285785</Color3uint8>
+          <token name="Material">512</token>
+          <token name="shape">2</token>
+          <Vector3 name="size">
+            <X>5.5</X>
+            <Y>0.77</Y>
+            <Z>0.77</Z>
+          </Vector3>
+          <token name="TopSurface">0</token>
+        </Properties>
+      </Item>
+      <Item class="Part" referent="98">
+        <Properties>
+          <string name="Name">Branch</string>
+          <bool name="Anchored">true</bool>
+          <token name="BottomSurface">0</token>
+          <CoordinateFrame name="CFrame">
+            <X>-44.970715</X>
+            <Y>14.705</Y>
+            <Z>-7.72572</Z>
+            <R00>-0.39220867</R00>
+            <R01>0.2941565</R01>
+            <R02>0.8715758</R02>
+            <R10>0.6</R10>
+            <R11>0.8</R11>
+            <R12>-0.000000000000000036739406</R12>
+            <R20>-0.6972606</R20>
+            <R21>0.52294546</R21>
+            <R22>-0.4902608</R22>
+          </CoordinateFrame>
+          <bool name="CanCollide">false</bool>
+          <bool name="CanTouch">false</bool>
+          <Color3uint8 name="Color3uint8">3285785</Color3uint8>
+          <token name="Material">512</token>
+          <token name="shape">2</token>
+          <Vector3 name="size">
+            <X>4.95</X>
+            <Y>0.77</Y>
+            <Z>0.77</Z>
+          </Vector3>
+          <token name="TopSurface">0</token>
+        </Properties>
+      </Item>
+      <Item class="Part" referent="99">
+        <Properties>
+          <string name="Name">Trunk</string>
+          <bool name="Anchored">true</bool>
+          <token name="BottomSurface">0</token>
+          <CoordinateFrame name="CFrame">
+            <X>44</X>
+            <Y>8</Y>
+            <Z>-8</Z>
+            <R00>0.00000000000000006123234</R00>
+            <R01>-1</R01>
+            <R02>0</R02>
+            <R10>1</R10>
+            <R11>0.00000000000000006123234</R11>
+            <R12>0</R12>
+            <R20>0</R20>
+            <R21>0</R21>
+            <R22>1</R22>
+          </CoordinateFrame>
+          <bool name="CanCollide">false</bool>
+          <bool name="CanTouch">false</bool>
+          <Color3uint8 name="Color3uint8">3285785</Color3uint8>
+          <token name="Material">512</token>
+          <token name="shape">2</token>
+          <Vector3 name="size">
+            <X>12</X>
+            <Y>1.6</Y>
+            <Z>1.6</Z>
+          </Vector3>
+          <token name="TopSurface">0</token>
+        </Properties>
+      </Item>
+      <Item class="Part" referent="100">
+        <Properties>
+          <string name="Name">Branch</string>
+          <bool name="Anchored">true</bool>
+          <token name="BottomSurface">0</token>
+          <CoordinateFrame name="CFrame">
+            <X>42.565186</X>
+            <Y>8</Y>
+            <Z>-8.708033</Z>
+            <R00>-0.71740675</R00>
+            <R01>0.53805506</R01>
+            <R02>0.44252044</R02>
+            <R10>0.6</R10>
+            <R11>0.8</R11>
+            <R12>-0.000000000000000036739406</R12>
+            <R20>-0.35401636</R20>
+            <R21>0.26551226</R21>
+            <R22>-0.89675844</R22>
+          </CoordinateFrame>
+          <bool name="CanCollide">false</bool>
+          <bool name="CanTouch">false</bool>
+          <Color3uint8 name="Color3uint8">3285785</Color3uint8>
+          <token name="Material">512</token>
+          <token name="shape">2</token>
+          <Vector3 name="size">
+            <X>4</X>
+            <Y>0.7</Y>
+            <Z>0.7</Z>
+          </Vector3>
+          <token name="TopSurface">0</token>
+        </Properties>
+      </Item>
+      <Item class="Part" referent="101">
+        <Properties>
+          <string name="Name">Branch</string>
+          <bool name="Anchored">true</bool>
+          <token name="BottomSurface">0</token>
+          <CoordinateFrame name="CFrame">
+            <X>46.29281</X>
+            <Y>10.4</Y>
+            <Z>-7.2907515</Z>
+            <R00>0.7642692</R00>
+            <R01>-0.5732019</R01>
+            <R02>-0.29552022</R02>
+            <R10>0.6</R10>
+            <R11>0.8</R11>
+            <R12>-0.000000000000000036739406</R12>
+            <R20>0.23641616</R20>
+            <R21>-0.17731212</R21>
+            <R22>0.9553365</R22>
+          </CoordinateFrame>
+          <bool name="CanCollide">false</bool>
+          <bool name="CanTouch">false</bool>
+          <Color3uint8 name="Color3uint8">3285785</Color3uint8>
+          <token name="Material">512</token>
+          <token name="shape">2</token>
+          <Vector3 name="size">
+            <X>6</X>
+            <Y>0.7</Y>
+            <Z>0.7</Z>
+          </Vector3>
+          <token name="TopSurface">0</token>
+        </Properties>
+      </Item>
+      <Item class="Part" referent="102">
+        <Properties>
+          <string name="Name">Branch</string>
+          <bool name="Anchored">true</bool>
+          <token name="BottomSurface">0</token>
+          <CoordinateFrame name="CFrame">
+            <X>42.52521</X>
+            <Y>11.9</Y>
+            <Z>-6.6490736</Z>
+            <R00>-0.589915</R00>
+            <R01>0.44243622</R01>
+            <R02>-0.6754632</R02>
+            <R10>0.6</R10>
+            <R11>0.8</R11>
+            <R12>-0.000000000000000036739406</R12>
+            <R20>0.5403705</R20>
+            <R21>-0.4052779</R21>
+            <R22>-0.73739374</R22>
+          </CoordinateFrame>
+          <bool name="CanCollide">false</bool>
+          <bool name="CanTouch">false</bool>
+          <Color3uint8 name="Color3uint8">3285785</Color3uint8>
+          <token name="Material">512</token>
+          <token name="shape">2</token>
+          <Vector3 name="size">
+            <X>5</X>
+            <Y>0.7</Y>
+            <Z>0.7</Z>
+          </Vector3>
+          <token name="TopSurface">0</token>
+        </Properties>
+      </Item>
+      <Item class="Part" referent="103">
+        <Properties>
+          <string name="Name">Branch</string>
+          <bool name="Anchored">true</bool>
+          <token name="BottomSurface">0</token>
+          <CoordinateFrame name="CFrame">
+            <X>43.11753</X>
+            <Y>13.55</Y>
+            <Z>-9.568836</Z>
+            <R00>-0.39220867</R00>
+            <R01>0.2941565</R01>
+            <R02>0.8715758</R02>
+            <R10>0.6</R10>
+            <R11>0.8</R11>
+            <R12>-0.000000000000000036739406</R12>
+            <R20>-0.6972606</R20>
+            <R21>0.52294546</R21>
+            <R22>-0.4902608</R22>
+          </CoordinateFrame>
+          <bool name="CanCollide">false</bool>
+          <bool name="CanTouch">false</bool>
+          <Color3uint8 name="Color3uint8">3285785</Color3uint8>
+          <token name="Material">512</token>
+          <token name="shape">2</token>
+          <Vector3 name="size">
+            <X>4.5</X>
+            <Y>0.7</Y>
+            <Z>0.7</Z>
+          </Vector3>
+          <token name="TopSurface">0</token>
+        </Properties>
+      </Item>
+      <Item class="Part" referent="104">
+        <Properties>
+          <string name="Name">Moon</string>
+          <bool name="Anchored">true</bool>
+          <token name="BottomSurface">0</token>
+          <CoordinateFrame name="CFrame">
+            <X>-45</X>
+            <Y>77</Y>
+            <Z>-150</Z>
+            <R00>1</R00>
+            <R01>0</R01>
+            <R02>0</R02>
+            <R10>0</R10>
+            <R11>1</R11>
+            <R12>0</R12>
+            <R20>0</R20>
+            <R21>0</R21>
+            <R22>1</R22>
+          </CoordinateFrame>
+          <bool name="CanCollide">false</bool>
+          <bool name="CanTouch">false</bool>
+          <bool name="CastShadow">false</bool>
+          <Color3uint8 name="Color3uint8">16774600</Color3uint8>
+          <token name="Material">288</token>
+          <token name="shape">0</token>
+          <Vector3 name="size">
+            <X>40</X>
+            <Y>40</Y>
+            <Z>40</Z>
+          </Vector3>
+          <token name="TopSurface">0</token>
+        </Properties>
+      </Item>
+      <Item class="Part" referent="105">
+        <Properties>
+          <string name="Name">Spotlight</string>
+          <bool name="Anchored">true</bool>
+          <token name="BottomSurface">0</token>
+          <CoordinateFrame name="CFrame">
+            <X>-16</X>
+            <Y>22</Y>
+            <Z>-10</Z>
+            <R00>-0.52999896</R00>
+            <R01>0.5853465</R01>
+            <R02>-0.613572</R02>
+            <R10>0</R10>
+            <R11>0.7235533</R11>
+            <R12>0.6902685</R12>
+            <R20>0.8479983</R20>
+            <R21>0.36584157</R21>
+            <R22>-0.3834825</R22>
+          </CoordinateFrame>
+          <bool name="CanCollide">false</bool>
+          <bool name="CanTouch">false</bool>
+          <Color3uint8 name="Color3uint8">1644830</Color3uint8>
+          <token name="Material">1088</token>
+          <Vector3 name="size">
+            <X>1.4</X>
+            <Y>1.4</Y>
+            <Z>2</Z>
+          </Vector3>
+          <token name="TopSurface">0</token>
+        </Properties>
+        <Item class="SpotLight" referent="106">
+          <Properties>
+            <string name="Name">SpotLight</string>
+            <float name="Angle">60</float>
+            <float name="Brightness">4</float>
+            <Color3 name="Color">
+              <R>0.6666667</R>
+              <G>0.3137255</G>
+              <B>1</B>
+            </Color3>
+            <token name="Face">5</token>
+            <float name="Range">60</float>
+            <bool name="Shadows">false</bool>
+          </Properties>
+        </Item>
+      </Item>
+      <Item class="Part" referent="107">
+        <Properties>
+          <string name="Name">Spotlight</string>
+          <bool name="Anchored">true</bool>
+          <token name="BottomSurface">0</token>
+          <CoordinateFrame name="CFrame">
+            <X>16</X>
+            <Y>22</Y>
+            <Z>-10</Z>
+            <R00>-0.52999896</R00>
+            <R01>-0.5853465</R01>
+            <R02>0.613572</R02>
+            <R10>0</R10>
+            <R11>0.7235533</R11>
+            <R12>0.6902685</R12>
+            <R20>-0.8479983</R20>
+            <R21>0.36584157</R21>
+            <R22>-0.3834825</R22>
+          </CoordinateFrame>
+          <bool name="CanCollide">false</bool>
+          <bool name="CanTouch">false</bool>
+          <Color3uint8 name="Color3uint8">1644830</Color3uint8>
+          <token name="Material">1088</token>
+          <Vector3 name="size">
+            <X>1.4</X>
+            <Y>1.4</Y>
+            <Z>2</Z>
+          </Vector3>
+          <token name="TopSurface">0</token>
+        </Properties>
+        <Item class="SpotLight" referent="108">
+          <Properties>
+            <string name="Name">SpotLight</string>
+            <float name="Angle">60</float>
+            <float name="Brightness">4</float>
+            <Color3 name="Color">
+              <R>1</R>
+              <G>0.54901963</G>
+              <B>0.15686275</B>
+            </Color3>
+            <token name="Face">5</token>
+            <float name="Range">60</float>
+            <bool name="Shadows">false</bool>
+          </Properties>
+        </Item>
+      </Item>
+    </Item>
+    <Item class="SpawnLocation" referent="109">
+      <Properties>
+        <string name="Name">SpawnLocation</string>
+        <bool name="Anchored">true</bool>
+        <CoordinateFrame name="CFrame">
+          <X>0</X>
+          <Y>0.5</Y>
+          <Z>70</Z>
+          <R00>1</R00>
+          <R01>0</R01>
+          <R02>0</R02>
+          <R10>0</R10>
+          <R11>1</R11>
+          <R12>0</R12>
+          <R20>0</R20>
+          <R21>0</R21>
+          <R22>1</R22>
+        </CoordinateFrame>
+        <int name="Duration">0</int>
+        <bool name="Neutral">true</bool>
+        <Vector3 name="size">
+          <X>6</X>
+          <Y>1</Y>
+          <Z>6</Z>
+        </Vector3>
+      </Properties>
+    </Item>
+  </Item>
+  <Item class="Lighting" referent="110">
+    <Properties>
+      <string name="Name">Lighting</string>
+      <Color3 name="Ambient">
+        <R>0.19607843</R>
+        <G>0.13725491</G>
+        <B>0.3529412</B>
+      </Color3>
+      <float name="Brightness">0.6</float>
+      <float name="ClockTime">0</float>
+      <Color3 name="FogColor">
+        <R>0.09803922</R>
+        <G>0.05882353</G>
+        <B>0.1764706</B>
+      </Color3>
+      <float name="FogEnd">220</float>
+      <float name="FogStart">60</float>
+      <bool name="GlobalShadows">true</bool>
+      <Color3 name="OutdoorAmbient">
+        <R>0.23529412</R>
+        <G>0.1764706</G>
+        <B>0.43137255</B>
+      </Color3>
+    </Properties>
+    <Item class="Atmosphere" referent="111">
+      <Properties>
+        <string name="Name">StageAtmosphere</string>
+        <Color3 name="Color">
+          <R>0.47058824</R>
+          <G>0.3137255</G>
+          <B>0.78431374</B>
+        </Color3>
+        <Color3 name="Decay">
+          <R>0.23529412</R>
+          <G>0.11764706</G>
+          <B>0.39215687</B>
+        </Color3>
+        <float name="Density">0.3</float>
+        <float name="Glare">0</float>
+        <float name="Haze">1</float>
+        <float name="Offset">0.2</float>
+      </Properties>
+    </Item>
+    <Item class="BloomEffect" referent="112">
+      <Properties>
+        <string name="Name">StageBloom</string>
+        <float name="Intensity">0.5</float>
+        <float name="Size">24</float>
+        <float name="Threshold">1</float>
+      </Properties>
+    </Item>
+  </Item>
+  <Item class="ServerScriptService" referent="113">
+    <Properties>
+      <string name="Name">ServerScriptService</string>
+    </Properties>
+    <Item class="Folder" referent="114">
+      <Properties>
+        <string name="Name">Stage</string>
+      </Properties>
+      <Item class="Script" referent="115">
+        <Properties>
+          <string name="Name">Bridge</string>
+          <ProtectedString name="Source"><![CDATA[-- Receives join/gift messages from the Node.js TikTok bridge (Open Cloud Messaging Service)
+-- and forwards them to the stage queue. Only works in a PUBLISHED game's live servers.
+local MessagingService = game:GetService("MessagingService")
+local HttpService = game:GetService("HttpService")
+local Config = require(script.Parent.Config)
+local StageAPI = require(script.Parent.StageAPI)
+local ThemeManager = require(script.Parent.ThemeManager)
+
+local MAX_GIFT_REPEAT = 5
+
+local function handle(raw: string)
+	local ok, data = pcall(function()
+		return HttpService:JSONDecode(raw)
+	end)
+	if not ok or type(data) ~= "table" then
+		return
+	end
+
+	if data.kind == "join" and type(data.username) == "string" then
+		if StageAPI.isValidUsername(data.username) then
+			StageAPI.enqueueJoin(data.username)
+		end
+	elseif data.kind == "theme" then
+		if ThemeManager.exists(data.name) then
+			ThemeManager.apply(data.name)
+		end
+	elseif data.kind == "gift" and type(data.gift) == "string" and #data.gift <= 50 then
+		local count = math.clamp(math.floor(tonumber(data.count) or 1), 1, MAX_GIFT_REPEAT)
+		local by = if type(data.by) == "string" then data.by else ""
+		for _ = 1, count do
+			StageAPI.enqueueGift(data.gift, by)
+		end
+	end
+end
+
+local ok, err = pcall(function()
+	MessagingService:SubscribeAsync(Config.MessagingTopic, function(message)
+		handle(message.Data)
+	end)
+end)
+
+if ok then
+	print("[Stage] Listening for bridge messages on topic:", Config.MessagingTopic)
+else
+	warn("[Stage] Could not subscribe to MessagingService:", err)
+end
+]]></ProtectedString>
+        </Properties>
+      </Item>
+      <Item class="ModuleScript" referent="116">
+        <Properties>
+          <string name="Name">Config</string>
+          <ProtectedString name="Source"><![CDATA[-- Central settings. Edit here; no code changes needed for gift tuning.
+-- Gift entries are PLACEHOLDERS: rename them to match the real TikTok gift names later.
+return {
+	-- Stage timing (seconds)
+	BaseStayTime = 20, -- how long a joined avatar stays on stage by default
+	MaxStayTime = 45, -- hard cap so the stage never freezes
+	GiftStayBonus = 5, -- extra seconds added per gift that targets an avatar on stage
+	QueueLimit = 15, -- max pending items; extra joins/gifts are dropped
+	StageSlots = 3, -- how many avatars can be on stage at once
+	ProcessInterval = 0.25, -- how often the queue checks for work
+
+	-- Messages from the Node.js bridge arrive on this topic (must match ROBLOX_TOPIC in bridge/.env)
+	MessagingTopic = "TikTokStage",
+
+	-- Gift -> effect mapping (placeholder)
+	-- Effect must match a key in Effects.luau. Action "Effect" plays a visual,
+	-- "Stay" adds stay time to the newest avatar on stage.
+	Gifts = {
+		Rose = { Effect = "Confetti", Stay = 0 },
+		Lion = { Effect = "Fire", Stay = 5 },
+		Galaxy = { Effect = "Stars", Stay = 10 },
+	},
+	DefaultGift = { Effect = "Confetti", Stay = 0 },
+
+	-- Stage layout. StageOrigin is where the middle avatar's root part stands:
+	-- an R15 avatar's feet are about 3 studs lower, so the floor top is StageOrigin.Y - 3.
+	StageOrigin = Vector3.new(0, 5, 0),
+	SlotSpacing = 8,
+	FaceDirection = Vector3.new(0, 0, 1), -- avatars face this way (towards the stream camera)
+
+	-- Map theme applied at game start. Names live in Themes.luau; switch live with /theme <name>.
+	Theme = "Halloween",
+
+	-- Dance animations for R15 avatars (a random one per avatar). These are Roblox's standard
+	-- emote animations; if one fails to load the avatar falls back to a simple bob.
+	DanceAnimations = {
+		"rbxassetid://507771019",
+		"rbxassetid://507776043",
+		"rbxassetid://507777268",
+	},
+}
+]]></ProtectedString>
+        </Properties>
+      </Item>
+      <Item class="ModuleScript" referent="117">
+        <Properties>
+          <string name="Name">DevActions</string>
+          <ProtectedString name="Source"><![CDATA[-- Developer actions shared by the chat commands and the on-screen DevPanel.
+-- Every input is validated here because the panel's RemoteEvent arguments come from a client.
+local Config = require(script.Parent.Config)
+local StageAPI = require(script.Parent.StageAPI)
+local ThemeManager = require(script.Parent.ThemeManager)
+
+local DevActions = {}
+
+-- Returns a short result text.
+function DevActions.run(action: any, arg: any, extra: any): string
+	if action == "join" then
+		if not StageAPI.isValidUsername(arg) then
+			return "invalid username"
+		end
+		return if StageAPI.enqueueJoin(arg) then "join queued" else "queue full"
+	elseif action == "gift" then
+		if type(arg) ~= "string" or #arg == 0 or #arg > 50 then
+			return "invalid gift"
+		end
+		local sender = if type(extra) == "string" and extra ~= "" then extra else "dev"
+		return if StageAPI.enqueueGift(arg, sender) then "gift queued" else "queue full"
+	elseif action == "theme" then
+		if not ThemeManager.exists(arg) then
+			return "unknown theme (available: " .. table.concat(ThemeManager.names(), ", ") .. ")"
+		end
+		ThemeManager.apply(arg :: string)
+		return "theme: " .. (arg :: string)
+	end
+	return "unknown action"
+end
+
+-- Gift names from Config.Gifts, sorted (used to build the panel's buttons).
+function DevActions.giftNames(): { string }
+	local names = {}
+	for name in Config.Gifts do
+		table.insert(names, name)
+	end
+	table.sort(names)
+	return names
+end
+
+return DevActions
+]]></ProtectedString>
+        </Properties>
+      </Item>
+      <Item class="Script" referent="118">
+        <Properties>
+          <string name="Name">DevCommands</string>
+          <ProtectedString name="Source"><![CDATA[-- Local testing. Accepted only from the game's creator (or anyone inside Studio).
+-- Chat commands:   /join <RobloxUsername>   /gift <GiftName> [sender]   /theme <ThemeName>
+-- On-screen panel: DevPanel.client.luau fires the StageDevAction remote created below.
+local Players = game:GetService("Players")
+local RunService = game:GetService("RunService")
+local ReplicatedStorage = game:GetService("ReplicatedStorage")
+local DevActions = require(script.Parent.DevActions)
+local ThemeManager = require(script.Parent.ThemeManager)
+
+local function allowed(player: Player): boolean
+	return RunService:IsStudio() or player.UserId == game.CreatorId
+end
+
+local function onChat(player: Player, message: string)
+	if not allowed(player) then
+		return
+	end
+	local cmd, arg, extra = message:match("^/(%a+)%s*(%S*)%s*(%S*)")
+	if cmd == "join" or cmd == "gift" or cmd == "theme" then
+		print("[Dev]", DevActions.run(cmd, arg, extra))
+	end
+end
+
+local function hook(player: Player)
+	player.Chatted:Connect(function(message)
+		onChat(player, message)
+	end)
+end
+
+for _, p in Players:GetPlayers() do
+	hook(p)
+end
+Players.PlayerAdded:Connect(hook)
+
+-- Names for the panel's buttons are published before the remote exists (the panel waits for the remote).
+workspace:SetAttribute("StageGiftNames", table.concat(DevActions.giftNames(), ","))
+workspace:SetAttribute("StageThemeNames", table.concat(ThemeManager.names(), ","))
+
+local remote = Instance.new("RemoteEvent")
+remote.Name = "StageDevAction"
+remote.OnServerEvent:Connect(function(player, action, arg, extra)
+	if allowed(player) then
+		print("[Dev]", DevActions.run(action, arg, extra))
+	end
+end)
+remote.Parent = ReplicatedStorage
+]]></ProtectedString>
+        </Properties>
+      </Item>
+      <Item class="ModuleScript" referent="119">
+        <Properties>
+          <string name="Name">Effects</string>
+          <ProtectedString name="Source"><![CDATA[-- Visual effects triggered by gifts. Each effect takes a Vector3 position.
+local Debris = game:GetService("Debris")
+
+local function burst(position: Vector3, color: Color3, rate: number, life: number)
+	local anchor = Instance.new("Part")
+	anchor.Anchored = true
+	anchor.CanCollide = false
+	anchor.Transparency = 1
+	anchor.Size = Vector3.new(1, 1, 1)
+	anchor.Position = position
+	anchor.Parent = workspace
+
+	local emitter = Instance.new("ParticleEmitter")
+	emitter.Color = ColorSequence.new(color)
+	emitter.Rate = 0
+	emitter.Lifetime = NumberRange.new(1, 2)
+	emitter.Speed = NumberRange.new(8, 16)
+	emitter.SpreadAngle = Vector2.new(180, 180)
+	emitter.Parent = anchor
+	emitter:Emit(rate)
+
+	Debris:AddItem(anchor, life)
+end
+
+local Effects = {}
+
+function Effects.Confetti(position: Vector3)
+	burst(position, Color3.fromRGB(255, 120, 200), 60, 3)
+end
+
+function Effects.Fire(position: Vector3)
+	burst(position, Color3.fromRGB(255, 110, 30), 120, 3)
+end
+
+function Effects.Stars(position: Vector3)
+	burst(position, Color3.fromRGB(255, 240, 150), 80, 3)
+end
+
+-- Fallback for unknown effect names
+function Effects.Play(name: string, position: Vector3)
+	local fn = Effects[name]
+	if fn then
+		fn(position)
+	else
+		warn("[Stage] Unknown effect:", name)
+	end
+end
+
+return Effects
+]]></ProtectedString>
+        </Properties>
+      </Item>
+      <Item class="ModuleScript" referent="120">
+        <Properties>
+          <string name="Name">GiftQueue</string>
+          <ProtectedString name="Source"><![CDATA[-- FIFO queue with a hard size limit. Items: { kind = "join" | "gift", ... }
+local GiftQueue = {}
+GiftQueue.__index = GiftQueue
+
+function GiftQueue.new(limit: number)
+	return setmetatable({ items = {}, limit = limit }, GiftQueue)
+end
+
+function GiftQueue:push(item): boolean
+	if #self.items >= self.limit then
+		return false -- queue full, drop it
+	end
+	table.insert(self.items, item)
+	return true
+end
+
+function GiftQueue:pop(): any?
+	if #self.items == 0 then
+		return nil
+	end
+	return table.remove(self.items, 1)
+end
+
+function GiftQueue:size(): number
+	return #self.items
+end
+
+return GiftQueue
+]]></ProtectedString>
+        </Properties>
+      </Item>
+      <Item class="ModuleScript" referent="121">
+        <Properties>
+          <string name="Name">Layout</string>
+          <ProtectedString name="Source"><![CDATA[-- Shared stage geometry so avatars, the map and the camera always agree.
+local Config = require(script.Parent.Config)
+
+local Layout = {}
+
+-- Distance from an R15 root part to the soles of its feet (HipHeight 2 + half of the 2-stud root).
+local ROOT_TO_FEET = 3
+
+function Layout.floorTopY(): number
+	return Config.StageOrigin.Y - ROOT_TO_FEET
+end
+
+function Layout.slotPosition(slot: number): Vector3
+	local offset = (slot - (Config.StageSlots + 1) / 2) * Config.SlotSpacing
+	return Config.StageOrigin + Vector3.new(offset, 0, 0)
+end
+
+-- Offset relative to the stage centre on the floor (y = 0 means standing on the floor).
+function Layout.fromFloor(offset: Vector3): Vector3
+	return Vector3.new(Config.StageOrigin.X + offset.X, Layout.floorTopY() + offset.Y, Config.StageOrigin.Z + offset.Z)
+end
+
+-- Offset relative to StageOrigin itself (used for camera positions).
+function Layout.fromOrigin(offset: Vector3): Vector3
+	return Config.StageOrigin + offset
+end
+
+return Layout
+]]></ProtectedString>
+        </Properties>
+      </Item>
+      <Item class="Script" referent="122">
+        <Properties>
+          <string name="Name">Main</string>
+          <ProtectedString name="Source"><![CDATA[-- Main loop: takes items from the queue, spawns avatars, plays gift effects.
+local Config = require(script.Parent.Config)
+local StageAPI = require(script.Parent.StageAPI)
+local StageActor = require(script.Parent.StageActor)
+local Effects = require(script.Parent.Effects)
+local ThemeManager = require(script.Parent.ThemeManager)
+
+local queue = StageAPI.getQueue()
+local onStage: { Model } = {}
+
+local function cleanupStage()
+	for i = #onStage, 1, -1 do
+		local model = onStage[i]
+		if StageActor.isExpired(model) then
+			model:Destroy()
+		end
+		if not model.Parent then
+			table.remove(onStage, i)
+		end
+	end
+end
+
+local function freeSlot(): number?
+	for slot = 1, Config.StageSlots do
+		local taken = false
+		for _, m in onStage do
+			if m:GetAttribute("Slot") == slot then
+				taken = true
+				break
+			end
+		end
+		if not taken then
+			return slot
+		end
+	end
+	return nil
+end
+
+local function handleJoin(item)
+	local slot = freeSlot()
+	if not slot then
+		-- No slot yet: put the join back at the front and wait
+		return false
+	end
+	local model, reason = StageActor.spawn(item.username, slot)
+	if not model then
+		warn("[Stage] Join failed for", item.username, reason)
+		return true -- consumed, skip it
+	end
+	model:SetAttribute("Slot", slot)
+	table.insert(onStage, model)
+	StageActor.setStay(model, Config.BaseStayTime)
+	Effects.Play("Confetti", model:GetPivot().Position)
+	return true
+end
+
+local function handleGift(item)
+	local rule = Config.Gifts[item.gift] or Config.DefaultGift
+	cleanupStage()
+	local target = onStage[#onStage]
+	local pos = target and target:GetPivot().Position or Config.StageOrigin
+	Effects.Play(rule.Effect, pos)
+	if target and rule.Stay > 0 then
+		local current = math.max(0, (target:GetAttribute("LeaveAt") or os.clock()) - os.clock())
+		local extra = math.min(current + rule.Stay + Config.GiftStayBonus, Config.MaxStayTime)
+		StageActor.setStay(target, extra)
+	end
+	return true
+end
+
+ThemeManager.apply(Config.Theme)
+
+task.spawn(function()
+	while true do
+		cleanupStage()
+		local item = queue.items[1]
+		if item then
+			local done
+			if item.kind == "join" then
+				done = handleJoin(item)
+			else
+				done = handleGift(item)
+			end
+			if done then
+				queue:pop()
+			end
+		end
+		task.wait(Config.ProcessInterval)
+	end
+end)
+
+print("[Stage] Ready. Queue limit:", Config.QueueLimit)
+]]></ProtectedString>
+        </Properties>
+      </Item>
+      <Item class="ModuleScript" referent="123">
+        <Properties>
+          <string name="Name">StageAPI</string>
+          <ProtectedString name="Source"><![CDATA[-- Single entry point for the queue. The TikTok bridge (later) and dev commands both call this.
+local GiftQueue = require(script.Parent.GiftQueue)
+local Config = require(script.Parent.Config)
+
+local queue = GiftQueue.new(Config.QueueLimit)
+
+local StageAPI = {}
+
+function StageAPI.enqueueJoin(username: string): boolean
+	return queue:push({ kind = "join", username = username })
+end
+
+function StageAPI.enqueueGift(giftName: string, sender: string?): boolean
+	return queue:push({ kind = "gift", gift = giftName, sender = sender or "" })
+end
+
+-- Roblox usernames: 3-20 characters, letters/digits/underscore only.
+function StageAPI.isValidUsername(name: any): boolean
+	return type(name) == "string" and #name >= 3 and #name <= 20 and name:match("^[%w_]+$") ~= nil
+end
+
+function StageAPI.getQueue()
+	return queue
+end
+
+return StageAPI
+]]></ProtectedString>
+        </Properties>
+      </Item>
+      <Item class="ModuleScript" referent="124">
+        <Properties>
+          <string name="Name">StageActor</string>
+          <ProtectedString name="Source"><![CDATA[-- Spawns an NPC that copies a Roblox user's avatar, dances on its stage slot, and is removed later.
+local Players = game:GetService("Players")
+local Config = require(script.Parent.Config)
+local Layout = require(script.Parent.Layout)
+
+local StageActor = {}
+
+local function facing(position: Vector3): CFrame
+	return CFrame.lookAt(position, position + Config.FaceDirection)
+end
+
+-- Plays a random dance animation. If none can be loaded the avatar bobs instead.
+local function startDancing(model: Model, humanoid: Humanoid, position: Vector3)
+	task.spawn(function()
+		local ids = Config.DanceAnimations
+		if #ids > 0 then
+			local animator = humanoid:FindFirstChildOfClass("Animator")
+			if not animator then
+				animator = Instance.new("Animator")
+				animator.Parent = humanoid
+			end
+			local animation = Instance.new("Animation")
+			animation.AnimationId = ids[math.random(1, #ids)]
+			local ok, track = pcall(function()
+				return (animator :: Animator):LoadAnimation(animation)
+			end)
+			if ok and track then
+				track.Looped = true
+				track:Play()
+				task.wait(1)
+				if not model.Parent then
+					return
+				end
+				if track.Length > 0 then
+					return -- the animation loaded and is playing
+				end
+				track:Stop()
+			end
+		end
+
+		local t = 0
+		while model.Parent do
+			t += task.wait(0.03)
+			model:PivotTo(facing(position + Vector3.new(0, math.sin(t * 4) * 0.5, 0)))
+		end
+	end)
+end
+
+-- Returns the model, or nil + reason if the username cannot be resolved.
+function StageActor.spawn(username: string, slot: number): (Model?, string?)
+	local okId, userId = pcall(function()
+		return Players:GetUserIdFromNameAsync(username)
+	end)
+	if not okId then
+		return nil, "username not found"
+	end
+
+	local okDesc, description = pcall(function()
+		return Players:GetHumanoidDescriptionFromUserId(userId)
+	end)
+	if not okDesc then
+		return nil, "could not load avatar"
+	end
+
+	local model = Players:CreateHumanoidModelFromDescription(description, Enum.HumanoidRigType.R15)
+	model.Name = username
+	local root = model:FindFirstChild("HumanoidRootPart") :: BasePart?
+	local humanoid = model:FindFirstChildOfClass("Humanoid")
+	if not root or not humanoid then
+		model:Destroy()
+		return nil, "avatar has no humanoid"
+	end
+	model.PrimaryPart = root
+	-- Anchor only the root: the limbs follow through their joints, so animations can still move them.
+	root.Anchored = true
+	humanoid.DisplayDistanceType = Enum.HumanoidDisplayDistanceType.None
+	humanoid.HealthDisplayType = Enum.HumanoidHealthDisplayType.AlwaysOff
+
+	-- Nametag
+	local gui = Instance.new("BillboardGui")
+	gui.Size = UDim2.fromOffset(200, 40)
+	gui.StudsOffset = Vector3.new(0, 3.5, 0)
+	gui.AlwaysOnTop = true
+	local label = Instance.new("TextLabel")
+	label.Size = UDim2.fromScale(1, 1)
+	label.BackgroundTransparency = 1
+	label.TextScaled = true
+	label.Font = Enum.Font.GothamBold
+	label.TextColor3 = Color3.new(1, 1, 1)
+	label.TextStrokeTransparency = 0
+	label.Text = username
+	label.Parent = gui
+	gui.Parent = root
+
+	local position = Layout.slotPosition(slot)
+	model:PivotTo(facing(position))
+	model.Parent = workspace
+	startDancing(model, humanoid, position)
+
+	return model, nil
+end
+
+-- Sets an expiry time. Calling again replaces it, so gifts can extend the stay.
+-- Main.server.luau removes avatars once their LeaveAt time has passed.
+function StageActor.setStay(model: Model, seconds: number)
+	model:SetAttribute("LeaveAt", os.clock() + seconds)
+end
+
+function StageActor.isExpired(model: Model): boolean
+	local leaveAt = model:GetAttribute("LeaveAt")
+	return leaveAt ~= nil and os.clock() >= leaveAt
+end
+
+return StageActor
+]]></ProtectedString>
+        </Properties>
+      </Item>
+      <Item class="ModuleScript" referent="125">
+        <Properties>
+          <string name="Name">ThemeManager</string>
+          <ProtectedString name="Source"><![CDATA[-- Builds the stage map from a theme in Themes.luau. Safe to call again to switch themes.
+-- In Studio (edit mode) run this in the Command Bar to preview a theme:
+--   require(game.ServerScriptService.Stage.ThemeManager).apply("Halloween")
+local Lighting = game:GetService("Lighting")
+local RunService = game:GetService("RunService")
+local TweenService = game:GetService("TweenService")
+local Config = require(script.Parent.Config)
+local Layout = require(script.Parent.Layout)
+local Themes = require(script.Parent.Themes)
+
+local MAP_NAME = "StageMap"
+local ATMOSPHERE_NAME = "StageAtmosphere"
+local BLOOM_NAME = "StageBloom"
+
+local ThemeManager = {}
+ThemeManager.current = nil :: string?
+
+----------------------------------------------------------------------------------------------------
+-- Part helpers
+----------------------------------------------------------------------------------------------------
+
+local function newPart(parent: Instance, props): Part
+	local part = Instance.new("Part")
+	part.Anchored = true
+	part.CanCollide = false
+	part.CanTouch = false
+	part.TopSurface = Enum.SurfaceType.Smooth
+	part.BottomSurface = Enum.SurfaceType.Smooth
+	for key, value in props do
+		(part :: any)[key] = value
+	end
+	part.Parent = parent
+	return part
+end
+
+-- A cylinder whose long axis runs from point a to point b.
+local function cylinderBetween(parent: Instance, a: Vector3, b: Vector3, diameter: number, props)
+	local delta = b - a
+	local center = (a + b) / 2
+	local cf
+	if math.abs(delta.Unit.Y) > 0.999 then
+		cf = CFrame.new(center) * CFrame.Angles(0, 0, math.pi / 2) -- vertical
+	else
+		cf = CFrame.lookAt(center, b) * CFrame.Angles(0, math.pi / 2, 0)
+	end
+	local full = { Shape = Enum.PartType.Cylinder, Size = Vector3.new(delta.Magnitude, diameter, diameter), CFrame = cf }
+	for key, value in props do
+		full[key] = value
+	end
+	return newPart(parent, full)
+end
+
+local function light(className: string, parent: Instance, props)
+	local l = Instance.new(className)
+	for key, value in props do
+		(l :: any)[key] = value
+	end
+	l.Parent = parent
+	return l
+end
+
+----------------------------------------------------------------------------------------------------
+-- Prop builders: builders[kind](parent, prop)
+----------------------------------------------------------------------------------------------------
+
+local builders: { [string]: (Instance, any) -> () } = {}
+
+function builders.Pumpkin(parent, prop)
+	local s = prop.scale or 1
+	local center = Layout.fromFloor(prop.pos) + Vector3.new(0, 2 * s, 0)
+	local orange = Color3.fromRGB(240, 110, 20)
+	newPart(parent, {
+		Name = "Pumpkin",
+		Shape = Enum.PartType.Ball,
+		Size = Vector3.new(4, 4, 4) * s,
+		CFrame = CFrame.new(center),
+		Color = orange,
+		Material = Enum.Material.SmoothPlastic,
+	})
+	newPart(parent, {
+		Name = "Stem",
+		Size = Vector3.new(0.5, 1, 0.5) * s,
+		CFrame = CFrame.new(center + Vector3.new(0, 2.1 * s, 0)),
+		Color = Color3.fromRGB(70, 45, 20),
+		Material = Enum.Material.Wood,
+	})
+	-- Carved face on the +Z side (towards the camera); the mouth carries the glow
+	local glow = Color3.fromRGB(255, 200, 60)
+	for _, x in { -0.8, 0.8 } do
+		newPart(parent, {
+			Name = "Eye",
+			Size = Vector3.new(0.6, 0.6, 0.4) * s,
+			CFrame = CFrame.new(center + Vector3.new(x * s, 0.5 * s, 1.76 * s)),
+			Color = glow,
+			Material = Enum.Material.Neon,
+		})
+	end
+	local mouth = newPart(parent, {
+		Name = "Mouth",
+		Size = Vector3.new(1.6, 0.4, 0.4) * s,
+		CFrame = CFrame.new(center + Vector3.new(0, -0.7 * s, 1.87 * s)),
+		Color = glow,
+		Material = Enum.Material.Neon,
+	})
+	light("PointLight", mouth, { Brightness = 2, Range = 12 * s, Color = Color3.fromRGB(255, 150, 50), Shadows = false })
+end
+
+function builders.Candle(parent, prop)
+	local s = prop.scale or 1
+	local base = Layout.fromFloor(prop.pos)
+	local height = 2.5 * s
+	cylinderBetween(parent, base, base + Vector3.new(0, height, 0), 0.8 * s, {
+		Name = "Candle",
+		Color = Color3.fromRGB(240, 235, 215),
+		Material = Enum.Material.SmoothPlastic,
+	})
+	local flame = newPart(parent, {
+		Name = "Flame",
+		Shape = Enum.PartType.Ball,
+		Size = Vector3.new(0.6, 0.6, 0.6) * s,
+		CFrame = CFrame.new(base + Vector3.new(0, height + 0.3 * s, 0)),
+		Color = Color3.fromRGB(255, 170, 60),
+		Material = Enum.Material.Neon,
+	})
+	light("PointLight", flame, { Brightness = 1.5, Range = 10, Color = Color3.fromRGB(255, 170, 80), Shadows = false })
+end
+
+function builders.Pillar(parent, prop)
+	local base = Layout.fromFloor(prop.pos)
+	local height = prop.height or 16
+	local radius = prop.radius or 1.5
+	cylinderBetween(parent, base, base + Vector3.new(0, height, 0), radius * 2, {
+		Name = "Pillar",
+		Color = prop.color or Color3.fromRGB(70, 70, 85),
+		Material = if prop.neon then Enum.Material.Neon else Enum.Material.Concrete,
+	})
+	if not prop.neon then
+		cylinderBetween(parent, base + Vector3.new(0, height, 0), base + Vector3.new(0, height + 0.8, 0), radius * 2.8, {
+			Name = "PillarCap",
+			Color = prop.color or Color3.fromRGB(70, 70, 85),
+			Material = Enum.Material.Concrete,
+		})
+	end
+end
+
+function builders.DeadTree(parent, prop)
+	local s = prop.scale or 1
+	local base = Layout.fromFloor(prop.pos)
+	local bark = { Color = Color3.fromRGB(50, 35, 25), Material = Enum.Material.Wood }
+	cylinderBetween(parent, base, base + Vector3.new(0, 12 * s, 0), 1.6 * s, { Name = "Trunk", Color = bark.Color, Material = bark.Material })
+	-- { height fraction on trunk, yaw (radians), branch length }
+	for _, b in { { 0.4, 3.6, 4 }, { 0.55, 0.3, 6 }, { 0.7, 2.4, 5 }, { 0.85, 4.2, 4.5 } } do
+		local attach = base + Vector3.new(0, 12 * s * b[1], 0)
+		local direction = Vector3.new(math.cos(b[2]) * 0.8, 0.6, math.sin(b[2]) * 0.8).Unit
+		cylinderBetween(parent, attach, attach + direction * b[3] * s, 0.7 * s, { Name = "Branch", Color = bark.Color, Material = bark.Material })
+	end
+end
+
+function builders.Moon(parent, prop)
+	local size = prop.size or 40
+	newPart(parent, {
+		Name = "Moon",
+		Shape = Enum.PartType.Ball,
+		Size = Vector3.new(size, size, size),
+		CFrame = CFrame.new(Layout.fromFloor(prop.pos)),
+		Color = prop.color or Color3.fromRGB(255, 245, 200),
+		Material = Enum.Material.Neon,
+		CastShadow = false,
+	})
+end
+
+function builders.Spotlight(parent, prop)
+	local pos = Layout.fromFloor(prop.pos)
+	local target = Layout.fromFloor(prop.aim or Vector3.new(0, 2, 0))
+	local housing = newPart(parent, {
+		Name = "Spotlight",
+		Size = Vector3.new(1.4, 1.4, 2),
+		CFrame = CFrame.lookAt(pos, target),
+		Color = Color3.fromRGB(25, 25, 30),
+		Material = Enum.Material.Metal,
+	})
+	light("SpotLight", housing, {
+		Face = Enum.NormalId.Front,
+		Angle = prop.angle or 60,
+		Range = prop.range or 60,
+		Brightness = prop.brightness or 4,
+		Color = prop.color or Color3.new(1, 1, 1),
+		Shadows = false,
+	})
+end
+
+function builders.NeonTile(parent, prop)
+	local size = prop.size or 3
+	newPart(parent, {
+		Name = "NeonTile",
+		Size = Vector3.new(size, 0.2, size),
+		CFrame = CFrame.new(Layout.fromFloor(prop.pos) + Vector3.new(0, 0.1, 0)),
+		Color = prop.color or Color3.new(1, 1, 1),
+		Material = Enum.Material.Neon,
+	})
+end
+
+function builders.DiscoBall(parent, prop)
+	local size = prop.size or 6
+	local center = Layout.fromFloor(prop.pos)
+	local core = newPart(parent, {
+		Name = "DiscoBall",
+		Shape = Enum.PartType.Ball,
+		Size = Vector3.new(size, size, size),
+		CFrame = CFrame.new(center),
+		Color = Color3.fromRGB(190, 190, 210),
+		Material = Enum.Material.Metal,
+		Reflectance = 0.4,
+	})
+	-- Mirror facets spread over the sphere (Fibonacci lattice)
+	local facetColors = { Color3.new(1, 1, 1), Color3.fromRGB(255, 150, 230), Color3.fromRGB(150, 255, 245) }
+	local count = 60
+	for i = 1, count do
+		local y = 1 - (i - 0.5) * 2 / count
+		local ring = math.sqrt(1 - y * y)
+		local theta = i * 2.399963
+		local direction = Vector3.new(math.cos(theta) * ring, y, math.sin(theta) * ring)
+		local at = center + direction * (size / 2)
+		newPart(parent, {
+			Name = "Facet",
+			Size = Vector3.new(size * 0.14, size * 0.14, size * 0.05),
+			CFrame = CFrame.lookAt(at, at + direction),
+			Color = facetColors[i % #facetColors + 1],
+			Material = Enum.Material.Neon,
+		})
+	end
+	-- Slowly cycling coloured glow (property changes only, so it is cheap to replicate)
+	local glow = light("PointLight", core, { Brightness = 2, Range = 40, Color = facetColors[2], Shadows = false })
+	if RunService:IsRunning() then
+		task.spawn(function()
+			local palette = { Color3.fromRGB(255, 0, 170), Color3.fromRGB(0, 255, 230), Color3.fromRGB(255, 230, 0) }
+			local index = 1
+			while glow.Parent do
+				index = index % #palette + 1
+				TweenService:Create(glow, TweenInfo.new(1.5), { Color = palette[index] }):Play()
+				task.wait(1.5)
+			end
+		end)
+	end
+end
+
+----------------------------------------------------------------------------------------------------
+-- Map pieces
+----------------------------------------------------------------------------------------------------
+
+local function buildGround(map: Instance, theme)
+	local groundTop = Layout.floorTopY() - theme.Floor.Thickness
+	newPart(map, {
+		Name = "Ground",
+		Size = Vector3.new(500, 1, 500),
+		CFrame = CFrame.new(Config.StageOrigin.X, groundTop - 0.5, Config.StageOrigin.Z),
+		Color = theme.Ground.Color,
+		Material = theme.Ground.Material,
+		CanCollide = true,
+	})
+end
+
+local function buildFloor(map: Instance, theme)
+	local floor = theme.Floor
+	local top = Layout.floorTopY()
+	local cx, cz = Config.StageOrigin.X, Config.StageOrigin.Z
+	local upright = CFrame.Angles(0, 0, math.pi / 2) -- cylinders lie along X by default
+	newPart(map, {
+		Name = "Floor",
+		Shape = Enum.PartType.Cylinder,
+		Size = Vector3.new(floor.Thickness, floor.Radius * 2, floor.Radius * 2),
+		CFrame = CFrame.new(cx, top - floor.Thickness / 2, cz) * upright,
+		Color = floor.Color,
+		Material = floor.Material,
+		CanCollide = true,
+	})
+	-- Glowing rim: a slightly larger, thin disc just under the floor surface
+	newPart(map, {
+		Name = "FloorRim",
+		Shape = Enum.PartType.Cylinder,
+		Size = Vector3.new(0.4, floor.Radius * 2 + 1.2, floor.Radius * 2 + 1.2),
+		CFrame = CFrame.new(cx, top - 0.25, cz) * upright,
+		Color = floor.RingColor,
+		Material = Enum.Material.Neon,
+	})
+	-- A marker where each avatar will stand
+	for slot = 1, Config.StageSlots do
+		local at = Layout.slotPosition(slot)
+		newPart(map, {
+			Name = "SlotMarker" .. slot,
+			Shape = Enum.PartType.Cylinder,
+			Size = Vector3.new(0.1, 5, 5),
+			CFrame = CFrame.new(at.X, top + 0.05, at.Z) * upright,
+			Color = floor.RingColor,
+			Material = Enum.Material.Neon,
+			Transparency = 0.4,
+		})
+	end
+end
+
+local function applyLighting(theme)
+	for key, value in theme.Lighting do
+		(Lighting :: any)[key] = value
+	end
+	Lighting.GlobalShadows = true
+
+	for _, name in { ATMOSPHERE_NAME, BLOOM_NAME } do
+		local old = Lighting:FindFirstChild(name)
+		if old then
+			old:Destroy()
+		end
+	end
+	local atmosphere = Instance.new("Atmosphere")
+	atmosphere.Name = ATMOSPHERE_NAME
+	for key, value in theme.Atmosphere do
+		(atmosphere :: any)[key] = value
+	end
+	atmosphere.Parent = Lighting
+
+	local bloom = Instance.new("BloomEffect")
+	bloom.Name = BLOOM_NAME
+	for key, value in theme.Bloom do
+		(bloom :: any)[key] = value
+	end
+	bloom.Parent = Lighting
+end
+
+-- The client camera script reads these attributes (see StreamCamera.client.luau).
+local function publishCamera(name: string, theme)
+	local camera = theme.Camera
+	workspace:SetAttribute("StageTheme", name)
+	workspace:SetAttribute("StageCamPos", Layout.fromOrigin(camera.Pos))
+	workspace:SetAttribute("StageCamLook", Layout.fromOrigin(camera.Look))
+	workspace:SetAttribute("StageCamFov", camera.Fov or 50)
+	workspace:SetAttribute("StageCamOrbit", camera.Orbit or false)
+end
+
+----------------------------------------------------------------------------------------------------
+-- Public API
+----------------------------------------------------------------------------------------------------
+
+function ThemeManager.names(): { string }
+	local list = {}
+	for name in Themes do
+		table.insert(list, name)
+	end
+	table.sort(list)
+	return list
+end
+
+function ThemeManager.exists(name: any): boolean
+	return type(name) == "string" and Themes[name] ~= nil
+end
+
+-- Returns true when the theme was applied.
+function ThemeManager.apply(name: string): boolean
+	local theme = Themes[name]
+	if not theme then
+		warn("[Stage] Unknown theme:", name, "- available:", table.concat(ThemeManager.names(), ", "))
+		return false
+	end
+
+	local old = workspace:FindFirstChild(MAP_NAME)
+	if old then
+		old:Destroy()
+	end
+	local map = Instance.new("Folder")
+	map.Name = MAP_NAME
+
+	buildGround(map, theme)
+	buildFloor(map, theme)
+	for _, prop in theme.Props do
+		local build = builders[prop.kind]
+		if not build then
+			warn("[Stage] Unknown prop kind:", prop.kind)
+		else
+			local ok, err = pcall(build, map, prop)
+			if not ok then
+				warn("[Stage] Prop failed:", prop.kind, err)
+			end
+		end
+	end
+	map.Parent = workspace
+
+	applyLighting(theme)
+	publishCamera(name, theme)
+	ThemeManager.current = name
+	print("[Stage] Theme applied:", name)
+	return true
+end
+
+return ThemeManager
+]]></ProtectedString>
+        </Properties>
+      </Item>
+      <Item class="ModuleScript" referent="126">
+        <Properties>
+          <string name="Name">Themes</string>
+          <ProtectedString name="Source"><![CDATA[-- Map themes: pure data. To add a theme, copy one block and change the values.
+-- Positions in Props are offsets from the stage centre; y = 0 means "on the floor".
+-- Prop kinds (see ThemeManager.luau): Pumpkin, Candle, Pillar, DeadTree, Moon, Spotlight, NeonTile, DiscoBall.
+-- Camera positions are offsets from Config.StageOrigin.
+local V3 = Vector3.new
+local RGB = Color3.fromRGB
+
+local function add(list, prop)
+	table.insert(list, prop)
+end
+
+-- Ring of neon floor tiles, colours cycling through `colors`.
+local function neonRing(list, count: number, radius: number, colors, size: number, phase: number?)
+	for i = 1, count do
+		local angle = (i - 1) / count * math.pi * 2 + (phase or 0)
+		add(list, {
+			kind = "NeonTile",
+			pos = V3(math.cos(angle) * radius, 0, math.sin(angle) * radius),
+			size = size,
+			color = colors[(i - 1) % #colors + 1],
+		})
+	end
+end
+
+local Themes = {}
+
+----------------------------------------------------------------------------------------------------
+-- Halloween: purple marble stage, pumpkins, candles, dead trees under a full moon
+----------------------------------------------------------------------------------------------------
+do
+	local props = {}
+	for _, p in
+		{
+			{ -17, -3, 1.3 },
+			{ -20.5, 0, 1 },
+			{ -18.5, -7, 1.1 },
+			{ 17, -3, 1.3 },
+			{ 20.5, 0, 1 },
+			{ 18.5, -7, 1.1 },
+			{ -9, -14, 1.2 },
+			{ 9, -14, 1.2 },
+			{ 0, -17, 1.6 },
+		}
+	do
+		add(props, { kind = "Pumpkin", pos = V3(p[1], 0, p[2]), scale = p[3] })
+	end
+	for _, p in { { -13, 9, 1 }, { 13, 9, 1 }, { -15, 7.5, 0.8 }, { 15, 7.5, 0.8 }, { -6, 12, 0.7 }, { 6, 12, 0.7 } } do
+		add(props, { kind = "Candle", pos = V3(p[1], 0, p[2]), scale = p[3] })
+	end
+	add(props, { kind = "Pillar", pos = V3(-24, 0, -8), height = 20, radius = 1.6 })
+	add(props, { kind = "Pillar", pos = V3(24, 0, -8), height = 20, radius = 1.6 })
+	add(props, { kind = "DeadTree", pos = V3(-32, 0, -22), scale = 1.4 })
+	add(props, { kind = "DeadTree", pos = V3(32, 0, -20), scale = 1.2 })
+	add(props, { kind = "DeadTree", pos = V3(-44, 0, -6), scale = 1.1 })
+	add(props, { kind = "DeadTree", pos = V3(44, 0, -8), scale = 1 })
+	add(props, { kind = "Moon", pos = V3(-45, 75, -150), size = 40, color = RGB(255, 245, 200) })
+	add(props, { kind = "Spotlight", pos = V3(-16, 20, -10), aim = V3(0, 2, 0), color = RGB(170, 80, 255) })
+	add(props, { kind = "Spotlight", pos = V3(16, 20, -10), aim = V3(0, 2, 0), color = RGB(255, 140, 40) })
+
+	Themes.Halloween = {
+		Display = "Halloween",
+		Lighting = {
+			ClockTime = 0,
+			Brightness = 0.6,
+			Ambient = RGB(50, 35, 90),
+			OutdoorAmbient = RGB(60, 45, 110),
+			FogColor = RGB(25, 15, 45),
+			FogStart = 60,
+			FogEnd = 220,
+		},
+		Atmosphere = { Density = 0.3, Offset = 0.2, Color = RGB(120, 80, 200), Decay = RGB(60, 30, 100), Glare = 0, Haze = 1 },
+		Bloom = { Intensity = 0.5, Size = 24, Threshold = 1 },
+		Ground = { Color = RGB(18, 14, 28), Material = Enum.Material.Slate },
+		Floor = { Radius = 22, Thickness = 2, Color = RGB(60, 25, 110), Material = Enum.Material.Marble, RingColor = RGB(200, 100, 255) },
+		Props = props,
+		Camera = { Pos = V3(0, 4, 26), Look = V3(0, 0, 0), Fov = 50, Orbit = false },
+	}
+end
+
+----------------------------------------------------------------------------------------------------
+-- DiscoNeon: dark glossy stage, glowing floor tiles, disco ball and coloured spotlights
+----------------------------------------------------------------------------------------------------
+do
+	local props = {}
+	local colors = { RGB(255, 0, 170), RGB(0, 255, 230), RGB(255, 230, 0) }
+	neonRing(props, 16, 15, colors, 3.4)
+	neonRing(props, 8, 8, colors, 2.6, math.pi / 8)
+	add(props, { kind = "DiscoBall", pos = V3(0, 24, -2), size = 6 })
+	add(props, { kind = "Spotlight", pos = V3(-20, 24, -12), aim = V3(0, 2, 0), color = RGB(255, 0, 170) })
+	add(props, { kind = "Spotlight", pos = V3(20, 24, -12), aim = V3(0, 2, 0), color = RGB(0, 255, 230) })
+	add(props, { kind = "Spotlight", pos = V3(-20, 24, 12), aim = V3(0, 2, 0), color = RGB(255, 230, 0) })
+	add(props, { kind = "Spotlight", pos = V3(20, 24, 12), aim = V3(0, 2, 0), color = RGB(120, 255, 80) })
+	add(props, { kind = "Pillar", pos = V3(-24, 0, -10), height = 22, radius = 1, color = RGB(255, 0, 170), neon = true })
+	add(props, { kind = "Pillar", pos = V3(24, 0, -10), height = 22, radius = 1, color = RGB(0, 255, 230), neon = true })
+
+	Themes.DiscoNeon = {
+		Display = "Disco Neon",
+		Lighting = {
+			ClockTime = 0,
+			Brightness = 0.2,
+			Ambient = RGB(10, 5, 30),
+			OutdoorAmbient = RGB(15, 10, 40),
+			FogColor = RGB(10, 0, 30),
+			FogStart = 100,
+			FogEnd = 300,
+		},
+		Atmosphere = { Density = 0.15, Offset = 0, Color = RGB(60, 0, 120), Decay = RGB(20, 0, 60), Glare = 0, Haze = 0.5 },
+		Bloom = { Intensity = 1.2, Size = 30, Threshold = 0.8 },
+		Ground = { Color = RGB(8, 6, 16), Material = Enum.Material.SmoothPlastic },
+		Floor = { Radius = 20, Thickness = 2, Color = RGB(15, 10, 30), Material = Enum.Material.SmoothPlastic, RingColor = RGB(0, 255, 230) },
+		Props = props,
+		Camera = { Pos = V3(0, 4, 26), Look = V3(0, 0, 0), Fov = 50, Orbit = false },
+	}
+end
+
+----------------------------------------------------------------------------------------------------
+-- Simple: bright, plain platform; good for testing and for a clean look
+----------------------------------------------------------------------------------------------------
+do
+	local props = {}
+	add(props, { kind = "Pillar", pos = V3(-22, 0, -8), height = 12, radius = 1.2, color = RGB(235, 235, 240) })
+	add(props, { kind = "Pillar", pos = V3(22, 0, -8), height = 12, radius = 1.2, color = RGB(235, 235, 240) })
+
+	Themes.Simple = {
+		Display = "Simple",
+		Lighting = {
+			ClockTime = 14,
+			Brightness = 2.5,
+			Ambient = RGB(140, 140, 150),
+			OutdoorAmbient = RGB(160, 170, 190),
+			FogColor = RGB(200, 210, 230),
+			FogStart = 200,
+			FogEnd = 1000,
+		},
+		Atmosphere = { Density = 0.2, Offset = 0, Color = RGB(199, 210, 230), Decay = RGB(106, 112, 125), Glare = 0, Haze = 0 },
+		Bloom = { Intensity = 0.2, Size = 24, Threshold = 2 },
+		Ground = { Color = RGB(120, 180, 110), Material = Enum.Material.Grass },
+		Floor = { Radius = 20, Thickness = 2, Color = RGB(230, 230, 235), Material = Enum.Material.SmoothPlastic, RingColor = RGB(80, 160, 255) },
+		Props = props,
+		Camera = { Pos = V3(0, 4, 26), Look = V3(0, 0, 0), Fov = 50, Orbit = false },
+	}
+end
+
+return Themes
+]]></ProtectedString>
+        </Properties>
+      </Item>
+    </Item>
+  </Item>
+  <Item class="StarterPlayer" referent="127">
+    <Properties>
+      <string name="Name">StarterPlayer</string>
+    </Properties>
+    <Item class="StarterPlayerScripts" referent="128">
+      <Properties>
+        <string name="Name">StarterPlayerScripts</string>
+      </Properties>
+      <Item class="LocalScript" referent="129">
+        <Properties>
+          <string name="Name">DevPanel</string>
+          <ProtectedString name="Source"><![CDATA[-- On-screen test panel (join / gift / theme buttons) for the game's creator and for Studio.
+-- It only sends requests; the server re-checks permission and validates everything.
+local Players = game:GetService("Players")
+local ReplicatedStorage = game:GetService("ReplicatedStorage")
+local RunService = game:GetService("RunService")
+local Workspace = game:GetService("Workspace")
+
+local player = Players.LocalPlayer
+if not (RunService:IsStudio() or player.UserId == game.CreatorId) then
+	return
+end
+
+local remote = ReplicatedStorage:WaitForChild("StageDevAction", 30)
+if not remote then
+	return
+end
+
+local gui = Instance.new("ScreenGui")
+gui.Name = "StageDevPanel"
+gui.ResetOnSpawn = false
+gui.DisplayOrder = 100
+gui.Parent = player:WaitForChild("PlayerGui")
+
+local panel = Instance.new("Frame")
+panel.Position = UDim2.fromOffset(10, 10)
+panel.Size = UDim2.fromOffset(230, 0)
+panel.AutomaticSize = Enum.AutomaticSize.Y
+panel.BackgroundColor3 = Color3.fromRGB(20, 20, 28)
+panel.BackgroundTransparency = 0.15
+panel.BorderSizePixel = 0
+panel.Parent = gui
+
+local padding = Instance.new("UIPadding")
+padding.PaddingTop = UDim.new(0, 8)
+padding.PaddingBottom = UDim.new(0, 8)
+padding.PaddingLeft = UDim.new(0, 8)
+padding.PaddingRight = UDim.new(0, 8)
+padding.Parent = panel
+
+local list = Instance.new("UIListLayout")
+list.Padding = UDim.new(0, 6)
+list.SortOrder = Enum.SortOrder.LayoutOrder
+list.Parent = panel
+
+local order = 0
+local function nextOrder(): number
+	order += 1
+	return order
+end
+
+local function label(text: string)
+	local l = Instance.new("TextLabel")
+	l.LayoutOrder = nextOrder()
+	l.Size = UDim2.new(1, 0, 0, 18)
+	l.BackgroundTransparency = 1
+	l.Font = Enum.Font.GothamBold
+	l.TextSize = 14
+	l.TextXAlignment = Enum.TextXAlignment.Left
+	l.TextColor3 = Color3.fromRGB(200, 200, 220)
+	l.Text = text
+	l.Parent = panel
+end
+
+local function button(text: string, onClick: () -> ())
+	local b = Instance.new("TextButton")
+	b.LayoutOrder = nextOrder()
+	b.Size = UDim2.new(1, 0, 0, 28)
+	b.BackgroundColor3 = Color3.fromRGB(90, 60, 200)
+	b.BorderSizePixel = 0
+	b.Font = Enum.Font.Gotham
+	b.TextSize = 14
+	b.TextColor3 = Color3.new(1, 1, 1)
+	b.Text = text
+	b.Parent = panel
+	b.Activated:Connect(onClick)
+end
+
+local function names(attribute: string): { string }
+	local result = {}
+	for name in string.gmatch(Workspace:GetAttribute(attribute) or "", "[^,]+") do
+		table.insert(result, name)
+	end
+	return result
+end
+
+label("Stage test panel")
+local box = Instance.new("TextBox")
+box.LayoutOrder = nextOrder()
+box.Size = UDim2.new(1, 0, 0, 28)
+box.BackgroundColor3 = Color3.fromRGB(40, 40, 55)
+box.BorderSizePixel = 0
+box.Font = Enum.Font.Gotham
+box.TextSize = 14
+box.TextColor3 = Color3.new(1, 1, 1)
+box.PlaceholderText = "Roblox username"
+box.Text = ""
+box.ClearTextOnFocus = false
+box.Parent = panel
+button("Join stage", function()
+	remote:FireServer("join", box.Text)
+end)
+
+label("Gifts")
+for _, name in names("StageGiftNames") do
+	button(name, function()
+		remote:FireServer("gift", name)
+	end)
+end
+
+label("Theme")
+for _, name in names("StageThemeNames") do
+	button(name, function()
+		remote:FireServer("theme", name)
+	end)
+end
+]]></ProtectedString>
+        </Properties>
+      </Item>
+      <Item class="LocalScript" referent="130">
+        <Properties>
+          <string name="Name">StreamCamera</string>
+          <ProtectedString name="Source"><![CDATA[-- Fixed (or slowly orbiting) camera on the stage for the live stream.
+-- ThemeManager publishes the camera as Workspace attributes whenever a theme is applied.
+local RunService = game:GetService("RunService")
+local Workspace = game:GetService("Workspace")
+
+local angle = 0
+
+RunService:BindToRenderStep("StageCamera", Enum.RenderPriority.Camera.Value + 1, function(dt)
+	local position = Workspace:GetAttribute("StageCamPos")
+	local lookAt = Workspace:GetAttribute("StageCamLook")
+	local camera = Workspace.CurrentCamera
+	if not camera or typeof(position) ~= "Vector3" or typeof(lookAt) ~= "Vector3" then
+		return -- no theme yet: leave the default camera alone
+	end
+
+	camera.CameraType = Enum.CameraType.Scriptable
+	camera.FieldOfView = Workspace:GetAttribute("StageCamFov") or 50
+
+	local offset = position - lookAt
+	if Workspace:GetAttribute("StageCamOrbit") then
+		angle += dt * 0.15
+		offset = CFrame.Angles(0, angle, 0):VectorToWorldSpace(offset)
+	end
+	camera.CFrame = CFrame.lookAt(lookAt + offset, lookAt)
+end)
+]]></ProtectedString>
+        </Properties>
+      </Item>
+    </Item>
+  </Item>
+</roblox>

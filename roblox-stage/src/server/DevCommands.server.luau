@@ -1,15 +1,23 @@
--- Local testing only: the place owner types commands in chat.
---   /join <RobloxUsername>
---   /gift <GiftName> [sender]
+-- Local testing. Accepted only from the game's creator (or anyone inside Studio).
+-- Chat commands:   /join <RobloxUsername>   /gift <GiftName> [sender]   /theme <ThemeName>
+-- On-screen panel: DevPanel.client.luau fires the StageDevAction remote created below.
 local Players = game:GetService("Players")
-local StageAPI = require(script.Parent.StageAPI)
+local RunService = game:GetService("RunService")
+local ReplicatedStorage = game:GetService("ReplicatedStorage")
+local DevActions = require(script.Parent.DevActions)
+local ThemeManager = require(script.Parent.ThemeManager)
+
+local function allowed(player: Player): boolean
+	return RunService:IsStudio() or player.UserId == game.CreatorId
+end
 
 local function onChat(player: Player, message: string)
+	if not allowed(player) then
+		return
+	end
 	local cmd, arg, extra = message:match("^/(%a+)%s*(%S*)%s*(%S*)")
-	if cmd == "join" and arg ~= "" then
-		print("[Dev] join", arg, StageAPI.enqueueJoin(arg) and "queued" or "queue full")
-	elseif cmd == "gift" and arg ~= "" then
-		print("[Dev] gift", arg, StageAPI.enqueueGift(arg, extra) and "queued" or "queue full")
+	if cmd == "join" or cmd == "gift" or cmd == "theme" then
+		print("[Dev]", DevActions.run(cmd, arg, extra))
 	end
 end
 
@@ -23,3 +31,16 @@ for _, p in Players:GetPlayers() do
 	hook(p)
 end
 Players.PlayerAdded:Connect(hook)
+
+-- Names for the panel's buttons are published before the remote exists (the panel waits for the remote).
+workspace:SetAttribute("StageGiftNames", table.concat(DevActions.giftNames(), ","))
+workspace:SetAttribute("StageThemeNames", table.concat(ThemeManager.names(), ","))
+
+local remote = Instance.new("RemoteEvent")
+remote.Name = "StageDevAction"
+remote.OnServerEvent:Connect(function(player, action, arg, extra)
+	if allowed(player) then
+		print("[Dev]", DevActions.run(action, arg, extra))
+	end
+end)
+remote.Parent = ReplicatedStorage

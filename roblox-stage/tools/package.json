@@ -1,0 +1,16 @@
+{
+  "name": "roblox-stage-tools",
+  "private": true,
+  "version": "0.1.0",
+  "description": "Build and test tooling for the Roblox stage project (not needed to play the game)",
+  "scripts": {
+    "check": "node check-luau.mjs ../src/server/*.luau ../src/client/*.luau",
+    "smoke": "node smoke-test.mjs",
+    "build": "node build-place.mjs",
+    "verify": "npm run check && npm run smoke && npm run build"
+  },
+  "dependencies": {
+    "luau-web": "^1.5.1",
+    "rbx-dom": "^0.3.0"
+  }
+}

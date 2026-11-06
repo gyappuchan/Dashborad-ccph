@@ -91,3 +91,21 @@ test('config: apiKey kept when blank, never exposed', () => {
   assert.equal(pub.apiKey, undefined);
   assert.equal(pub.hasApiKey, true);
 });
+
+import { listThemes } from '../src/themes.js';
+import { createController } from '../src/controller.js';
+
+test('listThemes reads the theme names from Themes.luau', () => {
+  assert.deepEqual(listThemes(), ['DiscoNeon', 'Halloween', 'Simple']);
+  assert.deepEqual(listThemes('/nonexistent/Themes.luau'), ['DiscoNeon', 'Halloween', 'Simple']); // fallback
+});
+
+test('sendTheme publishes a theme message (dry-run) and rejects unknown themes', async () => {
+  const logs = [];
+  const controller = createController({ log: (l) => logs.push(l) });
+  const cfg = { ...DEFAULTS, dryRun: true };
+  await controller.sendTheme(cfg, 'Halloween');
+  assert.ok(logs.some((l) => l.includes('{"kind":"theme","name":"Halloween"}')), logs.join('\n'));
+  await assert.rejects(controller.sendTheme(cfg, 'NoSuchTheme'), /ไม่มีธีม/);
+  await assert.rejects(controller.sendTheme({ ...DEFAULTS, dryRun: false }, 'Halloween'), /Universe ID/);
+});

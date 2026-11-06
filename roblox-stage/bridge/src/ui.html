@@ -25,6 +25,7 @@
   .on .dot { background:var(--ok); } .on { color:var(--ok); }
   #log { height:260px; overflow:auto; background:var(--bg); border:1px solid var(--line); border-radius:8px; padding:8px; font:12px/1.6 ui-monospace, monospace; white-space:pre-wrap; }
   .hint { font-size:12px; color:var(--muted); margin-top:6px; }
+  select { padding:8px 10px; border:1px solid var(--line); border-radius:8px; background:var(--bg); color:var(--text); font:inherit; }
   .check { display:flex; gap:8px; align-items:center; }
   #msg { font-size:13px; min-height:20px; }
 </style>
@@ -65,6 +66,12 @@
       <div><label>ชื่อของขวัญ</label><input type="text" id="testGift" value="Rose"></div>
     </div>
     <div class="row"><button id="testJoin">ส่งคนเข้าเวที</button><button id="testGiftBtn">ส่งของขวัญ</button></div>
+  </section>
+
+  <section class="card">
+    <h2>ธีมแมป (เปลี่ยนได้ระหว่างไลฟ์)</h2>
+    <div class="row" style="margin-top:0"><select id="themeSelect"></select><button id="themeBtn">เปลี่ยนธีม</button></div>
+    <div class="hint">ส่งคำสั่งไปที่เกม ต้องเปิดเกมค้างไว้ (ในโหมดทดลองจะแสดงแค่ใน log) เพิ่มธีมใหม่ได้ใน Themes.luau</div>
   </section>
 
   <section class="card">
@@ -111,8 +118,11 @@ $('stopBtn').onclick = async () => { try { await api('/api/stop', {}); setRunnin
 $('testJoin').onclick = async () => { try { await save(); await api('/api/test', { kind: 'join', username: $('testUser').value }); say('ส่งแล้ว'); } catch (e) { say(e.message, true); } };
 $('testGiftBtn').onclick = async () => { try { await save(); await api('/api/test', { kind: 'gift', gift: $('testGift').value }); say('ส่งแล้ว'); } catch (e) { say(e.message, true); } };
 
+$('themeBtn').onclick = async () => { try { await save(); await api('/api/theme', { name: $('themeSelect').value }); say('ส่งคำสั่งเปลี่ยนธีมแล้ว'); } catch (e) { say(e.message, true); } };
+
 (async () => {
   const s = await api('/api/state');
+  $('themeSelect').innerHTML = s.themes.map((n) => `<option value="${n}">${n}</option>`).join('');
   fill(s.config); setRunning(s.running); s.logs.forEach(addLog);
   new EventSource('/api/events').onmessage = (ev) => addLog(JSON.parse(ev.data));
 })();

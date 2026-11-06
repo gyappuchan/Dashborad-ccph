@@ -1,12 +1,49 @@
--- Spawns an NPC that copies a Roblox user's avatar, bobs on stage, then removes itself.
+-- Spawns an NPC that copies a Roblox user's avatar, dances on its stage slot, and is removed later.
 local Players = game:GetService("Players")
 local Config = require(script.Parent.Config)
+local Layout = require(script.Parent.Layout)
 
 local StageActor = {}
 
-local function slotPosition(slot: number): Vector3
-	local offset = (slot - (Config.StageSlots + 1) / 2) * Config.SlotSpacing
-	return Config.StageOrigin + Vector3.new(offset, 0, 0)
+local function facing(position: Vector3): CFrame
+	return CFrame.lookAt(position, position + Config.FaceDirection)
+end
+
+-- Plays a random dance animation. If none can be loaded the avatar bobs instead.
+local function startDancing(model: Model, humanoid: Humanoid, position: Vector3)
+	task.spawn(function()
+		local ids = Config.DanceAnimations
+		if #ids > 0 then
+			local animator = humanoid:FindFirstChildOfClass("Animator")
+			if not animator then
+				animator = Instance.new("Animator")
+				animator.Parent = humanoid
+			end
+			local animation = Instance.new("Animation")
+			animation.AnimationId = ids[math.random(1, #ids)]
+			local ok, track = pcall(function()
+				return (animator :: Animator):LoadAnimation(animation)
+			end)
+			if ok and track then
+				track.Looped = true
+				track:Play()
+				task.wait(1)
+				if not model.Parent then
+					return
+				end
+				if track.Length > 0 then
+					return -- the animation loaded and is playing
+				end
+				track:Stop()
+			end
+		end
+
+		local t = 0
+		while model.Parent do
+			t += task.wait(0.03)
+			model:PivotTo(facing(position + Vector3.new(0, math.sin(t * 4) * 0.5, 0)))
+		end
+	end)
 end
 
 -- Returns the model, or nil + reason if the username cannot be resolved.
@@ -28,16 +65,16 @@ function StageActor.spawn(username: string, slot: number): (Model?, string?)
 	local model = Players:CreateHumanoidModelFromDescription(description, Enum.HumanoidRigType.R15)
 	model.Name = username
 	local root = model:FindFirstChild("HumanoidRootPart") :: BasePart?
-	if not root then
+	local humanoid = model:FindFirstChildOfClass("Humanoid")
+	if not root or not humanoid then
 		model:Destroy()
-		return nil, "no root part"
+		return nil, "avatar has no humanoid"
 	end
 	model.PrimaryPart = root
-	for _, part in model:GetDescendants() do
-		if part:IsA("BasePart") then
-			part.Anchored = true
-		end
-	end
+	-- Anchor only the root: the limbs follow through their joints, so animations can still move them.
+	root.Anchored = true
+	humanoid.DisplayDistanceType = Enum.HumanoidDisplayDistanceType.None
+	humanoid.HealthDisplayType = Enum.HumanoidHealthDisplayType.AlwaysOff
 
 	-- Nametag
 	local gui = Instance.new("BillboardGui")
@@ -55,18 +92,10 @@ function StageActor.spawn(username: string, slot: number): (Model?, string?)
 	label.Parent = gui
 	gui.Parent = root
 
-	model:PivotTo(CFrame.new(slotPosition(slot)))
+	local position = Layout.slotPosition(slot)
+	model:PivotTo(facing(position))
 	model.Parent = workspace
-
-	-- Placeholder dance: bob up and down until removed
-	task.spawn(function()
-		local t = 0
-		while model.Parent do
-			t += task.wait(0.03)
-			local y = math.sin(t * 4) * 0.5
-			model:PivotTo(CFrame.new(slotPosition(slot) + Vector3.new(0, y, 0)))
-		end
-	end)
+	startDancing(model, humanoid, position)
 
 	return model, nil
 end
