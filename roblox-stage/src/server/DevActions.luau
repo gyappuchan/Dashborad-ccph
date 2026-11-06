@@ -12,7 +12,7 @@ function DevActions.run(action: any, arg: any, extra: any): string
 		if not StageAPI.isValidUsername(arg) then
 			return "invalid username"
 		end
-		return if StageAPI.enqueueJoin(arg) then "join queued" else "queue full"
+		return if StageAPI.enqueueJoin(arg) then "join queued" else "not queued (queue full or already waiting)"
 	elseif action == "gift" then
 		if type(arg) ~= "string" or #arg == 0 or #arg > 50 then
 			return "invalid gift"

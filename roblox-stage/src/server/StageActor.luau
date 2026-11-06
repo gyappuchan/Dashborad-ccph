@@ -64,6 +64,7 @@ function StageActor.spawn(username: string, slot: number): (Model?, string?)
 
 	local model = Players:CreateHumanoidModelFromDescription(description, Enum.HumanoidRigType.R15)
 	model.Name = username
+	model:SetAttribute("StageActor", true)
 	local root = model:FindFirstChild("HumanoidRootPart") :: BasePart?
 	local humanoid = model:FindFirstChildOfClass("Humanoid")
 	if not root or not humanoid then
@@ -78,8 +79,8 @@ function StageActor.spawn(username: string, slot: number): (Model?, string?)
 
 	-- Nametag
 	local gui = Instance.new("BillboardGui")
-	gui.Size = UDim2.fromOffset(200, 40)
-	gui.StudsOffset = Vector3.new(0, 3.5, 0)
+	gui.Size = UDim2.fromOffset(140, 26)
+	gui.StudsOffset = Vector3.new(0, 3, 0)
 	gui.AlwaysOnTop = true
 	local label = Instance.new("TextLabel")
 	label.Size = UDim2.fromScale(1, 1)
@@ -98,6 +99,17 @@ function StageActor.spawn(username: string, slot: number): (Model?, string?)
 	startDancing(model, humanoid, position)
 
 	return model, nil
+end
+
+-- True when this username is already dancing on the stage (case-insensitive).
+function StageActor.isOnStage(username: string): boolean
+	local wanted = string.lower(username)
+	for _, child in workspace:GetChildren() do
+		if child:GetAttribute("StageActor") and string.lower(child.Name) == wanted then
+			return true
+		end
+	end
+	return false
 end
 
 -- Sets an expiry time. Calling again replaces it, so gifts can extend the stay.

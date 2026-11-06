@@ -6,7 +6,14 @@ local queue = GiftQueue.new(Config.QueueLimit)
 
 local StageAPI = {}
 
+-- Returns false when the queue is full or this username is already waiting in it.
 function StageAPI.enqueueJoin(username: string): boolean
+	local wanted = string.lower(username)
+	for _, item in queue.items do
+		if item.kind == "join" and string.lower(item.username) == wanted then
+			return false
+		end
+	end
 	return queue:push({ kind = "join", username = username })
 end
 

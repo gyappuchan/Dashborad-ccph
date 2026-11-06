@@ -37,6 +37,10 @@ local function freeSlot(): number?
 end
 
 local function handleJoin(item)
+	if StageActor.isOnStage(item.username) then
+		print("[Stage] Already on stage, skipped:", item.username)
+		return true -- consumed
+	end
 	local slot = freeSlot()
 	if not slot then
 		-- No slot yet: put the join back at the front and wait

@@ -139,6 +139,9 @@ run("StageActor.spawn", function()
 	check("placed on slot 2", at.X == expected.X and at.Y == expected.Y and at.Z == expected.Z)
 	check("nametag added", root:FindFirstChild("BillboardGui") ~= nil or #root:GetChildren() > 0)
 
+	check("isOnStage finds the avatar (case-insensitive)", StageActor.isOnStage("aLiCe") == true)
+	check("isOnStage is false for others", StageActor.isOnStage("Bob") == false)
+
 	local none, reason = StageActor.spawn("bad_user", 1)
 	check("unknown username is rejected", none == nil and reason == "username not found", reason)
 
@@ -167,6 +170,7 @@ run("StageActor.spawn", function()
 	dance()
 	task.wait = realWait
 	check("fallback bob loop ends when model is removed", frames > 5, frames)
+	check("isOnStage is false once removed", StageActor.isOnStage("Alice") == false)
 end)
 
 run("Bridge: messages from the TikTok bridge", function()
@@ -216,6 +220,7 @@ run("DevActions: chat commands and panel remote", function()
 	local queue = StageAPI.getQueue()
 	queue.items = {}
 	check("join queued", DevActions.run("join", "Roblox") == "join queued" and #queue.items == 1)
+	check("same username twice is not queued again", DevActions.run("join", "roblox"):find("not queued") ~= nil and #queue.items == 1)
 	check("invalid username refused", DevActions.run("join", "no spaces allowed") == "invalid username")
 	check("non-string username refused", DevActions.run("join", { evil = true }) == "invalid username")
 	check("gift queued", DevActions.run("gift", "Rose") == "gift queued")
